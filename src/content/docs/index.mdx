@@ -1,0 +1,30 @@
+---
+title: Welcome to Sicoco v3 Docs
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+  tagline: Suteki Common Components to the moon!
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Get Started
+      link: /sicoco-v3-docs/getting-started/overview
+      icon: right-arrow
+      variant: primary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## In this website
+
+<CardGrid stagger>
+	<Card title="Overview" icon="pencil">
+		What is Suteki Common Components? [Get an overview of the project](/sicoco-v3-docs/getting-started/overview).
+	</Card>
+	<Card title="Awsome Components" icon="add-document">
+		Explore the components available in [Suteki Common Components](/sicoco-v3-docs/components).
+	</Card>
+	<Card title="Tool References" icon="setting">
+		Discover the tools and utilities used in Suteki Common Components in [Tools & Utilities](/sicoco-v3-docs/reference/tools).
+	</Card>
+</CardGrid>

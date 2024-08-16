@@ -1,0 +1,60 @@
+---
+title: Input
+description: Input component is a component that allows users to enter data.
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Input/apis/apiProperties.vue';
+import ApiSlots from '@/components/Input/apis/apiSlots.vue'
+import ApiEvents from '@/components/Input/apis/apiEvents.vue';
+import ApiMethods from '@/components/Input/apis/apiMethods.vue'
+
+import SInput from '@/components/Input/default.vue';
+import SInputRaw from '@/components/Input/default.vue?raw';
+
+import SInputDisabled from '@/components/Input/disabled.vue';
+import SInputDisabledRaw from '@/components/Input/disabled.vue?raw';
+
+import SInputRequired from '@/components/Input/required.vue';
+import SInputRequiredRaw from '@/components/Input/required.vue?raw';
+
+import SInputCustomValidator from '@/components/Input/customValidator.vue';
+import SInputCustomValidatorRaw from '@/components/Input/customValidator.vue?raw';
+
+Input component is a component that allows users to enter data.
+
+## Component Usage
+### Default
+<SInput client:only="vue" class="mt-4" />
+<Code code={SInputRaw} lang="vue" title="input.vue" />
+
+### Disabled
+<SInputDisabled client:only="vue" class="mt-4" />
+<Code code={SInputDisabledRaw} lang="vue" title="disabled.vue" />
+
+### Required
+To make the input required, you can add the `required` attribute to the input element and wrap it with the `s-form-input` component.
+
+<SInputRequired client:only="vue" class="mt-4" />
+<Code code={SInputRequiredRaw} lang="vue" title="required.vue" />
+
+### Custom Validator
+<SInputCustomValidator client:only="vue" class="mt-4" />
+<Code code={SInputCustomValidatorRaw} lang="vue" title="customValidator.vue" />
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+    <TabItem label="Events">
+        <ApiEvents client:only="vue" />
+    </TabItem>
+    <TabItem label="Methods">
+        <ApiMethods client:only="vue" />
+    </TabItem>
+</Tabs>

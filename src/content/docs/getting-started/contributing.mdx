@@ -1,0 +1,40 @@
+---
+title: Contributing
+---
+import { Steps } from '@astrojs/starlight/components'
+
+To contribute to Suteki Common Components, you need to follow the steps below:
+```bash
+$ git clone https://github.com/Suteki/@sutekitechid/sicoco-v3.git
+$ cd sicoco-v3
+$ npm install
+$ git checkout feat/fix/[Feat name/component]
+```
+
+## Running the project locally
+To run the project locally, you can use the following command:
+<Steps>
+1. Build the `sicoco-v3` first with the command `npm run build:package`. Call this command every time there is a change so that the test application can do hot reload.
+2. Go to the `docs` folder.
+3. Add the library / adjustments that have been added.
+4. The test project is already equipped with automatic tests, please add automatic tests for the components that have been created as well.
+5. Run the command `npm run dev` to run the project locally.
+</Steps>
+
+## Pushing the changes to the repository
+<Steps>
+1. After adding / modifying the component, please create a pull request to the `main` branch.
+2. Wait until the automatic test is complete. In order for the branch to be merged into `main`, all test cases that have been created must be `PASSED`.
+3. After all testcases passed, wait for other team members to review and accept all changes that have been made.
+4. Merge to main.
+</Steps>
+
+## Publishing the package
+<Steps>
+1. Login to npm with your GitHub account as mentioned in the [Running the project locally](#running-the-project-locally) section.
+2. Change the version of the package in the `package.json` file. Please follow the [Semantic Versioning](https://semver.org/) rules.
+3. Run the command below to publish the package:
+</Steps>
+```bash
+$ npm publish
+```
