@@ -14,6 +14,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Sicoco v3',
+      description: 'Sicoco v3 is a Vue 3 component library that helps you build modern web applications',
       social: {
       github: 'https://github.com/sutekitechid/sicoco-v3',
       },
