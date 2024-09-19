@@ -1,0 +1,52 @@
+---
+title: button
+---
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Button/apis/apiProperties.vue';
+
+import SButton from '@/components/Button/color.vue';
+import SButtonRaw from '@/components/Button/color.vue?raw';
+
+import SButtonDisabled from '@/components/Button/disabled.vue';
+import SButtonDisabledRaw from '@/components/Button/disabled.vue?raw';
+
+import SButtonRequired from '@/components/Button/outline.vue';
+import SButtonRequiredRaw from '@/components/Button/outline.vue?raw';
+
+import SButtonCustomValidator from '@/components/Button/pill.vue';
+import SButtonCustomValidatorRaw from '@/components/Button/pill.vue?raw';
+
+import SButtonSize from '@/components/Button/size.vue';
+import SButtonSizeRaw from '@/components/Button/size.vue?raw';
+
+
+Buttons can connect HIGH or LOW signals to Arduino pins so that they can be recognized as Button when the button is pressed.
+
+## Component Usage
+### Button Color
+<SButton client:only="vue" class="mt-4" />
+<Code code={SButtonRaw} lang="vue" title="color.vue" />
+
+### Button Disabled
+<SButtonDisabled client:only="vue" class="mt-4" />
+<Code code={SButtonDisabledRaw} lang="vue" title="disabled.vue" />
+
+### Button Outline
+<SButtonRequired client:only="vue" class="mt-4" />
+<Code code={SButtonRequiredRaw} lang="vue" title="required.vue" />
+
+### Button Pill
+<SButtonCustomValidator client:only="vue" class="mt-4" />
+<Code code={SButtonCustomValidatorRaw} lang="vue" title="customValidator.vue" />
+
+### Button Size
+<SButtonSize client:only="vue" class="mt-4" />
+<Code code={SButtonSizeRaw} lang="vue" title="size.vue" />
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+</Tabs>
