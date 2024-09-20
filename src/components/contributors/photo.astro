@@ -1,0 +1,7 @@
+---
+const { photo, login } = Astro.props
+---
+
+<div class="rounded-full overflow-hidden w-12 h-12">
+  <img src={photo || '/sicoco-v3-docs/github.png'} alt={login} />
+</div>
