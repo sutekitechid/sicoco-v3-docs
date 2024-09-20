@@ -20,44 +20,44 @@ const data = [
   {
     name: 'readonly',
     type: 'boolean',
-    default: 'FALSE',
-    description: 'Membuat checkbox hanya bisa dilihat',
+    default: false,
+    description: 'Makes the checkbox view-only"',
     },
   {
     name: 'disabled',
     type: 'boolean',
-    default: 'FALSE',
+    default: false,
     description: 'Disable checkbox',
     },
   {
     name: 'required',
     type: 'boolean',
-    default: 'FALSE',
-    description: 'Validasi checkbox wajib diisi',
+    default: false,
+    description: 'Checkbox validation is required',
     },
   {
     name: 'maxlength',
     type: ['String','Number'],
     default: '',
-    description: 'Jumlah karakter maksimal',
+    description: 'Maximum character count',
     },
   {
     name: 'rows',
     type: ['String', 'Number'],
     default: '3',
-    description: 'Jumlah row',
+    description: 'Number of rows',
     },
   {
     name: 'placeholder',
     type: 'String',
     default: '',
-    description: 'Label textarea',
+    description: 'Textarea label',
     },
   {
     name: 'size',
     type: 'String',
     default: 'md',
-    description: 'Ukuran textarea',
+    description: 'Textarea size',
   },
 ]
 </script>
