@@ -19,8 +19,6 @@ import STextareaReadonlyRaw from '@/components/Textarea/readonly.vue?raw';
 import STextareaRequired from '@/components/Textarea/required.vue';
 import STextareaRequiredRaw from '@/components/Textarea/required.vue?raw';
 
-import STextareaCustomValidator from '@/components/Textarea/customValidator.vue';
-import STextareaCustomValidatorRaw from '@/components/Textarea/customValidator.vue?raw';
 
 A `<textarea>` is an HTML element for inputting multi-line text in web forms. It's typically used for comments or longer messages.
 
@@ -52,13 +50,6 @@ To make the `<textarea>` required, you can add the required attribute to the tex
 
 <STextareaRequired client:only="vue" class="mt-4" />
 <Code code={STextareaRequiredRaw} lang="vue" title="textareaRequired.vue" />
-
-### Custom-Validator
-
-A `custom validator` is a function used to validate user input in forms beyond standard HTML validation. It allows you to define specific rules for input data and display custom error messages if the validation fails.
-
-<STextareaCustomValidator client:only="vue" class="mt-4" />
-<Code code={STextareaCustomValidatorRaw} lang="vue" title="textareaCustomValidator.vue" />
 
 ## API
 <Tabs>

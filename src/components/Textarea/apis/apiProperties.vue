@@ -7,7 +7,13 @@ import ApiPropertyTable from '@/components/api-table/apiProperty.vue'
 const data = [
   {
     name: 'v-model',
-    type: 'string',
+    type: [
+      'array',
+      'string',
+      'boolean',
+      'number',
+      'object'
+    ],
     default: '',
     description: 'Binding values',
     },
