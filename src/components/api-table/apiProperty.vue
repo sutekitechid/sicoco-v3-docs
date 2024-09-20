@@ -35,10 +35,8 @@
               {{ property.type }}
             </s-badge>
           </s-table-cell>
-          <s-table-cell class="!px-4 flex gap-2 flex-wrap">
-            <s-badge v-for="value in property.values" :key="value" type="danger">
-              {{ value }}
-            </s-badge>
+          <s-table-cell class="!px-4">
+            {{ property.values }}
           </s-table-cell>
           <s-table-cell class="!px-4 !text-left">
             <s-badge v-if="property.default" type="danger">
