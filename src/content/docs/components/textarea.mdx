@@ -1,0 +1,71 @@
+---
+title: Textarea
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Textarea/apis/apiProperties.vue';
+import ApiSlots from '@/components/Textarea/apis/apiSlots.vue'
+
+import STextarea from '@/components/Textarea/default.vue';
+import STextareaRaw from '@/components/Textarea/default.vue?raw';
+
+import STextareaDisabled from '@/components/Textarea/disabled.vue';
+import STextareaDisabledRaw from '@/components/Textarea/disabled.vue?raw';
+
+import STextareaReadonly from '@/components/Textarea/readonly.vue';
+import STextareaReadonlyRaw from '@/components/Textarea/readonly.vue?raw';
+
+import STextareaRequired from '@/components/Textarea/required.vue';
+import STextareaRequiredRaw from '@/components/Textarea/required.vue?raw';
+
+import STextareaCustomValidator from '@/components/Textarea/customValidator.vue';
+import STextareaCustomValidatorRaw from '@/components/Textarea/customValidator.vue?raw';
+
+A `<textarea>` is an HTML element for inputting multi-line text in web forms. It's typically used for comments or longer messages.
+
+## Component Usage
+### Default
+
+A default `<textarea>` is a form element that users can freely interact with. It allows text input, editing, and scrolling. It is fully functional unless modified with attributes like disabled or readonly.
+
+<STextarea client:only="vue" class="mt-4" />
+<Code code={STextareaRaw} lang="vue" title="textarea.vue" />
+
+### Disabled
+
+A disabled `<textarea>` is a form element that users can see but not interact with or edit. It is rendered with a gray background and is non-clickable.
+
+<STextareaDisabled client:only="vue" class="mt-4" />
+<Code code={STextareaDisabledRaw} lang="vue" title="textareaDisabled.vue" />
+
+### Readonly
+
+A readonly `<textarea>` allows users to view but not edit the content. Unlike a disabled textarea, it can still be selected and copied. It typically has a normal appearance, indicating that it is editable but not in this case.
+
+<STextareaReadonly client:only="vue" class="mt-4" />
+<Code code={STextareaReadonlyRaw} lang="vue" title="textareaReadonly.vue" />
+
+### Required
+
+To make the `<textarea>` required, you can add the required attribute to the textarea element and wrap it with the `s-form-input` component.
+
+<STextareaRequired client:only="vue" class="mt-4" />
+<Code code={STextareaRequiredRaw} lang="vue" title="textareaRequired.vue" />
+
+### Custom-Validator
+
+A `custom validator` is a function used to validate user input in forms beyond standard HTML validation. It allows you to define specific rules for input data and display custom error messages if the validation fails.
+
+<STextareaCustomValidator client:only="vue" class="mt-4" />
+<Code code={STextareaCustomValidatorRaw} lang="vue" title="textareaCustomValidator.vue" />
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+</Tabs>

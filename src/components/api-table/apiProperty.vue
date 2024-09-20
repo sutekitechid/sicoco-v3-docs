@@ -22,7 +22,7 @@
       </s-table-head>
       <s-table-body>
         <s-table-row v-for="property in properties" :key="property.name">
-          <s-table-cell class="!px-4">
+          <s-table-cell class="!px-4 flex gap-2 flex-wrap">
             <s-badge type="danger">
               {{ property.name }}
             </s-badge>
