@@ -1,0 +1,48 @@
+---
+title: Badge
+---
+
+
+A `Badge` component is a UI element used to display brief information or status, like notifications or categories. It's often attached to buttons, avatars, or lists to show counts or status indicators, such as unread messages or online status.
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Badge/apis/apiProperties.vue';
+
+import SBadge from '@/components/Badge/default.vue';
+import SBadgeRaw from '@/components/Badge/default.vue?raw';
+
+import SBadgeRounded from '@/components/Badge/rounded.vue';
+import SBadgeRoundedRaw from '@/components/Badge/rounded.vue?raw';
+
+import SBadgeClosable from '@/components/Badge/closable.vue';
+import SBadgeClosableRaw from '@/components/Badge/closable.vue?raw';
+
+## Component Usage
+### Default
+
+A default badge is a basic UI element showing small information, typically with a standard design and color, used for notifications or status indicators.
+
+<SBadge client:only="vue" class="mt-4" />
+<Code code={SBadgeRaw} lang="vue" title="defaultBadge.vue" />
+
+### Rounded
+
+A rounded badge is a UI element with a circular or rounded design used to display information or status. It typically features a curved edge and is used for notifications or indicators.
+
+<SBadgeRounded client:only="vue" class="mt-4" />
+<Code code={SBadgeRoundedRaw} lang="vue" title="roundedBadge.vue" />
+
+### Closable
+
+A closable badge is a UI element that can be dismissed or removed by the user, often with a close button or icon. It is used for notifications or alerts that users can clear from view.
+
+<SBadgeClosable client:only="vue" class="mt-4" />
+<Code code={SBadgeClosableRaw} lang="vue" title="closableBadge.vue" />
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+</Tabs>
