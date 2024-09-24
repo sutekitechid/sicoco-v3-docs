@@ -7,12 +7,12 @@ import ApiSlotTable from '@/components/api-table/apiSlot.vue'
 const data = [
   {
     "name": "trigger",
-    "description": "content that will be hovered",
+    "description": "Content that will be hovered",
     "props": ""
   },
   {
     "name": "content",
-    "description": "content that appears after trigger is hovered",
+    "description": "Content that appears after trigger is hovered",
     "props": ""
   }
 ]
