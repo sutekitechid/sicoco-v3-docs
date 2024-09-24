@@ -1,0 +1,37 @@
+---
+title: Tooltip
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Tooltip/apis/apiProperties.vue';
+import ApiSlots from '@/components/Tooltip/apis/apiSlots.vue'
+
+
+import STooltip from '@/components/Tooltip/placement.vue';
+import STooltipRaw from '@/components/Tooltip/placement.vue?raw';
+
+import STooltitrigger from '@/components/Tooltip/triger.vue';
+import STooltitriggerRaw from '@/components/Tooltip/triger.vue?raw';
+
+
+The function of a tooltip is to provide information or explanation about an element on a website or mobile application when the user interacts with that element.
+## Component Usage
+### Placement
+<STooltip client:only="vue" class="mt-4" />
+<Code code={STooltipRaw} lang="vue" title="placement.vue" />
+
+### Trigger
+<STooltitrigger  client:only="vue" class="mt-4" />
+<Code code={STooltitriggerRaw} lang="vue" title="triger.vue" />
+
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+</Tabs>
