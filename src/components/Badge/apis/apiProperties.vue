@@ -14,6 +14,9 @@ const data = [
             'success',
             'warning',
             'danger',
+            'dark-danger',
+            'grey',
+            'secondary',
             'purple'
         ],
         description: 'Changing the badge color.',
