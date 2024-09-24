@@ -1,0 +1,37 @@
+---
+import Photo from "./photo.astro";
+
+const repoName = 'sutekitechid/sicoco-v3-docs'
+
+let request = await fetch(`https://api.github.com/repos/${repoName}/contributors?per_page=100&page=1`, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  }
+});
+
+// print data from the fetch on screen
+let contributorsList = await request.json();
+
+const contributors = []
+
+for (let i = 0; i < contributorsList.length; i++) {
+  const request = await fetch(`https://api.github.com/users/${contributorsList[i].login}`)
+  const contributor = await request.json()
+  contributors.push(contributor)
+}
+---
+
+<div class="flex flex-col gap-4">
+  {contributors.map(contributor => (
+    <a href={`https://github.com/${contributor.login}`} target="_blank" class="flex gap-4">
+      <Photo photo={contributor.avatar_url} login={contributor.login} />
+      <p class="font-semibold !my-auto">
+        {contributor.login}
+      </p>
+      <p class="!my-auto">
+        {contributor.name}
+      </p>
+    </a>
+  ))}
+</div>

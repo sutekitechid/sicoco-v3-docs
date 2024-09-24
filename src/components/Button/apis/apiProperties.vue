@@ -26,7 +26,9 @@ const data = [
     name: 'size',
     type: 'string',
     default: 'sm',
+
     description: 'Determine the size of the button',
+
     values: ['xs', 'sm', 'md', 'lg', 'xl'],
   },
   {
@@ -40,7 +42,9 @@ const data = [
     name: 'square',
     type: 'boolean',
     default: false,
+
     description: 'Make the button a box',
+
     values: [],
   },
   {
@@ -48,7 +52,9 @@ const data = [
     type: 'boolean',
     default: false,
     description:
+
       'Change the button style with a transparent background and border color according to the props color',
+
     values: [],
   },
   {
@@ -62,7 +68,9 @@ const data = [
     name: 'disabled',
     type: 'boolean',
     default: false,
+
     description: 'Make the button disabled',
+
     values: [],
   },
 ]
