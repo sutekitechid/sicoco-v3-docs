@@ -50,7 +50,7 @@ const data = [
     values: [],
   },
   {
-    name: 'contentWrapperClass',
+    name: 'content-wrapper-class',
     type: 'String',
     default: '!w-[455px]',
     description: 'Modal class name',
