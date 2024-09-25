@@ -20,14 +20,14 @@ const data = [
     values: [],
   },
   {
-    name: 'confirmText',
+    name: 'confirm-text',
     type: 'String',
     default: '',
     description: 'Text of the confirmation action button',
     values: [],
   },
   {
-    name: 'cancelText',
+    name: 'cancel-text',
     type: 'String',
     default: '',
     description: 'Text of the cancel action button',
@@ -43,7 +43,7 @@ const data = [
     ],
   },
   {
-    name: 'dataCy',
+    name: 'data-cy',
     type: 'String',
     default: 'confirmation-dialog',
     description: 'Cypress selector on the element',
