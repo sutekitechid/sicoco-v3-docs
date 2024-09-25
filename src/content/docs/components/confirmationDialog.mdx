@@ -1,0 +1,51 @@
+---
+title: Confirmation Dialog
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/ConfirmDialog/apis/apiProperties.vue';
+import ApiSlots from '@/components/ConfirmDialog/apis/apiSlots.vue'
+import ApiMethods from '@/components/ConfirmDialog/apis/apiMethods.vue'
+
+import SDialog from '@/components/ConfirmDialog/default.vue';
+import SDialogRaw from '@/components/ConfirmDialog/default.vue?raw';
+
+import SDialogVariasititleMessageType from '@/components/ConfirmDialog/variation.vue';
+import SDialogVariasititleMessageTypeRaw from '@/components/ConfirmDialog/variation.vue?raw';
+
+import SSlot from '@/components/ConfirmDialog/slot.vue';
+import SSlotRaw from '@/components/ConfirmDialog/slot.vue?raw';
+
+import SCustomLabel from '@/components/ConfirmDialog/customLabel.vue';
+import SCustomLabelRaw from '@/components/ConfirmDialog/customLabel.vue?raw';
+
+### Default Confirmation Dialog
+<SDialog client:only="vue" class="mt-4" />
+<Code code={SDialogRaw} lang="vue" title="default.vue" />
+
+### variation
+<SDialogVariasititleMessageType client:only="vue" class="mt-4" />
+<Code code={SDialogVariasititleMessageTypeRaw} lang="vue" title="default.vue" />
+
+### Slot Content
+<SSlot client:only="vue" class="mt-4" />
+<Code code={SSlotRaw} lang="vue" title="Slot.vue" />
+
+### Custom Label
+<SCustomLabel client:only="vue" class="mt-4" />
+<Code code={SCustomLabelRaw} lang="vue" title="customLabel.vue" />
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+    <TabItem label="Methods">
+        <ApiMethods client:only="vue" />
+    </TabItem>
+    
+</Tabs>
