@@ -1,0 +1,92 @@
+---
+title: Dropdown
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Dropdown/apis/apiProperties.vue';
+import ApiEvents from '@/components/Dropdown/apis/apiEvents.vue';
+import ApiSlots from '@/components/Dropdown/apis/apiSlots.vue';
+import ApiMethods from '@/components/Dropdown/apis/apiMethods.vue';
+
+import ApiPropertiesItem from '@/components/DropdownItem/apiPropertiesItem.vue';
+import ApiEventsItem from '@/components/DropdownItem/apiEventsItem.vue';
+import ApiSlotsItem from '@/components/DropdownItem/apiSlotsItem.vue';
+
+import SDropdown from '@/components/Dropdown/defaultDisable.vue';
+import SDropdownRaw from '@/components/Dropdown/defaultDisable.vue?raw';
+
+import SOptions from '@/components/Dropdown/options.vue';
+import SOptionsRaw from '@/components/Dropdown/options.vue?raw';
+
+import SSlot from '@/components/Dropdown/slots.vue';
+import SSlotRaw from '@/components/Dropdown/slots.vue?raw';
+
+import SSearch from '@/components/Dropdown/search.vue';
+import SSearchRaw from '@/components/Dropdown/search.vue?raw';
+
+import SSelection from '@/components/Dropdown/multipleSelection.vue';
+import SSelectionRaw from '@/components/Dropdown/multipleSelection.vue?raw';
+
+import SFormater from '@/components/Dropdown/customFormatter.vue';
+import SFormaterRaw from '@/components/Dropdown/customFormatter.vue?raw';
+
+import SValidasi from '@/components/Dropdown/validasi.vue';
+import SValidasiRaw from '@/components/Dropdown/validasi.vue?raw';
+
+## Component Usage
+### Default And Disabled
+<SDropdown client:only="vue" class="mt-4" />
+<Code code={SDropdownRaw} lang="vue" title="defaultDisable.vue" />
+
+### Options
+<SOptions client:only="vue" class="mt-4" />
+<Code code={SOptionsRaw} lang="vue" title="options.vue" />
+
+### Slot 
+<SSlot client:only="vue" class="mt-4" />
+<Code code={SSlotRaw} lang="vue" title="slot.vue" />
+
+### Search
+<SSearch client:only="vue" class="mt-4" />
+<Code code={SSearchRaw} lang="vue" title="search.vue" />
+
+### Multiple Selection
+<SSelection client:only="vue" class="mt-4" />
+<Code code={SSelectionRaw} lang="vue" title="multipleSelection.vue" />
+
+### Custom Formatter
+<SFormater client:only="vue" class="mt-4" />
+<Code code={SFormaterRaw} lang="vue" title="customFormatter.vue" />
+### Validasi
+<SValidasi client:only="vue" class="mt-4" />
+<Code code={SValidasiRaw} lang="vue" title="validasi.vue" />
+## API
+### SDropdown
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Events">
+        <ApiEvents client:only="vue" />
+    </TabItem>
+    <TabItem label="Methods">
+    <ApiMethods client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### SDropdownItem
+<Tabs>
+    <TabItem label="PropertiesItem">
+        <ApiPropertiesItem client:only="vue" />
+    </TabItem>
+    <TabItem label="EventsItem">
+        <ApiEventsItem client:only="vue" />
+    </TabItem>
+    <TabItem label="SlotsItem">
+        <ApiSlotsItem client:only="vue" />
+    </TabItem>
+</Tabs>
