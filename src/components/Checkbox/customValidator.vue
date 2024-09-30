@@ -1,40 +1,71 @@
 <template>
   <s-form-input @submit="onSubmit">
-    <s-checkbox
-      v-model="checkbox1"
-      value="checkbox-satu"
-      :customValidators="{
-        'customValidators': (value) => {
-          return value
+    <s-checkbox-group 
+      :custom-validators="{
+        'cash': (value) => {
+          return !(pembayaran === 'cash' && pengiriman !== 'cod');
         }
       }"
     >
-      Checkbox 1 (customValidators)
-    </s-checkbox>
-    <s-checkbox
-      v-model="checkbox2"
-      value="checkbox-dua"
-    >
-      Checkbox 2
-    </s-checkbox>
-    <template #errors="{ validation }">
-      <div v-if="!validation['customValidators']" class="text-danger-100">
-        Custom validator error, please check "Checkbox 1"
+      <p class="mt-3 text-xl">Pilih Metode pengiriman:</p>
+      <div>
+        <div>
+          <s-checkbox value="regular" type="primary" v-model="pengiriman">
+            <p class="mt-[-18px]">Regular</p>
+          </s-checkbox>
+        </div>
+        <div>
+          <s-checkbox value="instant" type="primary" v-model="pengiriman">
+            <p class="mt-[-18px]">Instant</p>
+          </s-checkbox>
+        </div>
+        <div>
+          <s-checkbox value="cod" type="primary" v-model="pengiriman">
+            <p class="mt-[-18px]">COD</p>
+          </s-checkbox>
+        </div>
       </div>
-    </template>
-    <s-button type="submit" data-cy="submit-button">SUBMIT</s-button>
+
+      <p class="mt-3 text-xl">Pilih Metode pembayaran:</p>
+      <div>
+        <div>
+          <s-checkbox value="qris" type="primary" v-model="pembayaran">
+            <p class="mt-[-18px]">QRIS</p>
+          </s-checkbox>
+        </div>
+        <div>
+          <s-checkbox value="bank" type="primary" v-model="pembayaran">
+            <p class="mt-[-18px]">Bank Transfer</p>
+          </s-checkbox>
+        </div>
+        <div>
+          <s-checkbox 
+            value="cash" 
+            type="primary" 
+            v-model="pembayaran"
+          >
+            <p class="mt-[-18px]">Cash</p>
+          </s-checkbox>
+        </div>
+      </div>
+
+      <template #errors="{ validation }">
+        <div v-if="validation['cash']" class="text-danger-100">
+          Cash hanya bisa dilakukan untuk pengiriman COD.
+        </div>
+      </template>
+      <s-button type="submit" data-cy="submit-button">SUBMIT</s-button>
+    </s-checkbox-group>
   </s-form-input>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-const checkbox1 = ref(false)
-const checkbox2 = ref(false)
+const pengiriman = ref('');
+const pembayaran = ref('');  // Mengubah ke string untuk menyimpan satu nilai
 
 const onSubmit = () => {
-  if (!checkbox1.value) {
-    
-  }
+  console.log('submit');
 }
 </script>
