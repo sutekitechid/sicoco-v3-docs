@@ -1,0 +1,29 @@
+---
+title: Loading
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Loading/apis/apiProperties.vue';
+import ApiMethods from '@/components/Loading/apis/apiMethods.vue';
+
+import SLoading from '@/components/Loading/default.vue';
+import SLoadingRaw from '@/components/Loading/default.vue?raw';
+
+A `loading `component shows an indicator, like a spinner or progress bar, to inform users that data is being loaded. It helps improve the perceived performance and keeps users engaged.
+
+## Component Usage
+### Default
+
+<SLoading client:only="vue" class="mt-4" />
+<Code code={SLoadingRaw} lang="vue" title="default.vue" />
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Methods">
+        <ApiMethods client:only="vue" />
+    </TabItem>
+</Tabs>
