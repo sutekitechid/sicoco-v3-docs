@@ -6,16 +6,16 @@
 import ApiPropertyTable from '@/components/api-table/apiProperty.vue'
 const data = [
   {
-    name: 'onCancel',
+    name: 'can-cancel',
     type: 'boolean',
     default: '',
-    description: 'To display a different background for each row',
+    description: 'To indicate whether the loading is closable or not',
     },
   {
     name: 'active',
     type: 'boolean',
     default: '',
-    description: 'To make a table scrollable if the content is too long',
+    description: 'To open and close the loading.',
   },
 ]
 </script>
