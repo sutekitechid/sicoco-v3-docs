@@ -27,32 +27,32 @@ const data = [
     default: ''
   },
   {
-    name: 'optionLabel',
+    name: 'option-label',
     type: 'String',
     description: 'Determines the label key when using the options prop (Not active if the customFormatter prop is filled)',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
-    name: 'customFormatter',
+    name: 'custom-formatter',
     type: 'Function',
     description: 'Formats the option label',
     values: [],
-    default: 'FALSE'
+    default: ''
   },
   {
     name: 'disabled',
     type: 'Boolean',
     description: 'Disables the dropdown',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
     name: 'customFilter',
     type: 'Function',
     description: 'Filters the dropdown options (active if the searchable prop is true and the backendSearch prop is false)',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
     name: 'required',
@@ -73,21 +73,21 @@ const data = [
     type: 'Boolean',
     description: 'Searches for options in the dropdown based on user input',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
     name: 'backendSearch',
     type: 'Boolean',
     description: 'Searches for options in the dropdown based on user input from the backend',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
     name: 'loading',
     type: 'Boolean',
     description: 'Displays a loading indicator',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
     name: 'triggerClass',
@@ -108,35 +108,35 @@ const data = [
     type: 'Boolean',
     description: 'Allows selecting multiple options',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
-    name: 'closeOnSelect',
+    name: 'close-on-select',
     type: 'Boolean',
     description: 'Closes the dropdown after selecting an option',
     values: [],
-    default: 'TRUE'
+    default: true
   },
   {
-    name: 'appendToBody',
+    name: 'append-to-body',
     type: 'Boolean',
     description: 'Appends the dropdown to the body (prevents event bubbling)',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
-    name: 'mobileModal',
+    name: 'mobile-modal',
     type: 'Boolean',
     description: 'Displays a modal version on mobile devices',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
     name: 'inline',
     type: 'Boolean',
     description: 'Displays the dropdown options without a trigger (headless version)',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
     name: 'placement',
@@ -150,17 +150,17 @@ const data = [
     type: 'Boolean',
     description: 'Closes the dropdown when clicking outside the dropdown element',
     values: [],
-    default: 'TRUE'
+    default: true
   },
   {
-    name: 'hasIcon',
+    name: 'has-icon',
     type: 'Boolean',
     description: 'Adds an icon to the dropdown',
     values: [],
-    default: 'FALSE'
+    default: false
   },
   {
-    name: 'isOptionDisabled',
+    name: 'is-option-disabled',
     type: 'Function',
     description: 'Disables dropdown options when using the options prop',
     values: [],

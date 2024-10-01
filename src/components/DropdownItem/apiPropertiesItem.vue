@@ -17,7 +17,7 @@ const data = [
     type: 'Boolean',
     description: 'Disables the dropdown',
     values: [],
-    default: 'FALSE'
+    default: false
   }
 ]
 </script>
