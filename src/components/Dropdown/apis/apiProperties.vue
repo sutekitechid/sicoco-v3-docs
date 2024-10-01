@@ -48,7 +48,7 @@ const data = [
     default: false
   },
   {
-    name: 'customFilter',
+    name: 'custom-filter',
     type: 'Function',
     description: 'Filters the dropdown options (active if the searchable prop is true and the backendSearch prop is false)',
     values: [],
@@ -62,7 +62,7 @@ const data = [
     default: ''
   },
   {
-    name: 'customValidators',
+    name: 'custom-validators',
     type: 'Object',
     description: 'Adds custom validation to the dropdown. Must fill in the errors slot',
     values: [],
@@ -76,7 +76,7 @@ const data = [
     default: false
   },
   {
-    name: 'backendSearch',
+    name: 'backend-search',
     type: 'Boolean',
     description: 'Searches for options in the dropdown based on user input from the backend',
     values: [],
@@ -90,14 +90,14 @@ const data = [
     default: false
   },
   {
-    name: 'triggerClass',
+    name: 'trigger-class',
     type: 'String',
     description: 'Adds a class to the trigger button by default',
     values: [],
     default: ''
   },
   {
-    name: 'optionClass',
+    name: 'option-class',
     type: 'String',
     description: 'Adds a class to the options',
     values: [],
