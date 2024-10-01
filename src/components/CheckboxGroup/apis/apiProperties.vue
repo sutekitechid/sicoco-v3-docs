@@ -25,11 +25,11 @@ const data = [
         description: 'Checkbox validation is required',
     },
     {
-        name: 'customValidators',
+        name: 'custom-validators',
         type: 'object',
         default: '',
         values: '',
-        description: 'Add custom validation to the dropdown. Filling in the errors slots is required.',
+        description: 'Add custom validation to the checkbox. Filling in the errors slots is required.',
     },
 ]
 </script>

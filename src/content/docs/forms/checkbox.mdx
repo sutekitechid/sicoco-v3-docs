@@ -9,7 +9,6 @@ import { Tabs, TabItem } from '@astrojs/starlight/components'
 import ApiProperties from '@/components/Checkbox/apis/apiProperties.vue';
 import ApiSlots from '@/components/Checkbox/apis/apiSlots.vue'
 import ApiEvents from '@/components/Checkbox/apis/apiEvents.vue';
-import ApiMethods from '@/components/Checkbox/apis/apiMethods.vue'
 
 import ApiPropertiesCheckboxGroup from '@/components/CheckboxGroup/apis/apiProperties.vue';
 import ApiSlotsCheckboxGroup from '@/components/CheckboxGroup/apis/apiSlots.vue'
@@ -66,9 +65,6 @@ A custom `checkbox` validator ensures the checkbox meets specific criteria befor
     </TabItem>
     <TabItem label="Events">
         <ApiEvents client:only="vue" />
-    </TabItem>
-    <TabItem label="Methods">
-        <ApiMethods client:only="vue" />
     </TabItem>
 </Tabs>
 

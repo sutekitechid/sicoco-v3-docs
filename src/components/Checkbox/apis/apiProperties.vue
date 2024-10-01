@@ -60,13 +60,6 @@ const data = [
         description: 'The validation check box must be filled in',
     },
     {
-        name: 'required',
-        type: 'boolean',
-        default: 'false',
-        values: '',
-        description: 'The validation check box must be filled in',
-    },
-    {
         name: 'type',
         type: 'string',
         default: 'primary',
