@@ -1,0 +1,79 @@
+---
+title: Checkbox
+---
+
+A `checkbox` is a graphical user interface element that allows users to select one or multiple options from a set. It displays a small square that can be checked or unchecked.
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Checkbox/apis/apiProperties.vue';
+import ApiSlots from '@/components/Checkbox/apis/apiSlots.vue'
+import ApiEvents from '@/components/Checkbox/apis/apiEvents.vue';
+
+import ApiPropertiesCheckboxGroup from '@/components/CheckboxGroup/apis/apiProperties.vue';
+import ApiSlotsCheckboxGroup from '@/components/CheckboxGroup/apis/apiSlots.vue'
+
+import SCheckbox from '@/components/Checkbox/default.vue';
+import SCheckboxRaw from '@/components/Checkbox/default.vue?raw';
+
+import SCheckboxDisabled from '@/components/Checkbox/disabled.vue';
+import SCheckboxDisabledRaw from '@/components/Checkbox/disabled.vue?raw';
+
+import SCheckboxRequired from '@/components/Checkbox/required.vue';
+import SCheckboxRequiredRaw from '@/components/Checkbox/required.vue?raw';
+
+import SCheckboxCustomValidator from '@/components/Checkbox/customValidator.vue';
+import SCheckboxCustomValidatorRaw from '@/components/Checkbox/customValidator.vue?raw';
+
+## Component Usage
+### Default
+
+A default `checkbox` is a form control that shows its initial state as either checked or unchecked when the page first renders, according to its initial configuration.
+
+<SCheckbox client:only="vue" />
+<Code code={SCheckboxRaw} lang="vue" title="default.vue" />
+
+### Disabled
+
+A disabled `checkbox` is a non-interactive form element, meaning users can't check or uncheck it. It's visually distinct, often dimmed, to signal that it's not available for selection.
+
+<SCheckboxDisabled client:only="vue" />
+<Code code={SCheckboxDisabledRaw} lang="vue" title="disabled.vue" />
+
+### Required
+
+A required `checkbox` is a form element that must be checked before submitting the form, enforcing user agreement or acknowledgment of certain terms or conditions.
+
+<SCheckboxRequired client:only="vue"/>
+<Code code={SCheckboxRequiredRaw} lang="vue" title="required.vue" />
+
+### Custom Validator
+
+A custom `checkbox` validator ensures the checkbox meets specific criteria before form submission, checking it against predefined rules.
+
+<SCheckboxCustomValidator client:only="vue"/>
+<Code code={SCheckboxCustomValidatorRaw} lang="vue" title="customValidator.vue" />
+
+## API
+### Checkbox
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+    <TabItem label="Events">
+        <ApiEvents client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### CheckboxGroup
+<Tabs>
+    <TabItem label="Properties">
+        <ApiPropertiesCheckboxGroup client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlotsCheckboxGroup client:only="vue" />
+    </TabItem>
+</Tabs>
