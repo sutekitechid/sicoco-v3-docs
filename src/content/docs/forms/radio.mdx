@@ -1,0 +1,93 @@
+---
+title: Radio
+---
+
+A `radio` component enables users to choose one option from a predefined set. It ensures only one selection can be active at a time within a group.
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Radio/apis/apiProperties.vue';
+import ApiSlots from '@/components/Radio/apis/apiSlots.vue'
+import ApiEvents from '@/components/Radio/apis/apiEvents.vue';
+
+import ApiPropertiesRadioGroup from '@/components/RadioGroup/apis/apiProperties.vue';
+import ApiSlotsRadioGroup from '@/components/RadioGroup/apis/apiSlots.vue';
+import ApiEventsRadioGroup from '@/components/RadioGroup/apis/apiEvents.vue';
+
+import SRadio from '@/components/Radio/default.vue';
+import SRadioRaw from '@/components/Radio/default.vue?raw';
+
+import SRadioDisabled from '@/components/Radio/disabled.vue';
+import SRadioDisabledRaw from '@/components/Radio/disabled.vue?raw';
+
+import SRadioInvalid from '@/components/Radio/invalid.vue';
+import SRadioInvalidRaw from '@/components/Radio/invalid.vue?raw';
+
+import SRadioRequired from '@/components/Radio/required.vue';
+import SRadioRequiredRaw from '@/components/Radio/required.vue?raw';
+
+import SRadioCustomValidator from '@/components/Radio/customValidator.vue';
+import SRadioCustomValidatorRaw from '@/components/Radio/customValidator.vue?raw';
+
+## Component Usage
+### Default
+
+A default `radio` component is pre-selected to indicate a standard choice in a group of options. This helps guide users by providing a recommended selection right from the start.
+
+<SRadio client:only="vue" />
+<Code code={SRadioRaw} lang="vue" title="default.vue" />
+
+### Disabled
+
+A disabled `radio` component is inactive and cannot be selected, indicating unavailable options within a group.
+
+<SRadioDisabled client:only="vue" />
+<Code code={SRadioDisabledRaw} lang="vue" title="disabled.vue" />
+
+### Invalid
+
+An invalid `radio` component indicates that the selected option does not meet the required criteria. This prompts users to correct their choice before proceeding.
+
+<SRadioInvalid client:only="vue" />
+<Code code={SRadioInvalidRaw} lang="vue" title="invalid.vue" />
+
+### Required
+
+A required `radio` component mandates that users must select an option before submitting the form. This ensures that a choice is made, preventing incomplete submissions.
+
+<SRadioRequired client:only="vue" />
+<Code code={SRadioRequiredRaw} lang="vue" title="required.vue" />
+
+### Custom Validator
+
+A custom validator radio component lets developers set specific validation rules for user selections, enabling tailored error messages based on application needs.
+
+<SRadioCustomValidator client:only="vue"/>
+<Code code={SRadioCustomValidatorRaw} lang="vue" title="customValidator.vue" />
+
+## API
+### Radio
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+    <TabItem label="Events">
+        <ApiEvents client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### Radio Group
+<Tabs>
+    <TabItem label="Properties">
+        <ApiPropertiesRadioGroup client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlotsRadioGroup client:only="vue" />
+    </TabItem>
+    <TabItem label="Events">
+        <ApiEventsRadioGroup client:only="vue" />
+    </TabItem>
+</Tabs>
