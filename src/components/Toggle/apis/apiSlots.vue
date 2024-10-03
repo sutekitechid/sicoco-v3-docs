@@ -7,7 +7,7 @@ import ApiSlotTable from '@/components/api-table/apiSlot.vue'
 const data = [
   {
     "name": "default",
-    "description": "displays content next to the toggle",
+    "description": "Displays content next to the toggle",
     "props": ""
   },
 ]

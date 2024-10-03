@@ -23,7 +23,7 @@ const data = [
 {
   name: 'disabled',
   type: 'boolean',
-  description: 'disabled toggle',
+  description: 'Disabled toggle',
   values: '',
   default: false,
 },

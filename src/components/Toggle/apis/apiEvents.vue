@@ -7,7 +7,7 @@ import ApiEventTable from '@/components/api-table/apiEvent.vue'
 const data = [
   {
     name: 'v-model',
-    description: 'value for toggle',
+    description: 'Value for toggle',
     parameters: '',
   },
 ]
