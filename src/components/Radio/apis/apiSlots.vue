@@ -7,7 +7,7 @@ import ApiSlotTable from '@/components/api-table/apiSlot.vue'
 const data = [
   {
     name: 'default',
-    description: 'label radio button.',
+    description: 'Label radio button.',
     props: '',
     },
   {
