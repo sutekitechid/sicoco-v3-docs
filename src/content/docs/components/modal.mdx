@@ -1,0 +1,52 @@
+---
+title: Modal
+---
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Modal/apis/apiProperties.vue';
+import ApiSlots from '@/components/Modal/apis/apiSlots.vue'
+import ApiEvents from '@/components/Modal/apis/apiEvents.vue';
+import ApiMethods from '@/components/Modal/apis/apiMethods.vue';
+
+import SBasic from '@/components/Modal/basic.vue';
+import SBasicRaw from '@/components/Modal/basic.vue?raw';
+
+import SContent from '@/components/Modal/longContent.vue';
+import SContentRaw from '@/components/Modal/longContent.vue?raw';
+
+import SClos from '@/components/Modal/autoClos.vue';
+import SClosRaw from '@/components/Modal/autoClos.vue?raw';
+
+import SAction from '@/components/Modal/multiAction.vue';
+import SActionRaw from '@/components/Modal/multiAction.vue?raw';
+
+### Basic
+<SBasic client:only="vue" class="mt-4" />
+<Code code={SBasicRaw} lang="vue" title="basic.vue" />
+
+### Long Content
+<SContent client:only="vue" class="mt-4" />
+<Code code={SContentRaw} lang="vue" title="longContent.vue" />
+
+### Automatically Closed
+<SClos client:only="vue" class="mt-4" />
+<Code code={SClosRaw} lang="vue" title="autoClos.vue" />
+### Multi Action
+<SAction client:only="vue" class="mt-4" />
+<Code code={SActionRaw} lang="vue" title="multiAction.vue" />
+## Component Usage
+### API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+    <TabItem label="Events">
+        <ApiEvents client:only="vue" />
+    </TabItem>
+    <TabItem label="Methods">
+        <ApiMethods client:only="vue" />
+    </TabItem>
+</Tabs>
