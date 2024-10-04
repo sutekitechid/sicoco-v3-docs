@@ -1,0 +1,47 @@
+---
+title: Toggle
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Toggle/apis/apiProperties.vue';
+import ApiEvents from '@/components/Toggle/apis/apiEvents.vue';
+import ApiSlots from '@/components/Toggle/apis/apiSlots.vue';
+
+import SBasic from '@/components/Toggle/basic.vue';
+import SBasicRaw from '@/components/Toggle/basic.vue?raw';
+
+import SDisable from '@/components/Toggle/disable.vue';
+import SDisableRaw from '@/components/Toggle/disable.vue?raw';
+
+import SLabel from '@/components/Toggle/custom.vue';
+import SLabelRaw from '@/components/Toggle/custom.vue?raw';
+
+import SSlot from '@/components/Toggle/slot.vue';
+import SSlotRaw from '@/components/Toggle/slot.vue?raw';
+
+### Basic Toggle
+<SBasic client:only="vue" class="mt-4" />
+<Code code={SBasicRaw} lang="vue" title="basic.vue" />
+### Disable Toggle
+<SDisable client:only="vue" class="mt-4" />
+<Code code={SDisableRaw} lang="vue" title="disable.vue" />
+### Custom Toggle
+<SLabel client:only="vue" class="mt-4" />
+<Code code={SLabelRaw} lang="vue" title="custom.vue" />
+### Toggle with Slot
+<SSlot client:only="vue" class="mt-4" />
+<Code code={SSlotRaw} lang="vue" title="slot.vue" />
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+    <TabItem label="Events">
+        <ApiEvents client:only="vue" />
+    </TabItem>
+</Tabs>
