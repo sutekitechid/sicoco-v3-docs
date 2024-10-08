@@ -8,12 +8,12 @@ import ApiEventTable from '@/components/api-table/apiEvent.vue'
 const data = [
     {
         name: 'typing',
-        description: 'Ditrigger ketika user memasukkan input',
+        description: 'Triggered when the user enters input.',
         parameters: 'event: $event'
     },
     {
         name: 'keypress',
-        description: 'Ditrigger ketika user menekan tombol',
+        description: 'Triggered when the user presses the button.',
         parameters: 'event: $event'
     },
 ]
