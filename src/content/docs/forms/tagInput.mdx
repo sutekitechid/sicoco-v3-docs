@@ -1,0 +1,76 @@
+---
+title: Tag Input
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/TagInput/apis/apiProperties.vue';
+import ApiSlots from '@/components/TagInput/apis/apiSlots.vue'
+import ApiEvents from '@/components/TagInput/apis/apiEvents.vue';
+
+import STagInput from '@/components/TagInput/default.vue';
+import STagInputRaw from '@/components/TagInput/default.vue?raw';
+
+import STagInputRequired from '@/components/TagInput/required.vue';
+import STagInputRequiredRaw from '@/components/TagInput/required.vue?raw';
+
+import STagInputCustomValidator from '@/components/TagInput/customValidator.vue';
+import STagInputCustomValidatorRaw from '@/components/TagInput/customValidator.vue?raw';
+
+import STagInputCustomType from '@/components/TagInput/customType.vue';
+import STagInputCustomTypeRaw from '@/components/TagInput/customType.vue?raw';
+
+import STagInputCustomTag from '@/components/TagInput/customTag.vue';
+import STagInputCustomTagRaw from '@/components/TagInput/customTag.vue?raw';
+
+Tag `inputs` allow users to create multiple tags within a single input field, with each tag displayed as a separate item. This feature is often used for entering things like keywords or categories.
+
+## Component Usage
+### Default
+
+`Tag inputs` display individual tags within the input field, followed by a text area for entering additional tags.
+
+<STagInput client:only="vue" />
+<Code code={STagInputRaw} lang="vue" title="default.vue" />
+
+### Required
+
+A `required` tag input ensures that users must fill in a value before submitting a form. If left empty, the form will prompt an error, preventing submission until the field is completed.
+
+<STagInputRequired client:only="vue" />
+<Code code={STagInputRequiredRaw} lang="vue" title="required.vue" />
+
+### Custom Validator
+
+A tag input with a `custom validator` allows for validation rules to be defined manually, ensuring that input meets specific conditions. It provides flexibility to enforce custom logic during form submission.
+
+<STagInputCustomValidator client:only="vue" />
+<Code code={STagInputCustomValidatorRaw} lang="vue" title="customValidator.vue" />
+
+### Custom Type
+
+A `custom type` tag input allows for tags to be displayed in specific colors. This feature enhances visual organization by assigning different colors to tags based on their type or category.
+
+<STagInputCustomType client:only="vue" />
+<Code code={STagInputCustomTypeRaw} lang="vue" title="customType.vue" />
+
+### Custom Tag
+
+A `custom tag` input allows users to create and define unique tags based on their preferences. This flexibility enables personalization and better organization of information within the input field.
+
+<STagInputCustomTag client:only="vue" />
+<Code code={STagInputCustomTagRaw} lang="vue" title="customTag.vue" />
+
+
+## API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+    <TabItem label="Events">
+        <ApiEvents client:only="vue" />
+    </TabItem>
+</Tabs>
