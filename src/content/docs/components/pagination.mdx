@@ -1,0 +1,26 @@
+---
+title: Pagination
+---
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Pagination/apis/apiProperties.vue';
+import ApiEvents from '@/components/Pagination/apis/apiEvents.vue';
+
+import SBasic from '@/components/Pagination/basic.vue';
+import SBasicRaw from '@/components/Pagination/basic.vue?raw';
+
+
+## Component Usage
+### Default
+<SBasic client:only="vue" class="mt-4" />
+<Code code={SBasicRaw} lang="vue" title="basic.vue" />
+
+### API
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiEvents client:only="vue" />
+    </TabItem>
+</Tabs>
