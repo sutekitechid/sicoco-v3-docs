@@ -1,0 +1,63 @@
+---
+title: Table
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Table/apis/apiProperties.vue';
+import STableBodySlots from '@/components/Table/apis/STableBodySlots.vue';
+import STableCellSlots from '@/components/Table/apis/STableCellSlots.vue';
+import STableHeadSlots from '@/components/Table/apis/STableHeadSlots.vue';
+import STableHeadCellSlots from '@/components/Table/apis/STableHeadCellSlots.vue';
+import STableRowSlots from '@/components/Table/apis/STableRowSlots.vue';
+
+import STableBody from '@/components/Table/table.vue';
+import STableBodyRaw from '@/components/Table/table.vue?raw';
+
+## Component Usage
+### Table
+<STableBody client:only="vue" class="mt-4" />
+<Code code={STableBodyRaw} lang="vue" title="placement.vue" />
+
+## API
+### STable
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### STableBody
+<Tabs>
+    <TabItem label="Slots">
+        <STableBodySlots client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### STableCell
+<Tabs>
+    <TabItem label="Slots">
+        <STableCellSlots client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### STableHead
+<Tabs>
+    <TabItem label="Slots">
+        <STableHeadSlots client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### STableHeadCell
+<Tabs>
+    <TabItem label="Slots">
+        <STableHeadCellSlots client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### STableRow
+<Tabs>
+    <TabItem label="Slots">
+        <STableRowSlots client:only="vue" />
+    </TabItem>
+</Tabs>
