@@ -1,0 +1,59 @@
+---
+title: Accordion
+---
+
+import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import ApiProperties from '@/components/Accordion/apis/apiProperties.vue';
+import ApiSlots from '@/components/Accordion/apis/apiSlots.vue';
+
+import ApiSlotsAccordionContent from '@/components/AccordionContent/apis/apiSlots.vue'
+
+import ApiSlotsAccordionHeader from '@/components/AccordionHeader/apis/apiSlots.vue'
+
+import ApiSlotsAccordionPanel from '@/components/AccordionPanel/apis/apiSlots.vue'
+
+import SAccordion from '@/components/Accordion/default.vue';
+import SAccordionRaw from '@/components/Accordion/default.vue?raw';
+
+An accordion is a user interface element that displays content in expandable and collapsible panels. It helps manage large amounts of information in a compact layout.
+
+## Component Usage
+### Default
+
+A default `accordion` displays one section open by default while others remain collapsed. Users can click to expand or collapse additional sections as needed.
+
+<SAccordion client:only="vue" />
+<Code code={SAccordionRaw} lang="vue" title="default.vue" />
+
+## API
+### Accordion
+<Tabs>
+    <TabItem label="Properties">
+        <ApiProperties client:only="vue" />
+    </TabItem>
+    <TabItem label="Slots">
+        <ApiSlots client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### AccordionContent
+<Tabs>
+    <TabItem label="Slots">
+        <ApiSlotsAccordionContent client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### AccordionHeader
+<Tabs>
+    <TabItem label="Slots">
+        <ApiSlotsAccordionHeader client:only="vue" />
+    </TabItem>
+</Tabs>
+
+### AccordionPanel
+<Tabs>
+    <TabItem label="Slots">
+        <ApiSlotsAccordionPanel client:only="vue" />
+    </TabItem>
+</Tabs>
