@@ -6,7 +6,7 @@
 import ApiPropertyTable from '@/components/api-table/apiProperty.vue'
 const data = [
     {
-        name: 'alwaysOpen',
+        name: 'always-open',
         type: 'false',
         default: '',
         values: '',
