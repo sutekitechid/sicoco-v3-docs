@@ -13,7 +13,6 @@ const data = [
         default: 1,
     },
     {
-
         name: 'per-page',
         type: 'number',
         description: 'Data displayed per page',

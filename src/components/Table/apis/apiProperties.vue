@@ -42,7 +42,7 @@ const data = [
     default: false,
   },
   {
-    name: 'topHorizontalScroll',
+    name: 'top-horizontal-scroll',
     type: 'boolean',
     description: 'Displays a scrollbar at the top of the header',
     values: '',
