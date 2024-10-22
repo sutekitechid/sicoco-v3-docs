@@ -54,7 +54,13 @@ export default defineConfig({
             autogenerate: {
               directory: 'reference',
             },
+        },
+        {
+          label: 'Misc',
+          autogenerate: {
+            directory: 'misc',
           },
+        },
         ],
     }),
     vue({ appEntrypoint: '/src/pages/_app' }),
