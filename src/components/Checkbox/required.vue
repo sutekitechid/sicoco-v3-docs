@@ -1,23 +1,29 @@
 <template>
-  <s-form-input @submit="onSubmit">
-    <s-checkbox class="mt-3" type="primary" v-model="input" value="Primary" required>
-      <p class="mt-[-19px]">Accept Terms and Conditions</p>
-        <template #required>
-          <p class="ml-[-210px] text-red-90">Checkbox must be checked.</p>
-        </template>
-    </s-checkbox>
-    <div>
-       <s-button type="submit">SUBMIT</s-button>
-    </div>
-  </s-form-input>
+	<s-form-input @submit="onSubmit">
+		<SCheckboxGroup :value="input" required>
+			<s-checkbox class="mt-3" v-model="input" value="Primary" required>
+				<p>Accept Terms and Conditions</p>
+			</s-checkbox>
+			<template #required>
+				<p class="text-red-90">Checkbox must be checked.</p>
+			</template>
+		</SCheckboxGroup>
+		<s-button type="submit">SUBMIT</s-button>
+	</s-form-input>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import {
+	SCheckbox,
+	SFormInput,
+	SButton,
+	SCheckboxGroup,
+} from '@sutekitechid/sicoco-v3-next'
 
-const input = ref('')
+const input = ref()
 
 const onSubmit = () => {
-  console.log('submit')
+	console.log('submit')
 }
 </script>

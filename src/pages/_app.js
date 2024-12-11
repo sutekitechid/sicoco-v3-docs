@@ -1,6 +1,2 @@
-import { sicocoV3 } from '@sutekipub/flowbite-vue'
-import '@sutekipub/flowbite-vue/dist/style.css'
-
-export default (app) => {
-  app.use(sicocoV3)
-}
+import '@sutekitechid/sicoco-v3-next/dist/assets/style.css'
+import '@sutekitechid/sicoco-v3-next/dist/assets/icomoon/style.css'

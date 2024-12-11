@@ -1,55 +1,50 @@
 <template>
-  <div>
-    <!-- Trigger button for the multi-action modal -->
-    <SButton @click="showModal">Open Multi-Action Modal</SButton>
+	<div>
+		<!-- Trigger button for the multi-action modal -->
+		<SButton @click="dialogOpened = true">Open Multi-Action Modal</SButton>
 
-    <!-- Multi-Action Modal -->
-    <SModal
-      v-if="isModalVisible"
-      name="multi-action-modal"
-      title="Multi-Action Modal"
-      subtitle="Choose an action."
-      :isAutoClose="false"
-      :defaultHidden="false"
-      @close="handleClose"
-    >
-      <template #default>
-        <div class="profile-info" style="padding: 64px; background-color: #f5f5f5; color: black">
-            <p>Choose what you want to do:</p>
-            <SButton @click="saveChanges" class="mr-2">Save</SButton>
-            <SButton @click="discardChanges" class="mr-2">Discard</SButton>
-            <SButton @click="closeModal">Cancel</SButton>
-        </div>
-      </template>
-    </SModal>
-  </div>
+		<SDialog v-model:open="dialogOpened">
+			<SDialogContent class="text-black text-center w-[400px]">
+				<div class="flex flex-col gap-2 justify-center">
+					<div
+						class="rounded-full h-12 w-12 flex items-center justify-center bg-success-100/10 m-auto"
+					>
+						<div
+							class="rounded-full h-9 w-9 flex items-center justify-center bg-success-100/20"
+						>
+							<i class="si-check-circle text-success-100 h-4 w-4"></i>
+						</div>
+					</div>
+					<h2 class="text-xl font-bold">Successfull</h2>
+					<p class="text-neutral-60 text-sm">
+						This blog post has been published. Team members will be able to edit
+						this post and republish changes.
+					</p>
+					<div class="flex gap-4">
+						<SButton outlined @click="dialogOpened = false" class="w-full"
+							>Batal</SButton
+						>
+						<SButton class="w-full">Confirm</SButton>
+					</div>
+				</div>
+			</SDialogContent>
+		</SDialog>
+	</div>
 </template>
 
 <script>
+import { SButton, SDialog, SDialogContent } from '@sutekitechid/sicoco-v3-next'
+
 export default {
-  data() {
-    return {
-      isModalVisible: false,
-    };
-  },
-  methods: {
-    showModal() {
-      this.isModalVisible = true;
-    },
-    closeModal() {
-      this.isModalVisible = false;
-    },
-    saveChanges() {
-      console.log("Changes saved!");
-      this.closeModal();
-    },
-    discardChanges() {
-      console.log("Changes discarded!");
-      this.closeModal();
-    },
-    handleClose() {
-      console.log("Modal closed");
-    },
-  },
-};
+	components: {
+		SButton,
+		SDialog,
+		SDialogContent,
+	},
+	data() {
+		return {
+			dialogOpened: false,
+		}
+	},
+}
 </script>

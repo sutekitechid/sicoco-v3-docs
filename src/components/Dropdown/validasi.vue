@@ -1,60 +1,53 @@
 <template>
-  <div>
-    <SDropdown
-      v-model="data.enrollment_path.id"
-      :custom-formatter="(item) => admissionPaths.find((path) => path.id === item)?.name || ''"
-      :placeholder="$t('select')"
-      @change="validateSelection"
-      required
-    >
-      <SDropdownItem
-        v-for="path in admissionPaths"
-        :key="path.id"
-        :value="path.id"
-      >
-        {{ path.name }}
-      </SDropdownItem>
-    </SDropdown>
+	<SFormInput class="dropdown">
+		<SDropdown
+			v-model="data.enrollment_path"
+			placeholder="Please select an enrollment path"
+			required
+		>
+			<SDropdownItem
+				v-for="path in admissionPaths"
+				:key="path.id"
+				:value="path.id"
+			>
+				{{ path.name }}
+			</SDropdownItem>
+			<template #required>
+				<div>Please select an enrollment path</div>
+			</template>
+		</SDropdown>
 
-    <div v-if="errorMessage">
-      {{ errorMessage }}
-    </div>
-
-    <s-button @click="submitForm">Submit</s-button>
-  </div>
+		<s-button type="submit">Submit</s-button>
+	</SFormInput>
 </template>
 
 <script>
+import {
+	SDropdown,
+	SDropdownItem,
+	SFormInput,
+	SButton,
+} from '@sutekitechid/sicoco-v3-next'
+
 export default {
-  data() {
-    return {
-      data: {
-        enrollment_path: {
-          id: null
-        }
-      },
-      admissionPaths: [
-        { id: 1, name: 'Path 1' },
-        { id: 2, name: 'Path 2' },
-        { id: 3, name: 'Path 3' },
-      ],
-      errorMessage: '' 
-    };
-  },
-  methods: {
-    validateSelection() {
-      if (!this.data.enrollment_path.id) {
-        this.errorMessage = 'Please select an enrollment path.';
-      } else {
-        this.errorMessage = ''; 
-      }
-    },
-    submitForm() {
-      this.validateSelection();
-      if (!this.errorMessage) {
-        alert('Form submitted successfully!');
-      }
-    }
-  }
-};
+	components: {
+		SDropdown,
+		SDropdownItem,
+		SFormInput,
+		SButton,
+	},
+	data() {
+		return {
+			data: {
+				enrollment_path: undefined,
+			},
+			admissionPaths: [
+				{ id: 1, name: 'Path 1' },
+				{ id: 2, name: 'Path 2' },
+				{ id: 3, name: 'Path 3' },
+			],
+			errorMessage: '',
+		}
+	},
+}
 </script>

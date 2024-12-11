@@ -14,7 +14,7 @@
     "@astrojs/starlight": "^0.25.5",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vue": "^4.5.0",
-    "@sutekipub/flowbite-vue": "^1.0.33",
+    "@sutekitechid/sicoco-v3-next": "^3.0.0-alpha.4",
     "astro": "^4.10.2",
     "sharp": "^0.32.5",
     "tailwindcss": "^3.4.10",

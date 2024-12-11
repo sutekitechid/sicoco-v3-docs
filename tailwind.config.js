@@ -7,7 +7,7 @@ module.exports = {
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     './public/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    './node_modules/@sutekipub/flowbite-vue/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    './node_modules/@sutekitechid/sicoco-v3-next/dist/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
   ],
-  presets: [require('./node_modules/@sutekipub/flowbite-vue/config/configPreset.js')]
+  presets: [require('./node_modules/@sutekitechid/sicoco-v3-next/dist/config/configPreset.js')]
 }
