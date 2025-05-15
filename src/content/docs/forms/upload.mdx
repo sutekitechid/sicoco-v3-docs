@@ -1,0 +1,73 @@
+---
+title: Upload
+---
+
+An `Upload` component is a UI element that allows users to select and upload files from their device to a server or application. It is commonly used in forms or content management systems to handle file attachments, images, or documents.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Upload/apis/apiProperties.vue'
+import ApiSlots from '@/components/upload/apis/apiSlots.vue'
+
+import SUploadDisabled from '@/components/Upload/disabled.vue'
+import SUploadDisabledRaw from '@/components/Upload/disabled.vue?raw'
+
+import SUploadReadonly from '@/components/Upload/readonly.vue'
+import SUploadReadonlyRaw from '@/components/Upload/readonly.vue?raw'
+
+import SUploadValidation from '@/components/Upload/validation.vue'
+import SUploadValidationRaw from '@/components/Upload/validation.vue?raw'
+
+import SUploadDefault from '@/components/Upload/default.vue'
+import SUploadDefaultRaw from '@/components/Upload/default.vue?raw'
+
+import SUploadSlots from '@/components/Upload/slots.vue'
+import SUploadSlotsRaw from '@/components/Upload/slots.vue?raw'
+
+## Component Usage
+
+### Default
+
+A default upload is a basic UI element that allows users to select and upload a file.
+
+<SUploadDefault client:only='vue' class='mt-4' />
+<Code code={SUploadDefaultRaw} lang='vue' title='default.vue' />
+
+### Disabled
+
+A disabled upload prevents users from interacting with the upload button or selecting files.
+
+<SUploadDisabled client:only='vue' class='mt-4' />
+<Code code={SUploadDisabledRaw} lang='vue' title='disabled.vue' />
+
+### Readonly
+
+A readonly upload displays the upload component in a non-editable state.
+
+<SUploadReadonly client:only='vue' class='mt-4' />
+<Code code={SUploadReadonlyRaw} lang='vue' title='readonly.vue' />
+
+### Validation
+
+The `validation` prop restricts the file types or conditions that can be selected for upload. Use it to ensure users only upload files that meet specific criteria, such as file type or size.
+
+<SUploadValidation client:only='vue' class='mt-4 ' />
+<Code code={SUploadValidationRaw} lang='vue' title='validation.vue' />
+
+### Slots
+
+You can customize the upload component using slots for the button, icon, or label.
+
+<SUploadSlots client:only='vue' class='mt-4' />
+<Code code={SUploadSlotsRaw} lang='vue' title='slots.vue' />
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<ApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
