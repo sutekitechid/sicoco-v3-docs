@@ -1,49 +1,53 @@
 <template>
-  <div>
-    <SButton @click="showModal">Open Image Modal</SButton>
+	<div>
+		<SButton @click="isModalVisible = true">Open Image Dialog</SButton>
 
-    <SModal
-      v-if="isModalVisible"
-      name="image-modal"
-      :isAutoClose="false"
-      :defaultHidden="false"
-      @close="handleClose"
-    >
-      <template #default>
-        <div style="width: 640px; max-width: 100%; padding: 20px;">
-          <img
-            src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2020/12/22/732885074.jpg"
-            alt="Image Placeholder"
-            style="width: 100%; max-width: 1000px; height: auto;"
-          />
-          <div class="profile-info" style="padding: 15px; background-color: #f5f5f5;">
-            <p style="text-align: left; margin-top: 20px; margin-bottom: 20px; color: black;">
-              Cats, in Latin, Felis silvestris catus, are a type of carnivore. The word "cat" usually refers to a "cat" that has been domesticated, but can also refer to "big cats" such as lions, tigers, and leopards.
-            </p>
-          </div>
-        </div>
-      </template>
-    </SModal>
-  </div>
+		<SDialog v-model:open="isModalVisible">
+			<SDialogContent class="max-w-none w-fit">
+				<div style="width: 640px; max-width: 100%">
+					<img
+						src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2020/12/22/732885074.jpg"
+						alt="Image Placeholder"
+						style="width: 100%; max-width: 1000px; height: auto"
+					/>
+					<div
+						class="profile-info"
+						style="padding: 15px; background-color: #f5f5f5"
+					>
+						<p
+							style="
+								text-align: left;
+								margin-top: 20px;
+								margin-bottom: 20px;
+								color: black;
+							"
+						>
+							Cats, in Latin, Felis silvestris catus, are a type of carnivore.
+							The word "cat" usually refers to a "cat" that has been
+							domesticated, but can also refer to "big cats" such as lions,
+							tigers, and leopards.
+						</p>
+					</div>
+				</div>
+				<SButton @click="isModalVisible = false">Close</SButton>
+			</SDialogContent>
+		</SDialog>
+	</div>
 </template>
 
 <script>
+import { SButton, SDialog, SDialogContent } from '@sutekitechid/sicoco-v3-next'
+
 export default {
-  data() {
-    return {
-      isModalVisible: false,
-    };
-  },
-  methods: {
-    showModal() {
-      this.isModalVisible = true;
-    },
-    closeModal() {
-      this.isModalVisible = false;
-    },
-    handleClose() {
-      this.isModalVisible = false;
-    },
-  },
-};
+	components: {
+		SButton,
+		SDialog,
+		SDialogContent,
+	},
+	data() {
+		return {
+			isModalVisible: false,
+		}
+	},
+}
 </script>
