@@ -73,3 +73,9 @@ summary {
 		--color-neutral-100: 250 250 250;
 	}
 }
+
+.sl-markdown-content #component-sicoco p,
+.sl-markdown-content #component-sicoco div,
+.sl-markdown-content #component-sicoco button {
+	@apply !mt-0;
+}
