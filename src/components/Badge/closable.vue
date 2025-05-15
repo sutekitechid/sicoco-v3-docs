@@ -1,22 +1,16 @@
 <template>
-	<div class="flex gap-2 flex-wrap">
-		<s-badge closable type="primary">Badge</s-badge>
-		<s-badge closable type="success">Badge</s-badge>
-		<s-badge closable type="warning">Badge</s-badge>
-		<s-badge closable type="danger">Badge</s-badge>
-		<s-badge closable type="dark-danger">Badge</s-badge>
-		<s-badge closable type="grey">Badge</s-badge>
-		<s-badge closable type="secondary">Badge</s-badge>
-		<s-badge closable type="purple">Badge</s-badge>
+	<div class="flex gap-2">
+		<s-badge closeable variant="default">Badge</s-badge>
+		<s-badge closeable variant="primary">Badge</s-badge>
+		<s-badge closeable variant="success">Badge</s-badge>
+		<s-badge closeable variant="warning">Badge</s-badge>
+		<s-badge closeable variant="danger">Badge</s-badge>
+		<s-badge closeable variant="secondary">Badge</s-badge>
+		<s-badge closeable variant="grey">Badge</s-badge>
+		<s-badge closeable variant="gray">Badge</s-badge>
 	</div>
 </template>
 
-<script lang="ts">
-import { SButton } from '@sutekitechid/sicoco-v3-next'
-
-export default {
-	components: {
-		SButton,
-	},
-}
+<script setup>
+import { SBadge } from '@sutekitechid/sicoco-v3-next'
 </script>
