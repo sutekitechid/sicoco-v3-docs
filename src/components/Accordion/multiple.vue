@@ -1,11 +1,12 @@
 <template>
-	<SAccordion class="w-full" v-model="accordionValue">
+	<SAccordion class="w-full" type="multiple">
 		<SAccordionItem value="1">
 			<SAccordionTrigger>
 				<template #label> Header 1 </template>
 			</SAccordionTrigger>
 			<SAccordionContent>
-				Content {{ accordionValue }} is opened!
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry.
 			</SAccordionContent>
 		</SAccordionItem>
 		<SAccordionItem value="2">
@@ -13,7 +14,8 @@
 				<template #label> Header 2 </template>
 			</SAccordionTrigger>
 			<SAccordionContent>
-				Content {{ accordionValue }} is opened!
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry.
 			</SAccordionContent>
 		</SAccordionItem>
 	</SAccordion>
@@ -28,5 +30,5 @@ import {
 	SAccordionContent,
 } from '@sutekitechid/sicoco-v3-next'
 
-const accordionValue = ref('1')
+const accordionValue = ref([])
 </script>
