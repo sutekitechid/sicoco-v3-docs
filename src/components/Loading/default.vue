@@ -1,17 +1,19 @@
 <template>
-  <s-button @click="showLoading">Click Loading</s-button>
+	<s-button @click="showLoading">Click Loading</s-button>
+	<s-loading ref="loading"></s-loading>
 </template>
 
 <script setup>
-import { inject } from 'vue';
+import { ref } from 'vue'
+import { SButton, SLoading } from '@sutekitechid/sicoco-v3-next'
 
-const loading = inject('loading');
+const loading = ref(null)
 
 const showLoading = () => {
-  loading.open();
+	loading.value.open()
 
-  setTimeout(() => {
-    loading.close();
-  }, 3000);
-};
+	setTimeout(() => {
+		loading.value.close()
+	}, 3000)
+}
 </script>
