@@ -46,7 +46,14 @@ const data = [
 		name: 'variant',
 		type: 'string',
 		default: "'primary'",
-		values: ['primary', 'success', 'warning', 'danger', 'info', 'secondary'],
+		values: [
+			'primary',
+			'success',
+			'warning',
+			'danger',
+			'gray/grey',
+			'secondary',
+		],
 		description: 'The variant of the switch, which determines the color.',
 	},
 ]
