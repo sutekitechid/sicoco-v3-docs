@@ -1,3 +1,9 @@
 {
-	"conventionalCommits.scopes": ["upload", "toast", "badge", "alert"]
+	"conventionalCommits.scopes": [
+		"upload",
+		"toast",
+		"badge",
+		"alert",
+		"contributing"
+	]
 }
