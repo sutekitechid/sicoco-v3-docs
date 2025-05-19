@@ -1,6 +1,8 @@
 {
 	"conventionalCommits.scopes": [
+    "badge",
 		"checkbox",
+    "loading",
 		"upload",
 		"toast",
 		"badge",
