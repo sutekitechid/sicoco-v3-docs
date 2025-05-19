@@ -1,6 +1,6 @@
 <template>
-	<div class="flex flex-wrap gap-4">
-		<s-checkbox v-model="type" value="Primary" variant="primary" class="mt-4">
+	<div class="flex flex-wrap gap-4 mt-2" id="component-sicoco">
+		<s-checkbox v-model="type" value="Primary" variant="primary">
 			Primary
 		</s-checkbox>
 		<s-checkbox v-model="type" value="Success" variant="success">
