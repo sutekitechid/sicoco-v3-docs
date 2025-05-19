@@ -1,0 +1,73 @@
+---
+title: Toast
+---
+
+A `Toast` component is a small, non-intrusive notification that appears temporarily to inform users about events or actions.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Toast/apis/apiProperties.vue'
+import ApiMethods from '@/components/Toast/apis/apiMethods.vue'
+
+import ToastBasic from '@/components/Toast/basic.vue'
+import ToastBasicRaw from '@/components/Toast/basic.vue?raw'
+
+import ToastVariant from '@/components/Toast/variant.vue'
+import ToastVariantRaw from '@/components/Toast/variant.vue?raw'
+
+import ToastDuration from '@/components/Toast/duration.vue'
+import ToastDurationRaw from '@/components/Toast/duration.vue?raw'
+
+import ToastIndefinite from '@/components/Toast/indefinite.vue'
+import ToastIndefiniteRaw from '@/components/Toast/indefinite.vue?raw'
+
+import ToastPosition from '@/components/Toast/position.vue'
+import ToastPositionRaw from '@/components/Toast/position.vue?raw'
+
+## Component Usage
+
+### Basic
+
+A basic toast displays a simple notification with a title and description.
+
+<ToastBasic client:only='vue' class='mt-4' />
+<Code code={ToastBasicRaw} lang='vue' title='basic.vue' />
+
+### Variant
+
+You can change the visual style of the toast using the `variant` property.
+
+<ToastVariant client:only='vue' class='mt-4' />
+<Code code={ToastVariantRaw} lang='vue' title='variant.vue' />
+
+### Duration
+
+Set how long the toast should be visible using the `duration` property.
+
+<ToastDuration client:only='vue' class='mt-4' />
+<Code code={ToastDurationRaw} lang='vue' title='duration.vue' />
+
+### Indefinite
+
+Make the toast stay visible until manually dismissed using the `indefinite` property.
+
+<ToastIndefinite client:only='vue' class='mt-4' />
+<Code code={ToastIndefiniteRaw} lang='vue' title='indefinite.vue' />
+
+### Position
+
+You can control where the toast appears on the screen using the `position` property.
+
+<ToastPosition client:only='vue' class='mt-4' />
+<Code code={ToastPositionRaw} lang='vue' title='position.vue' />
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Methods'>
+		<ApiMethods client:only='vue' />
+	</TabItem>
+</Tabs>

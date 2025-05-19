@@ -1,12 +1,32 @@
 <template>
-    <SAccordion class="mt-4">
-        <SAccordionPanel>
-            <SAccordionHeader>Header 1</SAccordionHeader>
-            <SAccordionContent>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis nulla non nisi laborum libero.</SAccordionContent>
-        </SAccordionPanel>
-        <SAccordionPanel>
-            <SAccordionHeader>Header 2</SAccordionHeader>
-            <SAccordionContent>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis nulla non nisi laborum libero.</SAccordionContent>
-        </SAccordionPanel>
-    </SAccordion>
+	<SAccordion class="w-full" v-model="accordionValue">
+		<SAccordionItem value="1">
+			<SAccordionTrigger>
+				<template #label> Header 1 </template>
+			</SAccordionTrigger>
+			<SAccordionContent>
+				Content {{ accordionValue }} is opened!
+			</SAccordionContent>
+		</SAccordionItem>
+		<SAccordionItem value="2">
+			<SAccordionTrigger>
+				<template #label> Header 2 </template>
+			</SAccordionTrigger>
+			<SAccordionContent>
+				Content {{ accordionValue }} is opened!
+			</SAccordionContent>
+		</SAccordionItem>
+	</SAccordion>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import {
+	SAccordion,
+	SAccordionItem,
+	SAccordionTrigger,
+	SAccordionContent,
+} from '@sutekitechid/sicoco-v3-next'
+
+const accordionValue = ref('1')
+</script>

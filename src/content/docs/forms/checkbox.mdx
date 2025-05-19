@@ -2,7 +2,7 @@
 title: Checkbox
 ---
 
-A `checkbox` is a graphical user interface element that allows users to select one or multiple options from a set. It displays a small square that can be checked or unchecked.
+A `Checkbox` is a graphical user interface element that allows users to select one or multiple options from a set. It displays a small square that can be checked or unchecked.
 
 import { Code } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components'
@@ -28,28 +28,28 @@ import SCheckboxCustomValidatorRaw from '@/components/Checkbox/customValidator.v
 ## Component Usage
 ### Default
 
-A default `checkbox` is a form control that shows its initial state as either checked or unchecked when the page first renders, according to its initial configuration.
+A default `Checkbox` is a form control that shows its initial state as either checked or unchecked when the page first renders, according to its initial configuration.
 
 <SCheckbox client:only="vue" />
 <Code code={SCheckboxRaw} lang="vue" title="default.vue" />
 
 ### Disabled
 
-A disabled `checkbox` is a non-interactive form element, meaning users can't check or uncheck it. It's visually distinct, often dimmed, to signal that it's not available for selection.
+A disabled `Checkbox` is a non-interactive form element, meaning users can't check or uncheck it. It's visually distinct, often dimmed, to signal that it's not available for selection.
 
 <SCheckboxDisabled client:only="vue" />
 <Code code={SCheckboxDisabledRaw} lang="vue" title="disabled.vue" />
 
 ### Required
 
-A required `checkbox` is a form element that must be checked before submitting the form, enforcing user agreement or acknowledgment of certain terms or conditions.
+A required `Checkbox` is a form element that must be checked before submitting the form, enforcing user agreement or acknowledgment of certain terms or conditions.
 
 <SCheckboxRequired client:only="vue"/>
 <Code code={SCheckboxRequiredRaw} lang="vue" title="required.vue" />
 
 ### Custom Validator
 
-A custom `checkbox` validator ensures the checkbox meets specific criteria before form submission, checking it against predefined rules.
+A custom `Checkbox` validator ensures the checkbox meets specific criteria before form submission, checking it against predefined rules.
 
 <SCheckboxCustomValidator client:only="vue"/>
 <Code code={SCheckboxCustomValidatorRaw} lang="vue" title="customValidator.vue" />

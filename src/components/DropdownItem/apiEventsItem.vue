@@ -1,14 +1,15 @@
 <template>
-  <ApiEventTable :events="data" />
+	<ApiEventTable :events="data" />
 </template>
 
 <script setup>
 import ApiEventTable from '@/components/api-table/apiEvent.vue'
 const data = [
-  {
-    name: 'click',
-    description: 'Triggers when the user clicks an option',
-    parameters: 'event: $event',
-  },
+	{
+		name: 'select',
+		description:
+			'Emitted when this dropdown item is selected (clicked). Payload: the value of the item (props.value).',
+		parameters: 'value: any',
+	},
 ]
 </script>
