@@ -1,0 +1,11 @@
+/* Add this file and import it in your main style or component if needed */
+
+.s-calendar-cell {
+  border-width: 0 !important;
+}
+
+.s-calendar-cell[data-important="true"] {
+  border-width: 2px !important;
+  border-style: solid !important;
+  /* Optionally, you can set border-color dynamically via inline style or class */
+}

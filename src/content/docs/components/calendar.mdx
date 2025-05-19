@@ -1,0 +1,83 @@
+---
+title: Calendar
+---
+
+A `Calendar` component displays a monthly calendar view and allows users to select dates. It supports single date selection, highlighting important dates, and more.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Calendar/apis/apiProperties.vue'
+import ApiEvents from '@/components/Calendar/apis/apiEvents.vue'
+import ApiSlots from '@/components/Calendar/apis/apiSlots.vue'
+
+import CalendarDefault from '@/components/Calendar/default.vue'
+import CalendarDefaultRaw from '@/components/Calendar/default.vue?raw'
+
+import CalendarReadonly from '@/components/Calendar/readonly.vue'
+import CalendarReadonlyRaw from '@/components/Calendar/readonly.vue?raw'
+
+import CalendarImportantDates from '@/components/Calendar/importantDates.vue'
+import CalendarImportantDatesRaw from '@/components/Calendar/importantDates.vue?raw'
+
+import CalendarShowOutsideViewDates from '@/components/Calendar/showOutsideViewDates.vue'
+import CalendarShowOutsideViewDatesRaw from '@/components/Calendar/showOutsideViewDates.vue?raw'
+
+import CalendarHeaderSlot from '@/components/Calendar/headerSlot.vue'
+import CalendarHeaderSlotRaw from '@/components/Calendar/headerSlot.vue?raw'
+
+import CalendarYearsRange from '@/components/Calendar/yearsRange.vue'
+import CalendarYearsRangeRaw from '@/components/Calendar/yearsRange.vue?raw'
+
+## Component Usage
+
+### Default
+
+<CalendarDefault client:only='vue' class='mt-4' />
+<Code code={CalendarDefaultRaw} lang='vue' title='default.vue' />
+
+### Readonly
+
+<CalendarReadonly client:only='vue' class='mt-4' />
+<Code code={CalendarReadonlyRaw} lang='vue' title='readonly.vue' />
+
+### Years Range
+
+You can customize the years available in the year dropdown using the `yearsRange` prop.
+
+<CalendarYearsRange client:only='vue' class='mt-4' />
+<Code code={CalendarYearsRangeRaw} lang='vue' title='yearsRange.vue' />
+
+### Important Dates
+
+<CalendarImportantDates client:only='vue' class='mt-4' />
+<Code code={CalendarImportantDatesRaw} lang='vue' title='importantDates.vue' />
+
+### Show Outside View Dates
+
+<CalendarShowOutsideViewDates client:only='vue' class='mt-4' />
+<Code
+	code={CalendarShowOutsideViewDatesRaw}
+	lang='vue'
+	title='showOutsideViewDates.vue'
+/>
+
+### Custom Header Slot
+
+You can customize the calendar header using the `header` slot.
+
+<CalendarHeaderSlot client:only='vue' class='mt-4' />
+<Code code={CalendarHeaderSlotRaw} lang='vue' title='headerSlot.vue' />
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Events'>
+		<ApiEvents client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<ApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>

@@ -12,7 +12,8 @@
 		"radio",
 		"switch",
 		"dropdown",
-		"skeleton"
+		"calendar",
+		"skeleton",
 		"textarea",
 		"tooltip"
 	]
