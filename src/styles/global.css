@@ -74,9 +74,12 @@ summary {
 	}
 }
 
-.sl-markdown-content
-	#component-sicoco
-	:is(i, p, div, button, input, ul, li, h1, h2, h3, h4, h5, h6) {
+.sl-markdown-content #component-sicoco,
+.component-sicoco
+	:is(i, p, div, button, input, ul, li, h1, h2, h3, h4, h5, h6, label) {
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
+}
+.sl-markdown-content .component-sicoco :is(th, td) {
+	vertical-align: middle !important;
 }
