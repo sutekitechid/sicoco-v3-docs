@@ -11,6 +11,8 @@
 		"contributing",
 		"switch",
 		"dropdown",
-		"tooltip"
+		"tooltip",
+		"datatable",
+		"table"
 	]
 }
