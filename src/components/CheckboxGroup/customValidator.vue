@@ -3,7 +3,7 @@
 		<s-checkbox-group
 			:value="payment"
 			:custom-validators="{
-				cash: value => {
+				cash: (value) => {
 					return !(payment === 'cash' && delivery !== 'cod')
 				},
 			}"
@@ -47,7 +47,7 @@
 			</div>
 
 			<template #errors="{ validation }">
-				<div v-if="validation['cash']" class="text-danger-100">
+				<div v-if="validation.cash.$invalid" class="text-danger-100">
 					Cash can only be used for COD delivery.
 				</div>
 			</template>

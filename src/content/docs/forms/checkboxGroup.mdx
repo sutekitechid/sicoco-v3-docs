@@ -1,0 +1,60 @@
+---
+title: Checkbox Group
+---
+
+A `CheckboxGroup` is a graphical user interface element that allows users to select multiple options from a set.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/CheckboxGroup/apis/apiProperties.vue'
+import ApiSlots from '@/components/CheckboxGroup/apis/apiSlots.vue'
+
+import ApiPropertiesCheckboxGroup from '@/components/CheckboxGroup/apis/apiProperties.vue'
+import ApiSlotsCheckboxGroup from '@/components/CheckboxGroup/apis/apiSlots.vue'
+
+import SCheckboxGroup from '@/components/CheckboxGroup/default.vue'
+import SCheckboxGroupRaw from '@/components/CheckboxGroup/default.vue?raw'
+
+import SCheckboxRequired from '@/components/CheckboxGroup/required.vue'
+import SCheckboxRequiredRaw from '@/components/CheckboxGroup/required.vue?raw'
+
+import SCheckboxCustomValidator from '@/components/CheckboxGroup/customValidator.vue'
+import SCheckboxCustomValidatorRaw from '@/components/CheckboxGroup/customValidator.vue?raw'
+
+## Component Usage
+
+### Default
+
+Set of interactive buttons where multiple options can be selected at a time.
+
+<SCheckboxGroup client:only="vue" />
+<Code code={SCheckboxGroupRaw} lang="vue" title="default.vue" />
+
+### Required
+
+A required `CheckboxGroup` is a form element that must be checked before submitting the form, enforcing user agreement or acknowledgment of certain terms or conditions.
+
+<SCheckboxRequired client:only="vue" />
+<Code code={SCheckboxRequiredRaw} lang="vue" title="required.vue" />
+
+### Custom Validator
+
+A custom `CheckboxGroup` validator ensures the checkbox meets specific criteria before form submission, checking it against predefined rules.
+
+<SCheckboxCustomValidator client:only="vue" />
+<Code
+	code={SCheckboxCustomValidatorRaw}
+	lang="vue"
+	title="customValidator.vue"
+/>
+
+## API
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiPropertiesCheckboxGroup client:only="vue" />
+	</TabItem>
+	<TabItem label="Slots">
+		<ApiSlotsCheckboxGroup client:only="vue" />
+	</TabItem>
+</Tabs>
