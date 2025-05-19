@@ -9,9 +9,12 @@
 		"toast",
 		"alert",
 		"contributing",
+		"radio",
 		"switch",
 		"dropdown",
 		"calendar",
+		"skeleton",
+		"textarea",
 		"tooltip"
 	]
 }
