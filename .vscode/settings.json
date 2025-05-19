@@ -1,3 +1,13 @@
 {
-	"conventionalCommits.scopes": ["badge", "loading", "upload", "contributing"]
+	"conventionalCommits.scopes": [
+    "badge",
+		"checkbox",
+    "loading",
+		"upload",
+		"toast",
+		"badge",
+		"alert",
+		"contributing",
+		"dropdown"
+	]
 }

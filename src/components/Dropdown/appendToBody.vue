@@ -1,11 +1,10 @@
 <template>
-	<div id="component-sicoco">
-		<p>Value : {{ selectedOptions }}</p>
+	<div class="flex flex-col gap-6" id="component-sicoco">
+		<label>Append To Body</label>
 		<SDropdown
-			v-model="selectedOptions"
-			class="w-full"
-			placeholder="Choose options"
-			multiple
+			v-model="selectedAppendToBody"
+			:append-to-body="true"
+			placeholder="Append To Body"
 		>
 			<SDropdownItem
 				v-for="option in dropdownOptions"
@@ -22,7 +21,7 @@
 import { ref } from 'vue'
 import { SDropdown, SDropdownItem } from '@sutekitechid/sicoco-v3-next'
 
-const selectedOptions = ref([])
+const selectedAppendToBody = ref()
 const dropdownOptions = [
 	{ label: 'Option 1', value: 1 },
 	{ label: 'Option 2', value: 2 },
