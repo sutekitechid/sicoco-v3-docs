@@ -12,6 +12,7 @@
 		"radio",
 		"switch",
 		"dropdown",
+		"textarea",
 		"tooltip"
 	]
 }
