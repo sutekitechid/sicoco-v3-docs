@@ -4,12 +4,12 @@
 
 <script setup>
 import ApiEventTable from '@/components/api-table/apiEvent.vue'
+
 const data = [
 	{
-		name: 'select',
-		description:
-			'Emitted when this dropdown item is selected (clicked). Payload: the value of the item (props.value).',
-		parameters: 'value: any',
+		name: 'update:modelValue',
+		description: 'Emitted when the model value changes.',
+		parameters: 'value: boolean | string',
 	},
 ]
 </script>

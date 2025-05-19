@@ -1,12 +1,14 @@
 <template>
-	<div id="component-sicoco">
-		<p>Value : {{ selectedOptions }}</p>
+	<div class="flex flex-col gap-6" id="component-sicoco">
+		<label>Dropdown with Custom Trigger</label>
 		<SDropdown
-			v-model="selectedOptions"
-			class="w-full"
-			placeholder="Choose options"
-			multiple
+			v-model="selected"
+			placeholder="Custom Trigger"
+			ignore-active-item-value
 		>
+			<template #trigger>
+				<SButton> Open Custom Dropdown </SButton>
+			</template>
 			<SDropdownItem
 				v-for="option in dropdownOptions"
 				:key="option.value"
@@ -20,9 +22,9 @@
 
 <script setup>
 import { ref } from 'vue'
-import { SDropdown, SDropdownItem } from '@sutekitechid/sicoco-v3-next'
+import { SButton, SDropdown, SDropdownItem } from '@sutekitechid/sicoco-v3-next'
 
-const selectedOptions = ref([])
+const selected = ref(undefined)
 const dropdownOptions = [
 	{ label: 'Option 1', value: 1 },
 	{ label: 'Option 2', value: 2 },
