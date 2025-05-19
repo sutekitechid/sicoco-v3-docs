@@ -16,6 +16,8 @@
 		"calendar",
 		"skeleton",
 		"textarea",
-		"tooltip"
+		"tooltip",
+		"datatable",
+		"table"
 	]
 }
