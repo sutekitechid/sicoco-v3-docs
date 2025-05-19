@@ -1,11 +1,10 @@
 <template>
 	<div id="component-sicoco">
-		<p>Value : {{ selectedOptions }}</p>
+		<p>Value : {{ selectedOption }}</p>
 		<SDropdown
-			v-model="selectedOptions"
+			v-model="selectedOption"
 			class="w-full"
-			placeholder="Choose options"
-			multiple
+			placeholder="Choose an option"
 		>
 			<SDropdownItem
 				v-for="option in dropdownOptions"
@@ -22,7 +21,7 @@
 import { ref } from 'vue'
 import { SDropdown, SDropdownItem } from '@sutekitechid/sicoco-v3-next'
 
-const selectedOptions = ref([])
+const selectedOption = ref()
 const dropdownOptions = [
 	{ label: 'Option 1', value: 1 },
 	{ label: 'Option 2', value: 2 },

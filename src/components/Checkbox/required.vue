@@ -1,7 +1,7 @@
 <template>
 	<s-form-input @submit="onSubmit">
-		<SCheckboxGroup :value="input" required>
-			<s-checkbox class="mt-3" v-model="input" value="Primary" required>
+		<SCheckboxGroup class="mt-3" :value="input" required>
+			<s-checkbox v-model="input" value="Primary" required>
 				<p>Accept Terms and Conditions</p>
 			</s-checkbox>
 			<template #required>

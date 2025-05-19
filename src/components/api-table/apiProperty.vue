@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="overflow-x-auto">
 		<STable class="rounded-none shadow-none w-full mb-5">
 			<STableHeader
 				class="border-b-1 text-grey-100 font-semibold !text-lg capitalize z-0"

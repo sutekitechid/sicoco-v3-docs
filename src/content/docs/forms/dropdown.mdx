@@ -13,8 +13,11 @@ import ApiPropertiesItem from '@/components/DropdownItem/apiPropertiesItem.vue'
 import ApiEventsItem from '@/components/DropdownItem/apiEventsItem.vue'
 import ApiSlotsItem from '@/components/DropdownItem/apiSlotsItem.vue'
 
-import SDropdown from '@/components/Dropdown/defaultDisable.vue'
-import SDropdownRaw from '@/components/Dropdown/defaultDisable.vue?raw'
+import SDropdown from '@/components/Dropdown/default.vue'
+import SDropdownRaw from '@/components/Dropdown/default.vue?raw'
+
+import SDropdownDisabled from '@/components/Dropdown/disabled.vue'
+import SDropdownDisabledRaw from '@/components/Dropdown/disabled.vue?raw'
 
 import SSearch from '@/components/Dropdown/search.vue'
 import SSearchRaw from '@/components/Dropdown/search.vue?raw'
@@ -22,15 +25,35 @@ import SSearchRaw from '@/components/Dropdown/search.vue?raw'
 import SSelection from '@/components/Dropdown/multipleSelection.vue'
 import SSelectionRaw from '@/components/Dropdown/multipleSelection.vue?raw'
 
-import SValidasi from '@/components/Dropdown/validasi.vue'
-import SValidasiRaw from '@/components/Dropdown/validasi.vue?raw'
+import SValidation from '@/components/Dropdown/validation.vue'
+import SValidationRaw from '@/components/Dropdown/validation.vue?raw'
+
+import SDropdownSideAlign from '@/components/Dropdown/sideAlign.vue'
+import SDropdownSideAlignRaw from '@/components/Dropdown/sideAlign.vue?raw'
+
+import SDropdownAppendToBody from '@/components/Dropdown/appendToBody.vue'
+import SDropdownAppendToBodyRaw from '@/components/Dropdown/appendToBody.vue?raw'
+
+import SDropdownScrollable from '@/components/Dropdown/scrollable.vue'
+import SDropdownScrollableRaw from '@/components/Dropdown/scrollable.vue?raw'
+
+import SDropdownFitContent from '@/components/Dropdown/fitContent.vue'
+import SDropdownFitContentRaw from '@/components/Dropdown/fitContent.vue?raw'
+
+import SDropdownIgnoreActiveItemValue from '@/components/Dropdown/ignoreActiveItemValue.vue'
+import SDropdownIgnoreActiveItemValueRaw from '@/components/Dropdown/ignoreActiveItemValue.vue?raw'
 
 ## Component Usage
 
-### Default And Disabled
+### Default
 
 <SDropdown client:only='vue' class='mt-4' />
-<Code code={SDropdownRaw} lang='vue' title='defaultDisable.vue' />
+<Code code={SDropdownRaw} lang='vue' title='default.vue' />
+
+### Disabled
+
+<SDropdownDisabled client:only='vue' class='mt-4' />
+<Code code={SDropdownDisabledRaw} lang='vue' title='disabled.vue' />
 
 ### Search
 
@@ -44,10 +67,51 @@ import SValidasiRaw from '@/components/Dropdown/validasi.vue?raw'
 
 ### Validasi
 
-<SValidasi client:only='vue' class='mt-4' />
-<Code code={SValidasiRaw} lang='vue' title='validasi.vue' />
+<SValidation client:only='vue' class='mt-4' />
+<Code code={SValidationRaw} lang='vue' title='validasi.vue' />
 
-## API ### SDropdown
+### Side & Align
+
+You can control the dropdown's position using the `side` and `align` props.
+
+<SDropdownSideAlign client:only='vue' class='mt-4' />
+<Code code={SDropdownSideAlignRaw} lang='vue' title='sideAlign.vue' />
+
+### Scrollable
+
+You can make the dropdown menu scrollable using the `scrollable` prop.
+
+<SDropdownScrollable client:only='vue' class='mt-4' />
+<Code code={SDropdownScrollableRaw} lang='vue' title='scrollable.vue' />
+
+### Append To Body
+
+You can render the dropdown menu as a direct child of the body using the `appendToBody` prop.
+
+<SDropdownAppendToBody client:only='vue' class='mt-4' />
+<Code code={SDropdownAppendToBodyRaw} lang='vue' title='appendToBody.vue' />
+
+### Fit Content
+
+You can make the dropdown menu fit its content using the `fitContent` prop.
+
+<SDropdownFitContent client:only='vue' class='mt-4' />
+<Code code={SDropdownFitContentRaw} lang='vue' title='fitContent.vue' />
+
+### Ignore Active Item Value & Trigger Slot
+
+You can use the `trigger` slot to customize the dropdown trigger button.
+
+<SDropdownIgnoreActiveItemValue client:only='vue' class='mt-4' />
+<Code
+	code={SDropdownIgnoreActiveItemValueRaw}
+	lang='vue'
+	title='ignoreActiveItemValue.vue'
+/>
+
+## API
+
+### SDropdown
 
 <Tabs>
 	<TabItem label='Properties'>
