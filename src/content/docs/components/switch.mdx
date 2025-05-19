@@ -1,0 +1,61 @@
+---
+title: Switch
+---
+
+A `Switch` component is a UI element that allows users to toggle between two states, such as on/off or true/false.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Switch/apis/apiProperties.vue'
+import ApiSlots from '@/components/Switch/apis/apiSlots.vue'
+import ApiEvents from '@/components/Switch/apis/apiEvents.vue'
+
+import SwitchDefault from '@/components/Switch/default.vue'
+import SwitchDefaultRaw from '@/components/Switch/default.vue?raw'
+
+import SwitchVariant from '@/components/Switch/variant.vue'
+import SwitchVariantRaw from '@/components/Switch/variant.vue?raw'
+
+import SwitchDisabled from '@/components/Switch/disabled.vue'
+import SwitchDisabledRaw from '@/components/Switch/disabled.vue?raw'
+
+import SwitchTrueFalseValue from '@/components/Switch/trueFalseValue.vue'
+import SwitchTrueFalseValueRaw from '@/components/Switch/trueFalseValue.vue?raw'
+
+## Component Usage
+
+### Default
+
+<SwitchDefault client:only='vue' class='mt-4' />
+<Code code={SwitchDefaultRaw} lang='vue' title='default.vue' />
+
+### Variant
+
+<SwitchVariant client:only='vue' class='mt-4' />
+<Code code={SwitchVariantRaw} lang='vue' title='variant.vue' />
+
+### Disabled
+
+<SwitchDisabled client:only='vue' class='mt-4' />
+<Code code={SwitchDisabledRaw} lang='vue' title='disabled.vue' />
+
+### True/False Value
+
+You can customize the values that represent the checked and unchecked states using `trueValue` and `falseValue` props.
+
+<SwitchTrueFalseValue client:only='vue' class='mt-4' />
+<Code code={SwitchTrueFalseValueRaw} lang='vue' title='trueFalseValue.vue' />
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<ApiSlots client:only='vue' />
+	</TabItem>
+	<TabItem label='Events'>
+		<ApiEvents client:only='vue' />
+	</TabItem>
+</Tabs>
