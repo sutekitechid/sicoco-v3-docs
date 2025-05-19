@@ -1,39 +1,30 @@
 <template>
-  <ApiSlotTable :slots="data" />
+	<ApiSlotTable :slots="data" />
 </template>
 
 <script setup>
 import ApiSlotTable from '@/components/api-table/apiSlot.vue'
 const data = [
-  {
-    name: 'trigger',
-    description: 'Change the dropdown trigger with a custom component',
-    props: 'open, modelValue, invalid',
-  },
-  {
-    name: 'icon',
-    description: 'Change the icon on the dropdown',
-    props: '',
-  },
-  {
-    name: 'empty',
-    description: 'Change the display when the dropdown options are empty',
-    props: '',
-  },
-  {
-    name: 'errors',
-    description: 'Determine the display for custom errors (Active if the customValidators prop is filled)',
-    props: '',
-  },
-  {
-    name: 'required',
-    description: 'Change the display when the dropdown value is not filled (Active if the required prop is true)',
-    props: '',
-  },
-  {
-    name: 'default',
-    description: 'Change the display of the dropdown options',
-    props: '',
-  },
+	{
+		name: 'default',
+		description: 'Main slot for dropdown list options.',
+		props: '',
+	},
+	{
+		name: 'trigger',
+		description: 'Optional slot for a custom trigger button.',
+		props: 'open, modelValue, invalid',
+	},
+	{
+		name: 'required',
+		description: 'Slot for required validation message.',
+		props: 'validation',
+	},
+	{
+		name: 'errors',
+		description:
+			'Slot for other error messages (active if customValidators is set).',
+		props: 'validation',
+	},
 ]
 </script>
