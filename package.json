@@ -14,6 +14,7 @@
 		"@astrojs/starlight": "^0.25.5",
 		"@astrojs/tailwind": "^5.1.0",
 		"@astrojs/vue": "^4.5.0",
+		"@internationalized/date": "^3.8.0",
 		"@sutekitechid/sicoco-v3-next": "^3.5.3",
 		"astro": "^4.10.2",
 		"sharp": "^0.32.5",
