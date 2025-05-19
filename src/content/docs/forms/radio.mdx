@@ -2,7 +2,7 @@
 title: Radio
 ---
 
-A `Radio` component enables users to choose one option from a predefined set. It ensures only one selection can be active at a time within a group.
+A `RadioGroup` and `RadioGroupItem` component enables users to choose one option from a predefined set. It ensures only one selection can be active at a time within a group.
 
 import { Code } from '@astrojs/starlight/components'
 import { Tabs, TabItem } from '@astrojs/starlight/components'
@@ -14,8 +14,8 @@ import ApiPropertiesRadioGroup from '@/components/RadioGroup/apis/apiProperties.
 import ApiSlotsRadioGroup from '@/components/RadioGroup/apis/apiSlots.vue'
 import ApiEventsRadioGroup from '@/components/RadioGroup/apis/apiEvents.vue'
 
-import SRadio from '@/components/Radio/default.vue'
-import SRadioRaw from '@/components/Radio/default.vue?raw'
+import SRadioVariant from '@/components/Radio/variant.vue'
+import SRadioVariantRaw from '@/components/Radio/variant.vue?raw'
 
 import SRadioDisabled from '@/components/Radio/disabled.vue'
 import SRadioDisabledRaw from '@/components/Radio/disabled.vue?raw'
@@ -31,16 +31,16 @@ import SRadioCustomValidatorRaw from '@/components/Radio/customValidator.vue?raw
 
 ## Component Usage
 
-### Default
+### Variant
 
-A default `Radio` component is pre-selected to indicate a standard choice in a group of options. This helps guide users by providing a recommended selection right from the start.
+Use the `variant` prop to control the radio button size.
 
-<SRadio client:only="vue" />
-<Code code={SRadioRaw} lang="vue" title="default.vue" />
+<SRadioVariant client:only="vue" />
+<Code code={SRadioVariantRaw} lang="vue" title="size.vue" />
 
 ### Disabled
 
-A disabled `Radio` component is inactive and cannot be selected, indicating unavailable options within a group.
+Use the native `disabled` attribute to create a disabled radio button.
 
 <SRadioDisabled client:only="vue" />
 <Code code={SRadioDisabledRaw} lang="vue" title="disabled.vue" />
@@ -61,7 +61,7 @@ A custom validator radio component lets developers set specific validation rules
 
 ## API
 
-### Radio
+### RadioGroupItem
 
 <Tabs>
 	<TabItem label="Properties">
@@ -75,7 +75,7 @@ A custom validator radio component lets developers set specific validation rules
 	</TabItem>
 </Tabs>
 
-### Radio Group
+### RadioGroup
 
 <Tabs>
 	<TabItem label="Properties">

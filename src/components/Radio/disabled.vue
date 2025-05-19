@@ -8,11 +8,20 @@
 			<SRadioGroupItem value="1" class="flex items-center">
 				Value 1
 			</SRadioGroupItem>
-			<SRadioGroupItem value="2" class="flex items-center" disabled>
+			<SRadioGroupItem value="2" class="flex items-center">
 				Value 2
 			</SRadioGroupItem>
-			<SRadioGroupItem value="3" class="flex items-center">
-				Value 3
+		</SRadioGroup>
+		<SRadioGroup
+			class="flex flex-wrap gap-4"
+			v-model="disabledVariant"
+			id="component-sicoco"
+		>
+			<SRadioGroupItem value="1" class="flex items-center" disabled>
+				Value 1
+			</SRadioGroupItem>
+			<SRadioGroupItem value="2" class="flex items-center" disabled>
+				Value 2
 			</SRadioGroupItem>
 		</SRadioGroup>
 	</div>
@@ -22,7 +31,8 @@
 import { ref } from 'vue'
 import { SRadioGroupItem, SRadioGroup } from '@sutekitechid/sicoco-v3-next'
 
-const variant = ref('')
+const variant = ref('1')
+const disabledVariant = ref('1')
 </script>
 
 <style>
