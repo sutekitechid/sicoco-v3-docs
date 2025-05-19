@@ -2,36 +2,57 @@
 title: Tooltip
 ---
 
-import { Code } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components'
 import { Tabs, TabItem } from '@astrojs/starlight/components'
-import ApiProperties from '@/components/Tooltip/apis/apiProperties.vue';
+import TooltipApiProperties from '@/components/Tooltip/apis/tooltipApiProperties.vue'
+import ApiProperties from '@/components/Tooltip/apis/apiProperties.vue'
 import ApiSlots from '@/components/Tooltip/apis/apiSlots.vue'
 
+import STooltipVariant from '@/components/Tooltip/variant.vue'
+import STooltipVariantRaw from '@/components/Tooltip/variant.vue?raw'
 
-import STooltip from '@/components/Tooltip/placement.vue';
-import STooltipRaw from '@/components/Tooltip/placement.vue?raw';
+import STooltipPosition from '@/components/Tooltip/position.vue'
+import STooltipPositionRaw from '@/components/Tooltip/position.vue?raw'
 
-import STooltitrigger from '@/components/Tooltip/triger.vue';
-import STooltitriggerRaw from '@/components/Tooltip/triger.vue?raw';
-
+import STooltipTrigger from '@/components/Tooltip/trigger.vue'
+import STooltipTriggerRaw from '@/components/Tooltip/trigger.vue?raw'
 
 The function of a tooltip is to provide information or explanation about an element on a website or mobile application when the user interacts with that element.
+
 ## Component Usage
-### Placement
-<STooltip client:only="vue" class="mt-4" />
-<Code code={STooltipRaw} lang="vue" title="placement.vue" />
+
+### Variant
+
+<STooltipVariant client:only="vue" class="mt-4" />
+<Code code={STooltipVariantRaw} lang="vue" title="variant.vue" />
+
+### Position
+
+<STooltipPosition client:only="vue" class="mt-4" />
+<Code code={STooltipPositionRaw} lang="vue" title="position.vue" />
 
 ### Trigger
-<STooltitrigger  client:only="vue" class="mt-4" />
-<Code code={STooltitriggerRaw} lang="vue" title="triger.vue" />
 
+<STooltipTrigger client:only="vue" class="mt-4" />
+<Code code={STooltipTriggerRaw} lang="vue" title="trigger.vue" />
 
 ## API
+
+### Tooltip
+
 <Tabs>
-    <TabItem label="Properties">
-        <ApiProperties client:only="vue" />
-    </TabItem>
-    <TabItem label="Slots">
-        <ApiSlots client:only="vue" />
-    </TabItem>
+	<TabItem label="Properties">
+		<TooltipApiProperties client:only="vue" />
+	</TabItem>
+	<TabItem label="Slots">
+		<ApiSlots client:only="vue" />
+	</TabItem>
+</Tabs>
+
+### TooltipContent
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiProperties client:only="vue" />
+	</TabItem>
 </Tabs>
