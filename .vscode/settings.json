@@ -1,10 +1,11 @@
 {
 	"conventionalCommits.scopes": [
-    "accordion",
-    "badge",
+		"accordion",
+		"badge",
 		"checkbox",
-    "loading",
+		"loading",
 		"upload",
+		"installation-and-setup",
 		"toast",
 		"alert",
 		"contributing",
