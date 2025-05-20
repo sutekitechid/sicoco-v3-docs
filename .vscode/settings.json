@@ -15,6 +15,7 @@
 		"radio",
 		"switch",
 		"dropdown",
+		"stepper",
 		"calendar",
 		"skeleton",
 		"textarea",
