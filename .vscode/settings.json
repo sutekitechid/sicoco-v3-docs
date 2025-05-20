@@ -2,16 +2,26 @@
 	"conventionalCommits.scopes": [
 		"accordion",
 		"badge",
+		"card",
 		"checkbox",
+		"dialog",
+		"input",
 		"loading",
 		"upload",
 		"installation-and-setup",
 		"toast",
 		"alert",
 		"contributing",
+		"radio",
 		"switch",
 		"dropdown",
+		"stepper",
+		"calendar",
+		"skeleton",
+		"textarea",
 		"tooltip",
-		"stepper"
+		"datatable",
+		"table",
+		"rich-editor"
 	]
 }

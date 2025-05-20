@@ -1,57 +1,55 @@
 <template>
-  <s-form-input @submit="onSubmit">
-    <s-radio-group 
-      :custom-validators="{
-        'cold': (value) => {
-          return !(temperature === 'cold' && drink !== 'tea');
-        }
-      }"
-    >
-      <p class="mt-3 text-xl">Choose what you want to drink?</p>
-      <div>
-        <div>
-          <s-radio value="tea" type="primary" v-model="drink">
-            <p class="mt-[-18px] text-gray-300">Tea</p>
-          </s-radio>
-        </div>
-        <div>
-          <s-radio value="coffee" type="primary" v-model="drink">
-            <p class="mt-[-18px] text-gray-300">Coffee</p>
-          </s-radio>
-        </div>
-      </div>
+	<s-form-input @submit="onSubmit">
+		<p class="mt-3 text-xl">Choose what you want to drink?</p>
 
-      <p class="mt-3 text-xl">Do you want a cold or hot drink?</p>
-      <div>
-        <div>
-          <s-radio value="hot" type="primary" v-model="temperature">
-            <p class="mt-[-18px] text-gray-300">Hot</p>
-          </s-radio>
-        </div>
-        <div>
-          <s-radio value="cold" type="primary" v-model="temperature">
-            <p class="mt-[-18px] text-gray-300">Cold</p>
-          </s-radio>
-        </div>
-      </div>
+		<SRadioGroup
+			:custom-validators="{
+				cold: (value) => {
+					return !(temperature === 'cold' && drink !== 'tea')
+				},
+			}"
+			v-model="drink"
+		>
+			<SRadioGroupItem value="tea" type="primary"> Tea </SRadioGroupItem>
+			<SRadioGroupItem value="coffee" type="primary"> Coffee </SRadioGroupItem>
+		</SRadioGroup>
 
-      <template #errors="{ validation }">
-        <div v-if="validation['cold']" class="text-danger-100">
-          Sorry, but the cold coffee menu is not available!
-        </div>
-      </template>
-      <s-button type="submit" data-cy="submit-button">SUBMIT</s-button>
-    </s-radio-group>
-  </s-form-input>
+		<p class="mt-3 text-xl">Do you want a cold or hot drink?</p>
+
+		<SRadioGroup
+			:custom-validators="{
+				cold: (value) => {
+					return !(temperature === 'cold' && drink !== 'tea')
+				},
+			}"
+			v-model="temperature"
+		>
+			<SRadioGroupItem value="hot" type="primary"> Hot </SRadioGroupItem>
+			<SRadioGroupItem value="cold" type="primary"> Cold </SRadioGroupItem>
+		</SRadioGroup>
+
+		<template #errors="{ validation }">
+			<div v-if="validation['cold']" class="text-danger-100">
+				Sorry, but the cold coffee menu is not available!
+			</div>
+		</template>
+		<s-button type="submit" data-cy="submit-button">SUBMIT</s-button>
+	</s-form-input>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import {
+	SRadioGroupItem,
+	SRadioGroup,
+	SButton,
+	SFormInput,
+} from '@sutekitechid/sicoco-v3-next'
 
-const drink = ref('');
-const temperature = ref('');  // Convert to string to store a single value.
+const drink = ref('')
+const temperature = ref('') // Convert to string to store a single value.
 
 const onSubmit = () => {
-  console.log('submit');
+	console.log('submit')
 }
 </script>

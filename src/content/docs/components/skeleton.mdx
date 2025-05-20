@@ -1,0 +1,29 @@
+---
+title: Skeleton
+---
+
+The `Skeleton` component serves as a visual placeholder while content is being loaded, giving users a sense of the layout before the actual data appears.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Skeleton/apis/apiProperties.vue'
+
+import SkeletonDefault from '@/components/Skeleton/default.vue'
+import SkeletonDefaultRaw from '@/components/Skeleton/default.vue?raw'
+
+## Component Usage
+
+### Default
+
+The default `Skeleton` component is fully customizable through classes passed via its props, allowing you to adjust its size, shape, and color to match your design needs.
+
+<SkeletonDefault client:only="vue" class="mt-4" />
+<Code code={SkeletonDefaultRaw} lang="vue" title="default.vue" />
+
+## API
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiProperties client:only="vue" />
+	</TabItem>
+</Tabs>
