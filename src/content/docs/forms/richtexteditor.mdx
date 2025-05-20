@@ -1,0 +1,88 @@
+---
+title: Rich Text Editor
+---
+
+A `Rich Text Editor` is a web-based application that allows users to create and edit text with rich formatting options. It provides a user-friendly interface for styling text, inserting images, and managing content layout.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+
+import ApiProperties from '@/components/RichTextEditor/apis/apiProperties.vue'
+import ApiSlots from '@/components/RichTextEditor/apis/apiSlots.vue'
+
+import SRichTextEditorDefault from '@/components/RichTextEditor/default.vue'
+import SRichTextEditorDefaultRaw from '@/components/RichTextEditor/default.vue?raw'
+
+import SRichTextEditorRequired from '@/components/RichTextEditor/required.vue'
+import SRichTextEditorRequiredRaw from '@/components/RichTextEditor/required.vue?raw'
+
+import SRichTextEditorReadOnly from '@/components/RichTextEditor/readonly.vue'
+import SRichTextEditorReadOnlyRaw from '@/components/RichTextEditor/readonly.vue?raw'
+
+import SRichTextEditorPlaceholder from '@/components/RichTextEditor/placeholder.vue'
+import SRichTextEditorPlaceholderRaw from '@/components/RichTextEditor/placeholder.vue?raw'
+
+import SRichTextEditorMaxLength from '@/components/RichTextEditor/maxlength.vue'
+import SRichTextEditorMaxLengthRaw from '@/components/RichTextEditor/maxlength.vue?raw'
+
+import SRichTextEditorAttachment from '@/components/RichTextEditor/attachment-toolbar.vue'
+import SRichTextEditorAttachmentRaw from '@/components/RichTextEditor/attachment-toolbar.vue?raw'
+
+## Component Usage
+
+### Default
+
+A default rich text editor provides a basic interface for creating and editing text.
+
+<SRichTextEditorDefault client:only='vue' class='mt-4' />
+<Code code={SRichTextEditorDefaultRaw} lang='vue' title='default.vue' />
+
+### Required
+
+A required rich text editor ensures that users cannot leave the field empty.
+
+<SRichTextEditorRequired client:only='vue' class='mt-4' />
+<Code code={SRichTextEditorRequiredRaw} lang='vue' title='required.vue' />
+
+### Readonly
+
+A readonly rich text editor displays the editor in a non-editable state.
+
+<SRichTextEditorReadOnly client:only='vue' class='mt-4' />
+<Code code={SRichTextEditorReadOnlyRaw} lang='vue' title='readonly.vue' />
+
+### Placeholder
+
+A rich text editor with a placeholder provides guidance on what content to enter.
+
+<SRichTextEditorPlaceholder client:only='vue' class='mt-4' />
+<Code code={SRichTextEditorPlaceholderRaw} lang='vue' title='placeholder.vue' />
+
+### Max Length
+
+A rich text editor with a max length restricts the number of characters a user can enter.
+
+<SRichTextEditorMaxLength client:only='vue' class='mt-4' />
+<Code code={SRichTextEditorMaxLengthRaw} lang='vue' title='maxlength.vue' />
+
+### Attachment Toolbar
+
+A rich text editor with an attachment toolbar allows users to add files or images.
+
+<SRichTextEditorAttachment client:only='vue' class='mt-4' />
+<Code
+	code={SRichTextEditorAttachmentRaw}
+	lang='vue'
+	title='attachment-toolbar.vue'
+/>
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<ApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
