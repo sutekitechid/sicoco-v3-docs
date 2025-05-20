@@ -5,29 +5,6 @@
 <script setup>
 import ApiPropertyTable from '@/components/api-table/apiProperty.vue'
 
-const props = defineProps({
-	class: {
-		type: String,
-		default: '',
-	},
-	step: {
-		type: Number,
-		required: true,
-	},
-	disabled: {
-		type: Boolean,
-		default: false,
-	},
-	completed: {
-		type: Boolean,
-		default: false,
-	},
-	stepsCount: {
-		type: Number,
-		required: true,
-	},
-})
-
 const data = [
 	{
 		name: 'class',
