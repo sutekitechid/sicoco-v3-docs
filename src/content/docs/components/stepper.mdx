@@ -1,0 +1,94 @@
+---
+title: Stepper
+---
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+
+import SStepper from '@/components/Stepper/default.vue'
+import SStepperRaw from '@/components/Stepper/default.vue?raw'
+
+import StepperApiProperties from '@/components/Stepper/apis/apiProperties.vue'
+import StepperApiSlots from '@/components/Stepper/apis/apiSlots.vue'
+
+import StepperItemApiProperties from '@/components/StepperItem/apis/apiProperties.vue'
+import StepperItemApiSlots from '@/components/StepperItem/apis/apiSlots.vue'
+
+import StepperTriggerApiSlots from '@/components/StepperTrigger/apis/apiSlots.vue'
+
+import StepperIndicatorApiSlots from '@/components/StepperIndicator/apis/apiSlots.vue'
+
+import StepperDescriptionApiProperties from '@/components/StepperDescription/apis/apiProperties.vue'
+import StepperDescriptionApiSlots from '@/components/StepperDescription/apis/apiSlots.vue'
+
+import StepperTitleApiSlots from '@/components/StepperTitle/apis/apiSlots.vue'
+
+A `Stepper` is a component that displays steps of process.
+
+## Component Usage
+
+### Default
+
+A default `Stepper` displays some stepper items that have triggers and labels in horizontal layout.
+
+<SStepper />
+<Code code={SStepperRaw} lang='vue' title='default.vue' />
+
+## API
+
+### Stepper
+
+<Tabs>
+	<TabItem label='Properties'>
+		<StepperApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<StepperApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### StepperItem
+
+<Tabs>
+	<TabItem label='Properties'>
+		<StepperItemApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<StepperItemApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### StepperTrigger
+
+<Tabs>
+	<TabItem label='Slots'>
+		<StepperTriggerApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### StepperIndicator
+
+<Tabs>
+	<TabItem label='Slots'>
+		<StepperIndicatorApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### StepperTitle
+
+<Tabs>
+	<TabItem label='Slots'>
+		<StepperTitleApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### StepperDescription
+
+<Tabs>
+	<TabItem label='Properties'>
+		<StepperDescriptionApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<StepperDescriptionApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
