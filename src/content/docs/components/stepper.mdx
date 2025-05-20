@@ -23,7 +23,7 @@ import StepperDescriptionApiSlots from '@/components/StepperDescription/apis/api
 
 import StepperTitleApiSlots from '@/components/StepperTitle/apis/apiSlots.vue'
 
-A `Stepper` is a component that displays steps of process.
+A `Stepper` is a component that displays progress through multiple steps.
 
 ## Component Usage
 
@@ -31,7 +31,7 @@ A `Stepper` is a component that displays steps of process.
 
 A default `Stepper` displays some stepper items that have triggers and labels in horizontal layout.
 
-<SStepper />
+<SStepper client:only='vue' />
 <Code code={SStepperRaw} lang='vue' title='default.vue' />
 
 ## API
