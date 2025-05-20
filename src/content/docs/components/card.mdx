@@ -1,0 +1,35 @@
+---
+title: Card
+---
+
+A `Card` is a flexible container used to group related content and actions. Commonly used for displaying information in a clean, organized layout such as user profiles, product previews, or dashboards.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Card/apis/apiProperties.vue'
+
+import CardDefault from '@/components/Card/default.vue'
+import CardDefaultRaw from '@/components/Card/default.vue?raw'
+
+import CardFooter from '@/components/Card/withFooter.vue'
+import CardFooterRaw from '@/components/Card/withFooter.vue?raw'
+
+## Component Usage
+
+### Default
+
+<CardDefault client:only="vue" class="mt-4" />
+<Code code={CardDefaultRaw} lang="vue" title="default.vue" />
+
+### With Footer
+
+<CardFooter client:only="vue" class="mt-4" />
+<Code code={CardFooterRaw} lang="vue" title="withFooter.vue" />
+
+## API
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiProperties client:only="vue" />
+	</TabItem>
+</Tabs>

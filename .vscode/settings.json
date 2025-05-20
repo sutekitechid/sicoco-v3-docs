@@ -2,6 +2,7 @@
 	"conventionalCommits.scopes": [
 		"accordion",
 		"badge",
+		"card",
 		"checkbox",
 		"dialog",
 		"input",
