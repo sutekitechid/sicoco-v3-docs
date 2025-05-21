@@ -1,0 +1,95 @@
+---
+title: DatePicker
+---
+
+A `DatePicker` component is a versatile date selection component that supports both single date and date range selection, with support for important dates, custom formatting, and more.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/DatePicker/apis/apiProperties.vue'
+import ApiEvents from '@/components/DatePicker/apis/apiEvents.vue'
+import ApiSlots from '@/components/DatePicker/apis/apiSlots.vue'
+
+import DatePickerDefault from '@/components/DatePicker/default.vue'
+import DatePickerDefaultRaw from '@/components/DatePicker/default.vue?raw'
+
+import DatePickerRange from '@/components/DatePicker/range.vue'
+import DatePickerRangeRaw from '@/components/DatePicker/range.vue?raw'
+
+import DatePickerImportantDates from '@/components/DatePicker/importantDates.vue'
+import DatePickerImportantDatesRaw from '@/components/DatePicker/importantDates.vue?raw'
+
+import DatePickerDisabled from '@/components/DatePicker/disabled.vue'
+import DatePickerDisabledRaw from '@/components/DatePicker/disabled.vue?raw'
+
+import DatePickerYearsRange from '@/components/DatePicker/yearsRange.vue'
+import DatePickerYearsRangeRaw from '@/components/DatePicker/yearsRange.vue?raw'
+
+import DatePickerValidation from '@/components/DatePicker/validation.vue'
+import DatePickerValidationRaw from '@/components/DatePicker/validation.vue?raw'
+
+import DatePickerLocale from '@/components/DatePicker/locale.vue'
+import DatePickerLocaleRaw from '@/components/DatePicker/locale.vue?raw'
+
+import DatePickerFormat from '@/components/DatePicker/format.vue'
+import DatePickerFormatRaw from '@/components/DatePicker/format.vue?raw'
+
+## Component Usage
+
+### Default
+
+<DatePickerDefault client:only='vue' class='mt-4' />
+<Code code={DatePickerDefaultRaw} lang='vue' title='default.vue' />
+
+### Range
+
+<DatePickerRange client:only='vue' class='mt-4' />
+<Code code={DatePickerRangeRaw} lang='vue' title='range.vue' />
+
+### Important Dates
+
+<DatePickerImportantDates client:only='vue' class='mt-4' />
+<Code
+	code={DatePickerImportantDatesRaw}
+	lang='vue'
+	title='importantDates.vue'
+/>
+
+### Disabled
+
+<DatePickerDisabled client:only='vue' class='mt-4' />
+<Code code={DatePickerDisabledRaw} lang='vue' title='disabled.vue' />
+
+### Years Range
+
+<DatePickerYearsRange client:only='vue' class='mt-4' />
+<Code code={DatePickerYearsRangeRaw} lang='vue' title='yearsRange.vue' />
+
+### Validation
+
+<DatePickerValidation client:only='vue' class='mt-4' />
+<Code code={DatePickerValidationRaw} lang='vue' title='validation.vue' />
+
+### Locale
+
+<DatePickerLocale client:only='vue' class='mt-4' />
+<Code code={DatePickerLocaleRaw} lang='vue' title='locale.vue' />
+
+### Format
+
+<DatePickerFormat client:only='vue' class='mt-4' />
+<Code code={DatePickerFormatRaw} lang='vue' title='format.vue' />
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Events'>
+		<ApiEvents client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<ApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
