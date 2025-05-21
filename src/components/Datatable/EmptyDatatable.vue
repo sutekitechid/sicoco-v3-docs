@@ -1,12 +1,10 @@
 <template>
-	<div id="component-sicoco">
-		<Datatable
-			id="default-datatable"
-			:data="coffe"
-			:paginated="paginated"
-			:selectable="selectable"
-		></Datatable>
-	</div>
+	<Datatable
+		id="default-datatable"
+		:data="coffe"
+		:paginated="paginated"
+		:selectable="selectable"
+	></Datatable>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'

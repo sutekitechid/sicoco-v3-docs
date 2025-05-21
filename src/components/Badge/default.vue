@@ -1,5 +1,5 @@
 <template>
-	<div class="flex gap-2" id="component-sicoco">
+	<div class="flex gap-2 not-content">
 		<s-badge variant="primary">Badge</s-badge>
 		<s-badge variant="success">Badge</s-badge>
 		<s-badge variant="warning">Badge</s-badge>

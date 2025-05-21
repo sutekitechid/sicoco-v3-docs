@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<p>DatePicker with Important Dates</p>
 		<SDatePicker v-model="selectedDate" :important-dates="importantDates" />
 	</div>

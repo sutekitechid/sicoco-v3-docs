@@ -1,5 +1,5 @@
 <template>
-	<div class="flex gap-2 flex-wrap" id="component-sicoco">
+	<div class="flex gap-2 flex-wrap not-content">
 		<SButton @click="show('top')">Top</SButton>
 		<SButton @click="show('bottom')">Bottom</SButton>
 		<SToaster :position="position" />

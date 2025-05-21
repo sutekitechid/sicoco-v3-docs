@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="mt-4">
 		<SPagination
 			v-model:page="page"
 			v-model:perPage="perPage"
@@ -11,6 +11,7 @@
 			:show-per-page-options="showPerPageOptions"
 			:show-pagination-input="showPaginationInput"
 			:data-cy="dataCy"
+			class="not-content"
 		/>
 	</div>
 </template>

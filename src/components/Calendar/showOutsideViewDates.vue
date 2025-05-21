@@ -1,10 +1,10 @@
 <template>
-	<div id="component-sicoco">
+	<div>
 		<p>Calendar with showOutsideViewDates = false</p>
 		<SCalendar
 			v-model="selectedDate"
 			:show-outside-view-dates="false"
-			class="w-min"
+			class="w-min not-content"
 		/>
 	</div>
 </template>

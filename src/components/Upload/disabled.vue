@@ -3,7 +3,7 @@
 		v-model="modelValue"
 		label="Disabled File Upload"
 		disabled
-		id="component-sicoco"
+		class="not-content"
 	>
 	</SUpload>
 </template>

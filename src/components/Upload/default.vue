@@ -1,9 +1,5 @@
 <template>
-	<SUpload
-		v-model="modelValue"
-		label="Default File Upload"
-		id="component-sicoco"
-	>
+	<SUpload v-model="modelValue" label="Default File Upload" class="not-content">
 	</SUpload>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<p>Selected time: {{ time }}</p>
 		<STimePicker v-model="time" />
 	</div>

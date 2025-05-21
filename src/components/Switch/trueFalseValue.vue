@@ -1,5 +1,5 @@
 <template>
-	<div class="flex items-center gap-4">
+	<div class="flex items-center gap-4 not-content">
 		<SSWitch v-model="status" :true-value="'yes'" :false-value="'no'">
 			<span>Status: {{ status }}</span>
 		</SSWitch>

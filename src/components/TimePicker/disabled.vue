@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<STimePicker v-model="time" :disabled="true" />
 	</div>
 </template>

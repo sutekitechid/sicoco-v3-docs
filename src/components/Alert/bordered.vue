@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<SAlert bordered>Bordered Alert</SAlert>
 	</div>
 </template>

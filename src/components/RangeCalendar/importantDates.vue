@@ -1,10 +1,10 @@
 <template>
-	<div id="component-sicoco">
+	<div class="mt-4">
 		<p>RangeCalendar with Important Dates {{ selectedRange }}</p>
 		<SRangeCalendar
 			v-model="selectedRangeDate"
 			:important-dates="importantDates"
-			class="w-min"
+			class="w-min not-content"
 		/>
 	</div>
 </template>

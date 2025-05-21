@@ -1,5 +1,5 @@
 <template>
-	<SAccordion class="w-full" type="multiple">
+	<SAccordion class="w-full mt-4 not-content" type="multiple">
 		<SAccordionItem value="1">
 			<SAccordionTrigger>
 				<template #label> Header 1 </template>

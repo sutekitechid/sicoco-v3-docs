@@ -1,10 +1,6 @@
 <template>
-	<div class="mt-4">
-		<SRadioGroup
-			class="flex flex-wrap gap-4"
-			v-model="variant"
-			id="component-sicoco"
-		>
+	<div class="mt-4 not-content">
+		<SRadioGroup class="flex flex-wrap gap-4" v-model="variant">
 			<SRadioGroupItem value="1" class="flex items-center">
 				Value 1
 			</SRadioGroupItem>
@@ -12,11 +8,7 @@
 				Value 2
 			</SRadioGroupItem>
 		</SRadioGroup>
-		<SRadioGroup
-			class="flex flex-wrap gap-4"
-			v-model="disabledVariant"
-			id="component-sicoco"
-		>
+		<SRadioGroup class="flex flex-wrap gap-4" v-model="disabledVariant">
 			<SRadioGroupItem value="1" class="flex items-center" disabled>
 				Value 1
 			</SRadioGroupItem>

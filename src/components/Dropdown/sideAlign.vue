@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col gap-6" id="component-sicoco">
+	<div class="flex flex-col gap-6 not-content">
 		<div>
 			<label>Dropdown Side: Top</label>
 			<SDropdown v-model="selectedTop" side="top" placeholder="Top">

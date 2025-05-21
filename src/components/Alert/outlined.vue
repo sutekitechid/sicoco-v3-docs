@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<SAlert outlined>Outlined Alert</SAlert>
 	</div>
 </template>

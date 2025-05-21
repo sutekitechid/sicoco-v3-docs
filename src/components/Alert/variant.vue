@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col gap-4" id="component-sicoco">
+	<div class="flex flex-col gap-4 not-content">
 		<SAlert variant="info">Info Alert</SAlert>
 		<SAlert variant="success">Success Alert</SAlert>
 		<SAlert variant="warning">Warning Alert</SAlert>

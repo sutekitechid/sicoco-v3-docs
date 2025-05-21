@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col gap-4" id="component-sicoco">
+	<div class="flex flex-col gap-4 not-content">
 		<SAlert :closable="false">Closable Alert False</SAlert>
 		<SAlert>Closable Alert True</SAlert>
 	</div>

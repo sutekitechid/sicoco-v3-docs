@@ -1,5 +1,5 @@
 <template>
-	<div class="flex items-center gap-4" id="component-sicoco">
+	<div class="flex items-center gap-4 not-content">
 		<SSWitch v-model="checked">
 			<span>Switch is: {{ checked ? 'On' : 'Off' }}</span>
 		</SSWitch>

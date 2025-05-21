@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<p>DatePicker with Custom Years Range</p>
 		<SDatePicker v-model="selectedDate" :years-range="yearsRange" />
 	</div>

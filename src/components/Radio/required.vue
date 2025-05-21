@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<s-form-input @submit="onSubmit">
 			<s-radio-group required v-model="input" class="mt-3">
 				<s-radio-group-item value="1"> CLICK </s-radio-group-item>

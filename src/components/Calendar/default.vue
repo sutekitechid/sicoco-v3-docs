@@ -1,10 +1,9 @@
 <template>
-	<div id="component-sicoco">
+	<div>
 		<p>Selected date: {{ selectedDate }}</p>
 		<SCalendar
 			v-model="selectedDate"
-			class="w-min"
-			id="component-sicoco"
+			class="w-min not-content"
 			:years-range="[2000, 2030]"
 		/>
 	</div>

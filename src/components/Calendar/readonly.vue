@@ -1,7 +1,11 @@
 <template>
-	<div id="component-sicoco">
+	<div>
 		<p>Readonly Calendar</p>
-		<SCalendar v-model="selectedDate" :readonly="true" class="w-min" />
+		<SCalendar
+			v-model="selectedDate"
+			:readonly="true"
+			class="w-min not-content"
+		/>
 	</div>
 </template>
 

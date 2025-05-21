@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col gap-6" id="component-sicoco">
+	<div class="flex flex-col gap-6 not-content">
 		<div>
 			<p>Locale: en-US</p>
 			<SDatePicker v-model="dateEn" locale="en-US" placeholder="en-US" />

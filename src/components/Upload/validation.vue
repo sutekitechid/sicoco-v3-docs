@@ -6,7 +6,7 @@
 			:file-types="['image/jpeg', 'image/jpg', 'image/png']"
 			:max-size="1 * 1000 * 1000"
 			required
-			id="component-sicoco"
+			class="not-content"
 		>
 			<template #required>
 				<p>Please select a file to upload.</p>

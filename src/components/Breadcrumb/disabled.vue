@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-wrap gap-4 mt-4">
-		<SBreadcrumb>
+		<SBreadcrumb class="not-content">
 			<SBreadcrumbItem
 				v-for="item in labels"
 				:to="!item.disabled ? item.href : undefined"
@@ -27,9 +27,3 @@ const labels = ref([
 	},
 ])
 </script>
-
-<style>
-.sl-markdown-content li {
-	@apply !mt-0;
-}
-</style>

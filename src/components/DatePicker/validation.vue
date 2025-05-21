@@ -1,5 +1,5 @@
 <template>
-	<SFormInput id="component-sicoco">
+	<SFormInput class="not-content">
 		<SDatePicker
 			v-model="selectedDate"
 			:required="true"

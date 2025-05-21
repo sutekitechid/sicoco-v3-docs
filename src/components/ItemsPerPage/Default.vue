@@ -8,6 +8,7 @@
 			:per-page-formatter="perPageItemFormatter"
 			:data-cy="itemsPerPageDataCy"
 			@change="onChangeItemsPerPage"
+			class="not-content"
 		/>
 	</div>
 </template>

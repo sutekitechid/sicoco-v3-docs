@@ -1,11 +1,11 @@
 <template>
-	<SFormInput class="flex gap-4 pb-4" id="component-sicoco">
+	<SFormInput class="flex gap-4 pb-4 not-content">
 		<SDropdown
 			v-model="selectedOption"
 			class="w-full"
 			placeholder="Choose an option"
 			required
-			:custom-validators="{ value: value => value === 3 }"
+			:custom-validators="{ value: (value) => value === 3 }"
 		>
 			<SDropdownItem
 				v-for="option in dropdownOptions"
