@@ -1,0 +1,31 @@
+---
+title: Items Per Page
+---
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/ItemsPerPage/apis/apiProperties.vue'
+import ApiEvents from '@/components/ItemsPerPage/apis/apiEvents.vue'
+
+import SItemsPerPage from '@/components/ItemsPerPage/Default.vue'
+import SItemsPerPageRaw from '@/components/ItemsPerPage/Default.vue?raw'
+
+## Component Usage
+
+A `ItemsPerPage` controls how many displayed data in current page.
+
+### Default
+
+<SItemsPerPage client:only='vue' />
+<Code code={SItemsPerPageRaw} lang='vue' title='Default.vue' />
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Events'>
+		<ApiEvents client:only='vue' />
+	</TabItem>
+</Tabs>

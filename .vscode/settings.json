@@ -22,6 +22,7 @@
 		"tooltip",
 		"datatable",
 		"table",
-		"rich-editor"
+		"rich-editor",
+		"pagination"
 	]
 }
