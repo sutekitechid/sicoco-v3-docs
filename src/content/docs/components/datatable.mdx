@@ -26,51 +26,51 @@ A `Datatable` component is a UI element used to display and manage tabular data,
 
 A default datatable is a basic UI element used to display tabular data in a structured format, typically with rows and columns, allowing users to view and interact with information easily.
 
-<DefaultDatatable client:only='vue' class='mt-4' />
+<DefaultDatatable client:only="vue" class="mt-4" />
 
 ### Empty Datatable
 
 An empty datatable is a UI element that displays no data or content, often used to indicate that there are currently no records or items to show in the table. It shows a message or placeholder to inform users about the absence of data.
 
-<EmptyDatatable client:only='vue' class='mt-4' />
+<EmptyDatatable client:only="vue" class="mt-4" />
 
-<Code code={SDatatable} lang='vue' title='datatable.vue' />
+<Code code={SDatatable} lang="vue" title="datatable.vue" />
 
 ### Selectable Datatable
 
 A selectable datatable is a UI element that allows users to select one or more rows or items within the table, enabling actions such as editing, deleting, or performing batch operations on the selected data. It enhances user interaction and data management.
 
-<SelectableDatatable client:only='vue' class='mt-4' />
+<SelectableDatatable client:only="vue" class="mt-4" />
 
 ### Infinite Scroll
 
 An infinite scroll datatable is a UI element that loads and displays data dynamically as the user scrolls down the table, allowing for seamless navigation through large datasets without the need for pagination. It enhances user experience by providing continuous access to information.
 
-<InfiniteScrollDatatable client:only='vue' class='mt-4' />
+<InfiniteScrollDatatable client:only="vue" class="mt-4" />
 
 ## API
 
-Table
+### DataTable
 
 <Tabs>
-	<TabItem label='Properties'>
-		<ApiTableProps client:only='vue' />
+	<TabItem label="Properties">
+		<ApiTableProps client:only="vue" />
 	</TabItem>
-	<TabItem label='Slots'>
-		<ApiTableSlots client:only='vue' />
+	<TabItem label="Slots">
+		<ApiTableSlots client:only="vue" />
 	</TabItem>
-	<TabItem label='Events'>
-		<ApiTableEvents client:only='vue' />
+	<TabItem label="Events">
+		<ApiTableEvents client:only="vue" />
 	</TabItem>
 </Tabs>
 
-Table Column
+### DataTableColumn
 
 <Tabs>
-	<TabItem label='Properties'>
-		<ApiTableColumnProps client:only='vue' />
+	<TabItem label="Properties">
+		<ApiTableColumnProps client:only="vue" />
 	</TabItem>
-	<TabItem label='Slots'>
-		<ApiTableColumnSlots client:only='vue' />
+	<TabItem label="Slots">
+		<ApiTableColumnSlots client:only="vue" />
 	</TabItem>
 </Tabs>
