@@ -25,6 +25,7 @@
 		"datatable",
 		"table",
 		"rich-editor",
-		"pagination"
+		"pagination",
+		"tabs"
 	]
 }
