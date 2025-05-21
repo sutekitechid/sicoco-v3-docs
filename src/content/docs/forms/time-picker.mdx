@@ -1,0 +1,51 @@
+---
+title: TimePicker
+---
+
+A `TimePicker` component allows users to select a specific time (hours and minutes).
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/TimePicker/apis/apiProperties.vue'
+import ApiEvents from '@/components/TimePicker/apis/apiEvents.vue'
+import ApiSlots from '@/components/TimePicker/apis/apiSlots.vue'
+
+import TimePickerDefault from '@/components/TimePicker/default.vue'
+import TimePickerDefaultRaw from '@/components/TimePicker/default.vue?raw'
+
+import TimePickerDisabled from '@/components/TimePicker/disabled.vue'
+import TimePickerDisabledRaw from '@/components/TimePicker/disabled.vue?raw'
+
+import TimePickerValidation from '@/components/TimePicker/validation.vue'
+import TimePickerValidationRaw from '@/components/TimePicker/validation.vue?raw'
+
+## Component Usage
+
+### Default
+
+<TimePickerDefault client:only='vue' class='mt-4' />
+<Code code={TimePickerDefaultRaw} lang='vue' title='default.vue' />
+
+### Disabled
+
+<TimePickerDisabled client:only='vue' class='mt-4' />
+<Code code={TimePickerDisabledRaw} lang='vue' title='disabled.vue' />
+
+### Validation
+
+<TimePickerValidation client:only='vue' class='mt-4' />
+<Code code={TimePickerValidationRaw} lang='vue' title='validation.vue' />
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Events'>
+		<ApiEvents client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<ApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
