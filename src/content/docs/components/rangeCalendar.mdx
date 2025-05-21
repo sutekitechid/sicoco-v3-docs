@@ -1,0 +1,47 @@
+---
+title: RangeCalendar
+---
+
+A `RangeCalendar` component displays a monthly calendar view and allows users to select a date range. It supports highlighting important dates and more.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/RangeCalendar/apis/apiProperties.vue'
+import ApiEvents from '@/components/RangeCalendar/apis/apiEvents.vue'
+import ApiSlots from '@/components/RangeCalendar/apis/apiSlots.vue'
+
+import RangeCalendarDefault from '@/components/RangeCalendar/default.vue'
+import RangeCalendarDefaultRaw from '@/components/RangeCalendar/default.vue?raw'
+
+import RangeCalendarImportantDates from '@/components/RangeCalendar/importantDates.vue'
+import RangeCalendarImportantDatesRaw from '@/components/RangeCalendar/importantDates.vue?raw'
+
+## Component Usage
+
+### Default
+
+<RangeCalendarDefault client:only='vue' class='mt-4' />
+<Code code={RangeCalendarDefaultRaw} lang='vue' title='default.vue' />
+
+### Important Dates
+
+<RangeCalendarImportantDates client:only='vue' class='mt-4' />
+<Code
+	code={RangeCalendarImportantDatesRaw}
+	lang='vue'
+	title='importantDates.vue'
+/>
+
+## API
+
+<Tabs>
+	<TabItem label='Properties'>
+		<ApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Events'>
+		<ApiEvents client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<ApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
