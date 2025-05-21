@@ -9,7 +9,9 @@
 		>
 			<template #required> Field ini wajib diisi </template>
 		</s-input>
-		<s-button type="submit" data-cy="submit-button">SUBMIT</s-button>
+		<s-button class="mt-5" type="submit" data-cy="submit-button"
+			>SUBMIT</s-button
+		>
 	</s-form-input>
 </template>
 
@@ -23,3 +25,9 @@ const onSubmit = () => {
 	console.log('submit')
 }
 </script>
+
+<style>
+.sl-markdown-content .input__help-message {
+	@apply !mt-0;
+}
+</style>

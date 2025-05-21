@@ -21,9 +21,11 @@
 						{{ slot.description }}
 					</STableCell>
 					<STableCell class="!px-4 !text-left">
-						<SBadge v-if="slot.props" variant="danger">
-							{{ slot.props }}
-						</SBadge>
+						<template v-if="displayedProps(slot)">
+							<SBadge v-for="prop in displayedProps(slot)" variant="danger">
+								{{ prop }}
+							</SBadge>
+						</template>
 					</STableCell>
 				</STableRow>
 			</STableBody>
@@ -31,8 +33,8 @@
 	</div>
 </template>
 
-<script setup>
-import { defineProps } from 'vue'
+<script setup lang="ts">
+import { defineProps, computed, type PropType } from 'vue'
 import {
 	STable,
 	STableHeader,
@@ -44,9 +46,23 @@ import {
 
 const props = defineProps({
 	slots: {
-		type: Array,
+		type: Array as PropType<Record<string, any>>,
 		default: () => [],
 	},
+})
+
+const displayedProps = computed(() => {
+	return (slot: Record<string, any>) => {
+		if (slot.props) {
+			if (typeof slot.props === 'string') {
+				return [slot.props]
+			}
+			if (Array.isArray(slot.props)) {
+				return slot.props
+			}
+		}
+		return []
+	}
 })
 </script>
 

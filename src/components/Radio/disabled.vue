@@ -1,18 +1,42 @@
 <template>
-        <div class="mt-[-20px] flex flex-wrap gap-4">
-            <div class="mt-4 flex items-center">
-                <s-radio v-model="food" value="burger" disabled/>
-                <label class="mb-4"> Burger </label>
-             </div>
-             <div class="mt-4 flex items-center">
-                <s-radio v-model="food" value="pizza" disabled/>
-                <label class="mb-4"> Pizza </label>
-             </div>
-        </div>
+	<div class="mt-4">
+		<SRadioGroup
+			class="flex flex-wrap gap-4"
+			v-model="variant"
+			id="component-sicoco"
+		>
+			<SRadioGroupItem value="1" class="flex items-center">
+				Value 1
+			</SRadioGroupItem>
+			<SRadioGroupItem value="2" class="flex items-center">
+				Value 2
+			</SRadioGroupItem>
+		</SRadioGroup>
+		<SRadioGroup
+			class="flex flex-wrap gap-4"
+			v-model="disabledVariant"
+			id="component-sicoco"
+		>
+			<SRadioGroupItem value="1" class="flex items-center" disabled>
+				Value 1
+			</SRadioGroupItem>
+			<SRadioGroupItem value="2" class="flex items-center" disabled>
+				Value 2
+			</SRadioGroupItem>
+		</SRadioGroup>
+	</div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { SRadioGroupItem, SRadioGroup } from '@sutekitechid/sicoco-v3-next'
 
-const food = ref('')
+const variant = ref('1')
+const disabledVariant = ref('1')
 </script>
+
+<style>
+.sl-markdown-content label {
+	@apply !mt-0;
+}
+</style>
