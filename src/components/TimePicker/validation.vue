@@ -19,7 +19,6 @@ import { ref } from 'vue'
 import { STimePicker, SFormInput, SButton } from '@sutekitechid/sicoco-v3-next'
 const time = ref(null)
 function isMorning(value) {
-	console.log('value', value)
 	if (!value) return true
 	const hour =
 		value.hour ??
