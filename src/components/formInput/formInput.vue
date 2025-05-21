@@ -1,67 +1,75 @@
 <template>
-    <s-form-input auto-complete="on" @submit="onSubmit">
-        <div class="mt-4">
-            <label>Username :</label>
-            <s-input v-model="input" type="text" placeholder="Input Your Name" />
-        </div>
-        <div class="mt-4">
-            <label>Email Address :</label>
-            <s-input v-model="email" type="email" placeholder="Input Your Email" />
-        </div>
-        <div class="mt-4">
-            <label>Password :</label>
-            <s-input v-model="password" type="password" placeholder="Input Your Password" />
-        </div>
-        <div class="mt-4">
-            <label>Confirmation Password :</label>
-            <s-input v-model="confirmPassword" type="password" placeholder="Input Your Password" />
-        </div>
-        <div>
-            <s-checkbox v-model="accept" class="mt-3">
-                <p class="mt-[-18px]">Accept Terms and Conditions</p>
-            </s-checkbox>
-        </div>
-         <div v-if="errorMessage" class="mt-2 text-red-500">{{ errorMessage }}</div>
-        <div>
-            <s-button class="mt-3 mb-3" type="submit">SUBMIT</s-button>
-        </div>
-    </s-form-input>
+	<SFormInput @submit="onSubmit">
+		<SInput
+			v-model="email"
+			type="email"
+			placeholder="Enter your email"
+			required
+		>
+			<template #prefix>
+				<i class="si-envelope"></i>
+			</template>
+		</SInput>
+
+		<SInput
+			v-model="password"
+			type="password"
+			placeholder="Enter your password"
+			required
+		>
+			<template #prefix>
+				<i class="si-lock"></i>
+			</template>
+		</SInput>
+
+		<SInput
+			v-model="confirmPassword"
+			type="password"
+			placeholder="Confirm your password"
+			required
+		>
+			<template #prefix>
+				<i class="si-lock"></i>
+			</template>
+		</SInput>
+
+		<SButton type="submit">Submit</SButton>
+	</SFormInput>
+	<SToaster position="bottom" />
 </template>
 
 <script setup>
+import {
+	SFormInput,
+	SInput,
+	SToaster,
+	useToast,
+	SButton,
+} from '@sutekitechid/sicoco-v3-next'
+
 import { ref } from 'vue'
 
-const input = ref('');
-const email = ref('');
-const password = ref('');
-const confirmPassword = ref('');
-const accept = ref(false);
-const errorMessage = ref('');
-
-const registerValidateFunc = (func) => {
-    return func();
-}
-
-const validate = () => {
-    if (!input.value || !email.value || !password.value || !confirmPassword.value) {
-        errorMessage.value = 'You must fill in all fields!';
-        return false;
-    }
-    if (password.value !== confirmPassword.value) {
-        errorMessage.value = 'The passwords do not match!';
-        return false;
-    }
-    if (!accept.value) {
-        errorMessage.value = 'You must accept the terms and conditions.';
-        return false;
-    }
-    errorMessage.value = '';
-    return true;
-}
+const email = ref('')
+const password = ref('')
+const confirmPassword = ref('')
+const { toast } = useToast()
 
 const onSubmit = () => {
-    if (registerValidateFunc(validate)) {
-        
-    }
+	if (password.value !== confirmPassword.value) {
+		toast({
+			title: 'Error',
+			description: 'Passwords do not match',
+			variant: 'danger',
+			duration: 3000,
+		})
+		return
+	}
+
+	toast({
+		title: 'Success',
+		description: 'Form submitted successfully',
+		variant: 'success',
+		duration: 3000,
+	})
 }
 </script>
