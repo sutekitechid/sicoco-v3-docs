@@ -1,10 +1,36 @@
 <template>
 	<SFormInput @submit="onSubmit">
-		<SInput v-model="input" placeholder="Type your name..." required>
+		<SInput
+			v-model="email"
+			type="email"
+			placeholder="Enter your email"
+			required
+		>
 			<template #prefix>
-				<i class="si-user"></i>
+				<i class="si-envelope"></i>
 			</template>
-			<template #required> Please fill your name </template>
+		</SInput>
+
+		<SInput
+			v-model="password"
+			type="password"
+			placeholder="Enter your password"
+			required
+		>
+			<template #prefix>
+				<i class="si-lock"></i>
+			</template>
+		</SInput>
+
+		<SInput
+			v-model="confirmPassword"
+			type="password"
+			placeholder="Confirm your password"
+			required
+		>
+			<template #prefix>
+				<i class="si-lock"></i>
+			</template>
 		</SInput>
 
 		<SButton type="submit">Submit</SButton>
@@ -23,13 +49,25 @@ import {
 
 import { ref } from 'vue'
 
-const input = ref('')
+const email = ref('')
+const password = ref('')
+const confirmPassword = ref('')
 const { toast } = useToast()
 
 const onSubmit = () => {
+	if (password.value !== confirmPassword.value) {
+		toast({
+			title: 'Error',
+			description: 'Passwords do not match',
+			variant: 'danger',
+			duration: 3000,
+		})
+		return
+	}
+
 	toast({
-		title: 'Hello ' + input.value,
-		description: 'Submitted successfully',
+		title: 'Success',
+		description: 'Form submitted successfully',
 		variant: 'success',
 		duration: 3000,
 	})
