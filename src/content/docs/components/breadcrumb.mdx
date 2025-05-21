@@ -1,0 +1,54 @@
+---
+title: Breadcrumb
+---
+
+A `Breadcrumb` is a UI element that displays the user's current location within a hierarchy, helping them easily navigate back to previous levels.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Breadcrumb/apis/apiProperties.vue'
+import BreadcrumbItemApiProperties from '@/components/Breadcrumb/apis/breadcrumbItemApiProperties.vue'
+import ApiSlots from '@/components/Breadcrumb/apis/apiSlots.vue'
+import BreadcrumbItemApiSlots from '@/components/Breadcrumb/apis/breadcrumbItemApiSlots.vue'
+
+import BreadcrumbDefault from '@/components/Breadcrumb/default.vue'
+import BreadcrumbDefaultRaw from '@/components/Breadcrumb/default.vue?raw'
+
+import BreadcrumbDisabled from '@/components/Breadcrumb/disabled.vue'
+import BreadcrumbDisabledRaw from '@/components/Breadcrumb/disabled.vue?raw'
+
+## Component Usage
+
+### Default
+
+<BreadcrumbDefault client:only="vue" class="mt-4" />
+<Code code={BreadcrumbDefaultRaw} lang="vue" title="default.vue" />
+
+### Disabled
+
+<BreadcrumbDisabled client:only="vue" class="mt-4" />
+<Code code={BreadcrumbDisabledRaw} lang="vue" title="disabled.vue" />
+
+## API
+
+### Breadcrumb
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiProperties client:only="vue" />
+	</TabItem>
+	<TabItem label="Slots">
+		<ApiSlots client:only="vue" />
+	</TabItem>
+</Tabs>
+
+### BreadcrumbItem
+
+<Tabs>
+	<TabItem label="Properties">
+		<BreadcrumbItemApiProperties client:only="vue" />
+	</TabItem>
+	<TabItem label="Slots">
+		<BreadcrumbItemApiSlots client:only="vue" />
+	</TabItem>
+</Tabs>
