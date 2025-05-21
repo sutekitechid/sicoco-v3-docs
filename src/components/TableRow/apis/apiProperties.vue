@@ -9,7 +9,7 @@ const data = [
 	{
 		name: 'class',
 		type: 'string',
-		description: 'Custom class for the table',
+		description: 'Custom class for the table row',
 		values: '',
 		default: '',
 	},
