@@ -1,5 +1,5 @@
 <template>
-	<div class="component-sicoco">
+	<div id="component-sicoco">
 		<div>
 			<p>Selected:</p>
 			{{ selectedRows }}

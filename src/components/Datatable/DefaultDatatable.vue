@@ -1,5 +1,5 @@
 <template>
-	<div class="component-sicoco">
+	<div id="component-sicoco">
 		<div class="flex gap-4 pb-6">
 			<SCheckbox v-model="paginated" :value="true">Paginated</SCheckbox>
 		</div>

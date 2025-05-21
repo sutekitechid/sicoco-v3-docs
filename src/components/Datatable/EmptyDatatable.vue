@@ -1,5 +1,5 @@
 <template>
-	<div class="component-sicoco">
+	<div id="component-sicoco">
 		<Datatable
 			id="default-datatable"
 			:data="coffe"
