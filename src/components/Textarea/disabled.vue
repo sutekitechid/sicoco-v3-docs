@@ -1,12 +1,14 @@
 <template>
-	<s-textarea
-		v-model="input"
-		class="mt-4"
-		placeholder="Enter your text here"
-		maxlength="30"
-		minlength="5"
-		disabled
-	/>
+	<div class="not-content">
+		<s-textarea
+			v-model="input"
+			class="mt-4"
+			placeholder="Enter your text here"
+			maxlength="30"
+			minlength="5"
+			disabled
+		/>
+	</div>
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-wrap gap-4 mt-4" id="component-sicoco">
+	<div class="flex flex-wrap gap-4 mt-4 not-content">
 		<s-checkbox v-model="type" value="sm" size="sm"> Small </s-checkbox>
 		<s-checkbox v-model="type" value="md" size="md"> Medium </s-checkbox>
 		<s-checkbox v-model="type" value="lg" size="lg"> Large </s-checkbox>
@@ -22,9 +22,3 @@ import { SCheckbox } from '@sutekitechid/sicoco-v3-next'
 
 const type = ref([])
 </script>
-
-<style>
-.sl-markdown-content label {
-	@apply !mt-0;
-}
-</style>

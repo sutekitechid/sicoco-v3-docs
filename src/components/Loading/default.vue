@@ -1,6 +1,8 @@
 <template>
-	<s-button @click="showLoading">Click Loading</s-button>
-	<s-loading ref="loading"></s-loading>
+	<div class="not-content">
+		<s-button @click="showLoading">Click Loading</s-button>
+		<s-loading ref="loading"></s-loading>
+	</div>
 </template>
 
 <script setup>

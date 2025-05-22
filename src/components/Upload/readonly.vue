@@ -3,7 +3,7 @@
 		v-model="modelValue"
 		label="Readonly File Upload"
 		readonly
-		id="component-sicoco"
+		class="not-content"
 	/>
 </template>
 

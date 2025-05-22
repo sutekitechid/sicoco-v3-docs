@@ -1,7 +1,7 @@
 <template>
-	<div id="component-sicoco">
+	<div>
 		<p>Calendar with Custom Header Slot</p>
-		<SCalendar v-model="selectedDate" class="w-min">
+		<SCalendar v-model="selectedDate" class="w-min not-content">
 			<template #header>
 				<div class="mb-2 flex w-full items-center justify-between">
 					<SButton

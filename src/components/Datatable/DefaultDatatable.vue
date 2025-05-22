@@ -1,15 +1,13 @@
 <template>
-	<div id="component-sicoco">
-		<div class="flex gap-4 pb-6">
-			<SCheckbox v-model="paginated" :value="true">Paginated</SCheckbox>
-		</div>
-		<Datatable
-			id="default-datatable"
-			:data="coffe.hot"
-			:paginated="paginated"
-			:selectable="selectable"
-		></Datatable>
+	<div class="mt-4 not-content">
+		<SCheckbox v-model="paginated" :value="true">Paginated</SCheckbox>
 	</div>
+	<Datatable
+		id="default-datatable"
+		:data="coffe.hot"
+		:paginated="paginated"
+		:selectable="selectable"
+	></Datatable>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'

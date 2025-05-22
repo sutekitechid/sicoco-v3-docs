@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<p>Selected range: {{ start }} - {{ end }}</p>
 		<SDatePicker v-model:start="start" v-model:end="end" :date-range="true" />
 	</div>

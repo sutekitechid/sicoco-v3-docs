@@ -1,7 +1,11 @@
 <template>
-	<div id="component-sicoco">
+	<div>
 		<p>Calendar with Custom Years Range</p>
-		<SCalendar v-model="selectedDate" :years-range="yearsRange" class="w-min" />
+		<SCalendar
+			v-model="selectedDate"
+			:years-range="yearsRange"
+			class="w-min not-content"
+		/>
 	</div>
 </template>
 

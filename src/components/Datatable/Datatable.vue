@@ -1,6 +1,7 @@
 <template>
 	<SDataTable
 		:id="id"
+		class="not-content"
 		:data="computedData"
 		data-cy="example-datatable"
 		v-model="selectedRows"
@@ -12,7 +13,7 @@
 		:selectable="selectable"
 		:headers-text-wrap="false"
 		:infinite-scroll="infiniteScroll"
-		@sort="$event => onSort($event)"
+		@sort="($event) => onSort($event)"
 		@change-page="onChangePage"
 		@change-per-page="onChangePerPage"
 	>
@@ -55,8 +56,8 @@
 			<STableEmpty class="bg-white">
 				<p class="font-semibold text-lg">No data found</p>
 				<p>
-					We couldn’t find any data matching your search criteria. Please try
-					again.
+					We couldn&apos;t find any data matching your search criteria. Please
+					try again.
 				</p>
 			</STableEmpty>
 		</template>
@@ -100,7 +101,7 @@ const props = defineProps({
 const emit = defineEmits(['update:selectableRows'])
 const selectedRows = computed({
 	get: () => props.selectableRows,
-	set: value => {
+	set: (value) => {
 		emit('update:selectableRows', value)
 	},
 })

@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<div class="pb-2">
 			<p>Value: {{ selectedOptionSearch }}</p>
 			<p>Keyword: {{ searchValue }}</p>
@@ -35,7 +35,7 @@ const dropdownOptions = [
 	{ label: 'Option 4', value: 4 },
 ]
 const filteredOptions = computed(() =>
-	dropdownOptions.filter(option =>
+	dropdownOptions.filter((option) =>
 		option.label.toLowerCase().includes(searchValue.value.toLowerCase())
 	)
 )

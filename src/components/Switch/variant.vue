@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-4 not-content">
 		<div class="flex items-center gap-4">
 			<SSWitch v-model="checked1" variant="primary" />
 			<span>Primary / Default</span>

@@ -1,7 +1,7 @@
 <template>
-	<div id="component-sicoco">
+	<div class="mt-4">
 		<p>Selected range: {{ selectedRangeDate }}</p>
-		<SRangeCalendar v-model="selectedRangeDate" class="w-min" />
+		<SRangeCalendar v-model="selectedRangeDate" class="w-min not-content" />
 	</div>
 </template>
 

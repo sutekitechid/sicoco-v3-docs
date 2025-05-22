@@ -1,5 +1,5 @@
 <template>
-	<SFormInput id="component-sicoco">
+	<SFormInput class="not-content">
 		<STimePicker v-model="time" :custom-validators="{ isMorning }">
 			<template #required> Time is required </template>
 			<template #errors="{ validation }">

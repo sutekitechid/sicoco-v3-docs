@@ -1,10 +1,6 @@
 <template>
 	<div class="mt-4">
-		<SRadioGroup
-			class="flex flex-wrap gap-4"
-			v-model="variant"
-			id="component-sicoco"
-		>
+		<SRadioGroup class="flex flex-wrap gap-4 not-content" v-model="variant">
 			<SRadioGroupItem value="default" class="flex items-center">
 				Default
 			</SRadioGroupItem>
@@ -46,9 +42,3 @@ import { SRadioGroupItem, SRadioGroup } from '@sutekitechid/sicoco-v3-next'
 
 const variant = ref('default')
 </script>
-
-<style>
-.sl-markdown-content label {
-	@apply !mt-0;
-}
-</style>

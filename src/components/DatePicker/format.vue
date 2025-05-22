@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col gap-6" id="component-sicoco">
+	<div class="flex flex-col gap-6 not-content">
 		<p>Value: {{ date }}</p>
 		<div>
 			<p>Format: {{ DateFormatEnum.STANDARD }}</p>

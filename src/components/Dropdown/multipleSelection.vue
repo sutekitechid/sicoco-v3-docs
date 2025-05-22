@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<p>Value : {{ selectedOptions }}</p>
 		<SDropdown
 			v-model="selectedOptions"

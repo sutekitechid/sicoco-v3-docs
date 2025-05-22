@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<p>Selected date: {{ selectedDate }}</p>
 		<SDatePicker v-model="selectedDate" />
 	</div>

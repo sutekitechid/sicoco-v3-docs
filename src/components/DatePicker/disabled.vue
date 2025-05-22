@@ -1,5 +1,5 @@
 <template>
-	<div id="component-sicoco">
+	<div class="not-content">
 		<p>Disabled DatePicker</p>
 		<SDatePicker v-model="selectedDate" disabled />
 	</div>

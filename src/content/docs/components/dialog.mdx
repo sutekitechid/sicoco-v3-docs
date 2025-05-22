@@ -1,0 +1,54 @@
+---
+title: Dialog
+---
+
+The `Dialog` component is an interface element used to capture user attention and present important content, actions, or forms in a focused overlay. It is typically used for confirmations, alerts, input prompts, or custom interactive content without navigating away from the current page.
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Dialog/apis/apiProperties.vue'
+import ContentApiProperties from '@/components/Dialog/apis/contentApiProperties.vue'
+
+import SBasic from '@/components/Dialog/basic.vue'
+import SBasicRaw from '@/components/Dialog/basic.vue?raw'
+
+import SContent from '@/components/Dialog/longContent.vue'
+import SContentRaw from '@/components/Dialog/longContent.vue?raw'
+
+import SAction from '@/components/Dialog/multiAction.vue'
+import SActionRaw from '@/components/Dialog/multiAction.vue?raw'
+
+## Component Usage
+
+### Basic
+
+<SBasic client:only="vue" class="mt-4" />
+<Code code={SBasicRaw} lang="vue" title="basic.vue" />
+
+### Long Content
+
+<SContent client:only="vue" class="mt-4" />
+<Code code={SContentRaw} lang="vue" title="longContent.vue" />
+
+### Multi Action
+
+<SAction client:only="vue" class="mt-4" />
+<Code code={SActionRaw} lang="vue" title="multiAction.vue" />
+
+## API
+
+### Dialog
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiProperties client:only="vue" />
+	</TabItem>
+</Tabs>
+
+### Dialog Content
+
+<Tabs>
+	<TabItem label="Properties">
+		<ContentApiProperties client:only="vue" />
+	</TabItem>
+</Tabs>

@@ -1,5 +1,5 @@
 <template>
-	<div class="flex items-center gap-4">
+	<div class="flex items-center gap-4 not-content">
 		<SSWitch v-model="checked" :disabled="true">
 			<span>Disabled Switch</span>
 		</SSWitch>

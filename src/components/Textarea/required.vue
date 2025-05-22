@@ -1,8 +1,10 @@
 <template>
-	<s-form-input @submit="onSubmit">
-		<s-textarea v-model="input" placeholder="Enter your text here" required />
-		<s-button type="submit">SUBMIT</s-button>
-	</s-form-input>
+	<div class="not-content">
+		<s-form-input @submit="onSubmit">
+			<s-textarea v-model="input" placeholder="Enter your text here" required />
+			<s-button type="submit">SUBMIT</s-button>
+		</s-form-input>
+	</div>
 </template>
 
 <script setup>

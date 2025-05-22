@@ -1,10 +1,10 @@
 <template>
-	<div id="component-sicoco">
+	<div>
 		<p>Calendar with Important Dates</p>
 		<SCalendar
 			v-model="selectedDate"
 			:important-dates="importantDates"
-			class="w-min"
+			class="w-min not-content"
 		/>
 	</div>
 </template>

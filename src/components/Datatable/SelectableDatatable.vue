@@ -1,17 +1,15 @@
 <template>
-	<div id="component-sicoco">
-		<div>
-			<p>Selected:</p>
-			{{ selectedRows }}
-		</div>
-		<Datatable
-			id="default-datatable"
-			v-model:selectable-rows="selectedRows"
-			:data="coffe.hot"
-			:paginated="paginated"
-			selectable
-		></Datatable>
+	<div>
+		<p>Selected:</p>
+		{{ selectedRows }}
 	</div>
+	<Datatable
+		id="default-datatable"
+		v-model:selectable-rows="selectedRows"
+		:data="coffe.hot"
+		:paginated="paginated"
+		selectable
+	></Datatable>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
