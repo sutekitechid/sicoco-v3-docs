@@ -25,22 +25,22 @@ A `Textarea` is a component part of form for inputting multi-line text in web fo
 
 A default `Textarea` is a form element that users can freely interact with. It allows change in many props, such as `row`, `cols`, `max-length`, `min-length`, `placeholder`, etc.
 
-<STextarea client:only="vue" />
-<Code code={STextareaRaw} lang="vue" title="textarea.vue" />
+<STextarea client:only="vue" class="mt-4" />
+<Code code={STextareaRaw} lang="vue" title="default.vue" />
 
 ### Disabled
 
 A disabled `Textarea` is a form element that users can see but not interact with or edit. It is rendered with a gray background and is non-clickable.
 
-<STextareaDisabled client:only="vue" />
-<Code code={STextareaDisabledRaw} lang="vue" title="textareaDisabled.vue" />
+<STextareaDisabled client:only="vue" class="mt-4" />
+<Code code={STextareaDisabledRaw} lang="vue" title="disabled.vue" />
 
 ### Required
 
 To make the `<textarea>` required, you can add the required attribute to the textarea element and wrap it with the `s-form-input` component.
 
 <STextareaRequired client:only="vue" class="mt-4" />
-<Code code={STextareaRequiredRaw} lang="vue" title="textareaRequired.vue" />
+<Code code={STextareaRequiredRaw} lang="vue" title="required.vue" />
 
 ## API
 
