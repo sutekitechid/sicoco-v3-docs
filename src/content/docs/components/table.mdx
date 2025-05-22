@@ -2,62 +2,161 @@
 title: Table
 ---
 
-import { Code } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components'
 import { Tabs, TabItem } from '@astrojs/starlight/components'
-import ApiProperties from '@/components/Table/apis/apiProperties.vue';
-import STableBodySlots from '@/components/Table/apis/STableBodySlots.vue';
-import STableCellSlots from '@/components/Table/apis/STableCellSlots.vue';
-import STableHeadSlots from '@/components/Table/apis/STableHeadSlots.vue';
-import STableHeadCellSlots from '@/components/Table/apis/STableHeadCellSlots.vue';
-import STableRowSlots from '@/components/Table/apis/STableRowSlots.vue';
 
-import STableBody from '@/components/Table/table.vue';
-import STableBodyRaw from '@/components/Table/table.vue?raw';
+import STable from '@/components/Table/Default.vue'
+import STableRaw from '@/components/Table/Default.vue?raw'
+
+import STableCellWithLoading from '@/components/Table/TableCellWithLoading.vue'
+import STableCellWithLoadingRaw from '@/components/Table/TableCellWithLoading.vue?raw'
+
+import STableFooter from '@/components/Table/TableFooter.vue'
+import STableFooterRaw from '@/components/Table/TableFooter.vue?raw'
+
+import STableHeaderSticky from '@/components/Table/TableHeaderSticky.vue'
+import STableHeaderStickyRaw from '@/components/Table/TableHeaderSticky.vue?raw'
+
+import STableApiProperties from '@/components/Table/apis/apiProperties.vue'
+import STableApiSlots from '@/components/Table/apis/apiSlots.vue'
+
+import STableBodyApiProperties from '@/components/TableBody/apis/apiProperties.vue'
+import STableBodyApiSlots from '@/components/TableBody/apis/apiSlots.vue'
+
+import STableCellApiProperties from '@/components/TableCell/apis/apiProperties.vue'
+import STableCellApiSlots from '@/components/TableCell/apis/apiSlots.vue'
+
+import STableHeaderApiProperties from '@/components/TableHeader/apis/apiProperties.vue'
+import STableHeaderApiSlots from '@/components/TableHeader/apis/apiSlots.vue'
+
+import STableHeadApiProperties from '@/components/TableHead/apis/apiProperties.vue'
+import STableHeadApiSlots from '@/components/TableHead/apis/apiSlots.vue'
+
+import STableRowApiProperties from '@/components/TableRow/apis/apiProperties.vue'
+import STableRowApiSlots from '@/components/TableRow/apis/apiSlots.vue'
+
+import STableFooterApiProperties from '@/components/TableFooter/apis/apiProperties.vue'
+import STableFooterApiSlots from '@/components/TableFooter/apis/apiSlots.vue'
+
+import STableEmptyApiProperties from '@/components/TableEmpty/apis/apiProperties.vue'
+import STableEmptyApiSlots from '@/components/TableEmpty/apis/apiSlots.vue'
 
 ## Component Usage
+
+A `Table` displays tabular data in a structured and flexible way.
+
 ### Table
-<STableBody client:only="vue" class="mt-4" />
-<Code code={STableBodyRaw} lang="vue" title="placement.vue" />
+
+<STable client:only='vue' class='mt-4' />
+<Code code={STableRaw} lang='vue' title='Default.vue' />
+
+### Table Cell with Loading
+
+Show content placeholder in certain cells.
+
+<STableCellWithLoading client:only='vue' class='mt-4' />
+<Code
+	code={STableCellWithLoadingRaw}
+	lang='vue'
+	title='TableCellWithLoading.vue'
+/>
+
+### Sticky Table Header
+
+<STableHeaderSticky client:only='vue' class='mt-4' />
+<Code code={STableHeaderStickyRaw} lang='vue' title='TableHeaderSticky.vue' />
+
+### Table Footer
+
+<STableFooter client:only='vue' class='mt-4' />
+<Code code={STableFooterRaw} lang='vue' title='TableFooter.vue' />
 
 ## API
-### STable
+
+### Table
+
 <Tabs>
-    <TabItem label="Properties">
-        <ApiProperties client:only="vue" />
-    </TabItem>
+	<TabItem label='Properties'>
+		<STableApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STableApiSlots client:only='vue' />
+	</TabItem>
 </Tabs>
 
-### STableBody
+### TableHeader
+
 <Tabs>
-    <TabItem label="Slots">
-        <STableBodySlots client:only="vue" />
-    </TabItem>
+	<TabItem label='Properties'>
+		<STableHeaderApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STableHeaderApiSlots client:only='vue' />
+	</TabItem>
 </Tabs>
 
-### STableCell
+### TableHead
+
 <Tabs>
-    <TabItem label="Slots">
-        <STableCellSlots client:only="vue" />
-    </TabItem>
+	<TabItem label='Properties'>
+		<STableHeadApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STableHeadApiSlots client:only='vue' />
+	</TabItem>
 </Tabs>
 
-### STableHead
+### TableBody
+
 <Tabs>
-    <TabItem label="Slots">
-        <STableHeadSlots client:only="vue" />
-    </TabItem>
+	<TabItem label='Properties'>
+		<STableBodyApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STableBodyApiSlots client:only='vue' />
+	</TabItem>
 </Tabs>
 
-### STableHeadCell
+### TableRow
+
 <Tabs>
-    <TabItem label="Slots">
-        <STableHeadCellSlots client:only="vue" />
-    </TabItem>
+	<TabItem label='Properties'>
+		<STableRowApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STableRowApiSlots client:only='vue' />
+	</TabItem>
 </Tabs>
 
-### STableRow
+### TableCell
+
 <Tabs>
-    <TabItem label="Slots">
-        <STableRowSlots client:only="vue" />
-    </TabItem>
+	<TabItem label='Properties'>
+		<STableCellApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STableCellApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### TableFooter
+
+<Tabs>
+	<TabItem label='Properties'>
+		<STableFooterApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STableFooterApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### TableEmpty
+
+<Tabs>
+	<TabItem label='Properties'>
+		<STableEmptyApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STableEmptyApiSlots client:only='vue' />
+	</TabItem>
 </Tabs>

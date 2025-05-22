@@ -13,5 +13,19 @@ const data = [
 		values: '',
 		default: '',
 	},
+	{
+		name: 'size',
+		type: 'string',
+		description: 'Size of the table head',
+		values: ['sm', 'md', 'lg'],
+		default: '',
+	},
+	{
+		name: 'textWrap',
+		type: 'boolean',
+		description: 'Enable text wrapping in the table head',
+		values: '',
+		default: 'true',
+	},
 ]
 </script>
