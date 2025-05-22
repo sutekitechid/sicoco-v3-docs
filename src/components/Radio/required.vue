@@ -31,9 +31,3 @@ const onSubmit = () => {
 	console.log('submit')
 }
 </script>
-
-<style>
-.sl-markdown-content label {
-	@apply !mt-0;
-}
-</style>

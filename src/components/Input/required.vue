@@ -25,9 +25,3 @@ const onSubmit = () => {
 	console.log('submit')
 }
 </script>
-
-<style>
-.sl-markdown-content .input__help-message {
-	@apply !mt-0;
-}
-</style>

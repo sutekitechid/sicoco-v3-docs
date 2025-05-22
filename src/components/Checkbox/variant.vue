@@ -33,9 +33,3 @@ import { SCheckbox } from '@sutekitechid/sicoco-v3-next'
 
 const type = ref([])
 </script>
-
-<style>
-.sl-markdown-content label {
-	@apply !mt-0;
-}
-</style>

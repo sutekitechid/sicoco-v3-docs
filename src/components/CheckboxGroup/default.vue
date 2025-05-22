@@ -25,9 +25,3 @@ import { SCheckboxGroup, SCheckbox } from '@sutekitechid/sicoco-v3-next'
 
 const selectedOptions = ref([])
 </script>
-
-<style>
-.sl-markdown-content label {
-	@apply !mt-0;
-}
-</style>
