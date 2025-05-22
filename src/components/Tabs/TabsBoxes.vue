@@ -1,5 +1,9 @@
 <template>
-	<STabs :default-value="triggers[0].value" :variant="tabsVariant">
+	<STabs
+		:default-value="triggers[0].value"
+		:variant="tabsVariant"
+		class="not-content"
+	>
 		<STabsList>
 			<STabsTrigger
 				v-for="(trigger, idx) in triggers"

@@ -34,14 +34,14 @@
 </template>
 
 <script setup lang="ts">
-import { SStepper } from '@sutekitechid/sicoco-v3-next'
 import {
+	SStepper,
 	SStepperDescription,
 	SStepperIndicator,
 	SStepperItem,
 	SStepperTitle,
 	SStepperTrigger,
-} from '@sutekitechid/sicoco-v3-next/dist/components/stepper'
+} from '@sutekitechid/sicoco-v3-next'
 
 import { ref } from 'vue'
 
