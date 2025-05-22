@@ -1,0 +1,84 @@
+---
+title: Tabs
+---
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+
+import STabs from '@/components/Tabs/Default.vue'
+import STabsRaw from '@/components/Tabs/Default.vue?raw'
+
+import STabsBoxes from '@/components/Tabs/TabsBoxes.vue'
+import STabsBoxesRaw from '@/components/Tabs/TabsBoxes.vue?raw'
+
+import STabsApiProperties from '@/components/Tabs/apis/apiProperties.vue'
+import STabsApiSlots from '@/components/Tabs/apis/apiSlots.vue'
+
+import STabsListApiProperties from '@/components/TabsList/apis/apiProperties.vue'
+import STabsListApiSlots from '@/components/TabsList/apis/apiSlots.vue'
+
+import STabsTriggerApiProperties from '@/components/TabsTrigger/apis/apiProperties.vue'
+import STabsTriggerApiSlots from '@/components/TabsTrigger/apis/apiSlots.vue'
+
+import STabsContentApiProperties from '@/components/TabsContent/apis/apiProperties.vue'
+import STabsContentApiSlots from '@/components/TabsContent/apis/apiSlots.vue'
+
+## Component Usage
+
+A `Tabs` organizes content into separate panels, each accessible via a tab.
+
+### Default Tabs
+
+<STabs client:only='vue' class='mt-4' />
+<Code code={STabsRaw} lang='vue' title='Default.vue' />
+
+### Boxes Tabs
+
+<STabsBoxes client:only='vue' class='mt-4' />
+<Code code={STabsBoxesRaw} lang='vue' title='TabsBoxes.vue' />
+
+## API
+
+### Tabs
+
+<Tabs>
+	<TabItem label='Properties'>
+		<STabsApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STabsApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### TabsList
+
+<Tabs>
+	<TabItem label='Properties'>
+		<STabsListApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STabsListApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### TabsTrigger
+
+<Tabs>
+	<TabItem label='Properties'>
+		<STabsTriggerApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STabsTriggerApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
+
+### TabsContent
+
+<Tabs>
+	<TabItem label='Properties'>
+		<STabsContentApiProperties client:only='vue' />
+	</TabItem>
+	<TabItem label='Slots'>
+		<STabsContentApiSlots client:only='vue' />
+	</TabItem>
+</Tabs>
