@@ -2,7 +2,7 @@
 	<div class="flex flex-col gap-8">
 		<div>
 			<h5>Label Slot</h5>
-			<SUpload v-model="modelValue not-content">
+			<SUpload v-model="modelValue" class="not-content">
 				<template #label>
 					<div class="flex items-center gap-2 font-semibold text-xl ml-4">
 						<i class="si-camera dark:text-neutral-10 text-neutral-100"></i>
