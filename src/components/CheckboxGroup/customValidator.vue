@@ -1,6 +1,7 @@
 <template>
 	<s-form-input @submit="onSubmit">
 		<s-checkbox-group
+			class="mb-10"
 			:value="payment"
 			:custom-validators="{
 				cash: (value) => {
@@ -47,10 +48,11 @@
 			</div>
 
 			<template #errors="{ validation }">
-				<div v-if="validation.cash.$invalid" class="text-danger-100">
+				<template v-if="validation.cash.$invalid">
 					Cash can only be used for COD delivery.
-				</div>
+				</template>
 			</template>
+
 			<s-button type="submit" data-cy="submit-button">SUBMIT</s-button>
 		</s-checkbox-group>
 	</s-form-input>
@@ -67,8 +69,4 @@ import {
 
 const delivery = ref()
 const payment = ref() // Convert to string to store a single value.
-
-const onSubmit = () => {
-	console.log('submit')
-}
 </script>
