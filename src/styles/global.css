@@ -73,3 +73,13 @@ summary {
 		--color-neutral-100: 250 250 250;
 	}
 }
+
+.sl-markdown-content div + div {
+	margin-top: 0 !important;
+}
+.sl-markdown-content button + button {
+	margin-top: 0 !important;
+}
+.\!h-0 * {
+	height: 0 !important;
+}
