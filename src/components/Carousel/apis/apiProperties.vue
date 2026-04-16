@@ -6,6 +6,13 @@
 import ApiPropertyTable from '@/components/api-table/apiProperty.vue'
 const data = [
 	{
+		name: 'model-value',
+		type: 'string | number',
+		default: '',
+		description: 'Binding untuk current snap index. Bisa digunakan untuk membuat controlled carousel',
+		values: undefined,
+	},
+	{
 		name: 'items-per-view',
 		type: 'number',
 		default: '1',
