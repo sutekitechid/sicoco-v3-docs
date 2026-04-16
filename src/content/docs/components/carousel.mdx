@@ -1,0 +1,167 @@
+---
+title: Carousel
+---
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ApiProperties from '@/components/Carousel/apis/apiProperties.vue'
+import ApiSlots from '@/components/Carousel/apis/apiSlots.vue'
+
+import ApiPropertiesCarouselContent from '@/components/Carousel/CarouselContent/apis/apiProperties.vue'
+import ApiSlotsCarouselContent from '@/components/Carousel/CarouselContent/apis/apiSlots.vue'
+
+import ApiPropertiesCarouselItem from '@/components/Carousel/CarouselItem/apis/apiProperties.vue'
+import ApiSlotsCarouselItem from '@/components/Carousel/CarouselItem/apis/apiSlots.vue'
+
+import ApiPropertiesCarouselPagination from '@/components/Carousel/CarouselPagination/apiProperties.vue'
+import ApiSlotsCarouselPagination from '@/components/Carousel/CarouselPagination/apiSlots.vue'
+
+import SCarouselDefault from '@/components/Carousel/default.vue'
+import SCarouselDefaultRaw from '@/components/Carousel/default.vue?raw'
+import SCarouselMultiItem from '@/components/Carousel/multiItem.vue'
+import SCarouselMultiItemRaw from '@/components/Carousel/multiItem.vue?raw'
+import SCarouselAutoplay from '@/components/Carousel/autoplay.vue'
+import SCarouselAutoplayRaw from '@/components/Carousel/autoplay.vue?raw'
+import SCarouselVertical from '@/components/Carousel/vertical.vue'
+import SCarouselVerticalRaw from '@/components/Carousel/vertical.vue?raw'
+import SCarouselWithNavigation from '@/components/Carousel/withNavigation.vue'
+import SCarouselWithNavigationRaw from '@/components/Carousel/withNavigation.vue?raw'
+import SCarouselThumbnailIndicator from '@/components/Carousel/thumbnailIndicator.vue'
+import SCarouselThumbnailIndicatorRaw from '@/components/Carousel/thumbnailIndicator.vue?raw'
+import SCarouselNumberIndicator from '@/components/Carousel/numberIndicator.vue'
+import SCarouselNumberIndicatorRaw from '@/components/Carousel/numberIndicator.vue?raw'
+import SCarouselCustomLayout from '@/components/Carousel/customLayout.vue'
+import SCarouselCustomLayoutRaw from '@/components/Carousel/customLayout.vue?raw'
+import SCarouselSpoilerMask from '@/components/Carousel/spoilerMask.vue'
+import SCarouselSpoilerMaskRaw from '@/components/Carousel/spoilerMask.vue?raw'
+import SCarouselOverlaid from '@/components/Carousel/overlaid.vue'
+import SCarouselOverlaidRaw from '@/components/Carousel/overlaid.vue?raw'
+import SCarouselNoPagination from '@/components/Carousel/noPagination.vue'
+import SCarouselNoPaginationRaw from '@/components/Carousel/noPagination.vue?raw'
+
+A `Carousel` is a slideshow component for cycling through elements—images or slides of content—like a carousel. It allows users to browse through multiple items in a compact space.
+
+## Component Usage
+
+### Default
+
+A default `Carousel` displays one item at a time with dot indicators for navigation. Users can click dots to jump to specific slides or swipe/drag to navigate.
+
+<SCarouselDefault client:only="vue" />
+<Code code={SCarouselDefaultRaw} lang="vue" title="default.vue" />
+
+### Multi Item
+
+A multi-item `Carousel` displays multiple items simultaneously. This example shows 3 items at once, perfect for product showcases or image galleries.
+
+<SCarouselMultiItem client:only="vue" />
+<Code code={SCarouselMultiItemRaw} lang="vue" title="multiItem.vue" />
+
+### Autoplay
+
+An autoplay `Carousel` automatically advances through slides at specified intervals. The autoplay pauses when users hover or focus on the carousel.
+
+<SCarouselAutoplay client:only="vue" />
+<Code code={SCarouselAutoplayRaw} lang="vue" title="autoplay.vue" />
+
+### Vertical
+
+A vertical `Carousel` scrolls items vertically instead of horizontally. Useful for displaying content in a vertical layout.
+
+<SCarouselVertical client:only="vue" />
+<Code code={SCarouselVerticalRaw} lang="vue" title="vertical.vue" />
+
+### With Navigation
+
+A `Carousel` with previous/next buttons positioned on the sides. When `loop` is disabled, buttons are automatically disabled at the start and end.
+
+<SCarouselWithNavigation client:only="vue" />
+<Code code={SCarouselWithNavigationRaw} lang="vue" title="withNavigation.vue" />
+
+### Thumbnail Indicator
+
+A `Carousel` using thumbnail images as indicators instead of dots. Users can click thumbnails to jump to specific slides.
+
+<SCarouselThumbnailIndicator client:only="vue" />
+<Code code={SCarouselThumbnailIndicatorRaw} lang="vue" title="thumbnailIndicator.vue" />
+
+### Number Indicator
+
+A `Carousel` displaying current position as numbers (e.g., "1 / 5") instead of dots.
+
+<SCarouselNumberIndicator client:only="vue" />
+<Code code={SCarouselNumberIndicatorRaw} lang="vue" title="numberIndicator.vue" />
+
+### Custom Layout
+
+A `Carousel` with fully customized pagination layout using the default scoped slot. This example shows text navigation buttons with a counter.
+
+<SCarouselCustomLayout client:only="vue" />
+<Code code={SCarouselCustomLayoutRaw} lang="vue" title="customLayout.vue" />
+
+### Spoiler Effect with CSS Mask
+
+A `Carousel` with edge fade effect using CSS mask-image. This creates a "spoiler" effect showing partial views of adjacent slides using pure CSS.
+
+<SCarouselSpoilerMask client:only="vue" />
+<Code code={SCarouselSpoilerMaskRaw} lang="vue" title="spoilerMask.vue" />
+
+### Overlaid Pagination
+
+A `Carousel` with pagination controls positioned absolutely over the content. Perfect for banner-style carousels.
+
+<SCarouselOverlaid client:only="vue" />
+<Code code={SCarouselOverlaidRaw} lang="vue" title="overlaid.vue" />
+
+### No Pagination
+
+A `Carousel` without any pagination controls. Users can freely scroll/drag through items, perfect for product lists.
+
+<SCarouselNoPagination client:only="vue" />
+<Code code={SCarouselNoPaginationRaw} lang="vue" title="noPagination.vue" />
+
+## API
+
+### Carousel
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiProperties client:only="vue" />
+	</TabItem>
+	<TabItem label="Slots">
+		<ApiSlots client:only="vue" />
+	</TabItem>
+</Tabs>
+
+### CarouselContent
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiPropertiesCarouselContent client:only="vue" />
+	</TabItem>
+	<TabItem label="Slots">
+		<ApiSlotsCarouselContent client:only="vue" />
+	</TabItem>
+</Tabs>
+
+### CarouselItem
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiPropertiesCarouselItem client:only="vue" />
+	</TabItem>
+	<TabItem label="Slots">
+		<ApiSlotsCarouselItem client:only="vue" />
+	</TabItem>
+</Tabs>
+
+### CarouselPagination
+
+<Tabs>
+	<TabItem label="Properties">
+		<ApiPropertiesCarouselPagination client:only="vue" />
+	</TabItem>
+	<TabItem label="Slots">
+		<ApiSlotsCarouselPagination client:only="vue" />
+	</TabItem>
+</Tabs>
