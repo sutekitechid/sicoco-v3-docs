@@ -12,5 +12,12 @@ const data = [
 		values: '',
 		description: 'Controlled open state of the dialog',
 	},
+	{
+		name: 'closeOnClickOutside',
+		type: 'boolean',
+		default: 'false',
+		values: '',
+		description: 'Whether the dialog should close when clicking outside of it',
+	}
 ]
 </script>
