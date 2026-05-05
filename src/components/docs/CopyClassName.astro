@@ -1,0 +1,22 @@
+---
+interface Props {
+  className: string;
+}
+
+const { className } = Astro.props;
+
+const copyHandler = `const button=this;if(button._copyTimer){clearTimeout(button._copyTimer);button._copyTimer=null;}(async()=>{if(!navigator.clipboard?.writeText){return;}try{await navigator.clipboard.writeText(${JSON.stringify(className)});button.textContent='Copied';button.setAttribute('aria-label','Copied');button.setAttribute('title','Copied');button._copyTimer=setTimeout(()=>{button.textContent='Copy';button.setAttribute('aria-label',${JSON.stringify(`Copy ${className}`)});button.setAttribute('title','Copy');button._copyTimer=null;},1200);}catch(_error){}})();`;
+---
+
+<span style="display:inline-flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+  <code>{className}</code>
+  <button
+    type="button"
+    style="display:inline-flex;align-items:center;justify-content:center;padding:0.25rem;border:1px solid var(--sl-color-gray-4);border-radius:0.35rem;background:var(--sl-color-bg);font-size:0.85rem;line-height:1;cursor:pointer;"
+    onclick={copyHandler}
+    aria-label={`Copy ${className}`}
+    title="Copy"
+  >
+    Copy
+  </button>
+</span>
