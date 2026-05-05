@@ -1,7 +1,6 @@
 <template>
-	<s-form-input @submit="onSubmit">
+	<s-form-input class="not-content" @submit="onSubmit">
 		<p class="mt-3 text-xl">Choose what you want to drink?</p>
-
 		<SRadioGroup
 			:custom-validators="{
 				cold: (value) => {
@@ -15,7 +14,6 @@
 		</SRadioGroup>
 
 		<p class="mt-3 text-xl">Do you want a cold or hot drink?</p>
-
 		<SRadioGroup
 			:custom-validators="{
 				cold: (value) => {
@@ -26,14 +24,16 @@
 		>
 			<SRadioGroupItem value="hot" type="primary"> Hot </SRadioGroupItem>
 			<SRadioGroupItem value="cold" type="primary"> Cold </SRadioGroupItem>
+			<template #errors="{ validation }">
+				<div v-if="validation.cold.$invalid">
+					Sorry, but the cold coffee menu is not available!
+				</div>
+			</template>
 		</SRadioGroup>
 
-		<template #errors="{ validation }">
-			<div v-if="validation['cold']" class="text-danger-100">
-				Sorry, but the cold coffee menu is not available!
-			</div>
-		</template>
-		<s-button type="submit" data-cy="submit-button">SUBMIT</s-button>
+		<s-button class="mt-4" type="submit" data-cy="submit-button"
+			>SUBMIT</s-button
+		>
 	</s-form-input>
 </template>
 
