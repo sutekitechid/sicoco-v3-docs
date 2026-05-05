@@ -38,6 +38,15 @@ export default defineConfig({
             ],
           },
           {
+            label: 'Design Tokens',
+            items: [
+              {
+                label: 'Color',
+                slug: 'design-tokens/color',
+              },
+            ],
+          },
+          {
             label: 'Components',
             autogenerate: {
               directory: 'components',

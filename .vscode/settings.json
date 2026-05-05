@@ -26,6 +26,7 @@
 		"table",
 		"rich-editor",
 		"pagination",
-		"tabs"
+		"tabs",
+		"color"
 	]
 }

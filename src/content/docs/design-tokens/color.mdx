@@ -1,0 +1,333 @@
+---
+title: Color
+description: Consistent and expressive color usage across all Sicoco components and interfaces.
+---
+
+import CopyClassName from '@/components/docs/CopyClassName.astro'
+
+Using the color palette consistently creates a cohesive and recognizable visual identity
+across all Sicoco products and interfaces. This approach is built on a clear set of
+guidelines for applying the Sicoco component library across both light and dark themes.
+
+---
+
+## Color anatomy
+
+Sicoco's color system is organized into **semantic color families** and a **neutral palette**.
+Each family expresses a specific role or intent in the UI:
+
+- **Primary** — The main brand color (indigo). Used for primary actions, links, focus rings, and interactive highlights.
+- **Secondary** — A supporting cyan/teal tone. Used for complementary UI elements and accents.
+- **Neutral** — Grayscale with a subtle blue-gray cast. Drives backgrounds, borders, text, and surface layering.
+- **Semantic colors** — Communicate system feedback and status:
+  - **Success** — Confirms a positive outcome (green).
+  - **Warning** — Signals caution or a non-blocking issue (amber).
+  - **Danger** — Indicates a destructive or error state (red).
+  - **Info** — Provides informational context; shares the same palette as Primary.
+- **Orange** — A supplemental accent for badges, highlights, and decorative elements.
+
+### Scale model
+
+Every color family uses a **10–100 scale** where lower numbers are lighter tints and higher
+numbers are darker shades. The step with the highest chromatic intensity (the "pure" hue)
+sits at **100** in light mode. This scale maps directly to Tailwind utility classes:
+
+```
+bg-primary-10   → lightest primary tint
+bg-primary-100  → full primary hue
+```
+
+---
+
+## Implementing color
+
+Sicoco uses **CSS custom properties** and **Tailwind utility classes** together to apply color.
+
+### CSS custom properties (tokens)
+
+Each color step is a CSS variable holding space-separated RGB channel values:
+
+```css
+--color-primary-100: 39 55 201;
+```
+
+Consume them in custom CSS via the Tailwind `rgba()` helper pattern:
+
+```css
+.my-element {
+  background-color: rgba(var(--color-primary-100) / 0.15);
+  color: rgba(var(--color-primary-100) / 1);
+}
+```
+
+### Tailwind utility classes
+
+The Tailwind preset bundled with `@sutekitechid/sicoco-v3-next` maps every CSS variable
+to a utility class automatically:
+
+| Class example | What it does |
+|---|---|
+| <CopyClassName className="bg-primary-100" /> | Sets background to the full primary hue |
+| <CopyClassName className="text-neutral-80" /> | Sets text to neutral-80 |
+| <CopyClassName className="border-danger-40" /> | Sets border to danger-40 |
+| <CopyClassName className="ring-success-60" /> | Sets ring to success-60 |
+
+Opacity modifiers work out of the box because the variables use RGB channels:
+
+```html
+<div class="bg-primary-100/10">…</div>
+```
+
+---
+
+## Themes
+
+Sicoco ships with two built-in themes: **Light** (default) and **Dark**.
+Themes are activated by toggling the `data-mode="dark"` attribute on the root element.
+Each theme maps a different set of hex values to the same CSS variable names, so
+components automatically adapt without any class changes.
+
+```html
+<!-- Light theme (default) -->
+<html>…</html>
+
+<!-- Dark theme -->
+<html data-mode="dark">…</html>
+```
+
+### Light theme
+
+The light theme uses white and very light neutral tints as page backgrounds.
+Color families have their full-intensity hue at step **100** and feather out to
+near-white at step **10**.
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem">
+  <div style="background:#2737C9;width:40px;height:40px;border-radius:6px" title="primary-100"></div>
+  <div style="background:#00BBE4;width:40px;height:40px;border-radius:6px" title="secondary-100"></div>
+  <div style="background:#FFA800;width:40px;height:40px;border-radius:6px" title="warning-100"></div>
+  <div style="background:#00AD6F;width:40px;height:40px;border-radius:6px" title="success-100"></div>
+  <div style="background:#C30000;width:40px;height:40px;border-radius:6px" title="danger-100"></div>
+  <div style="background:#1E2238;width:40px;height:40px;border-radius:6px" title="neutral-100"></div>
+  <div style="background:#F85C0E;width:40px;height:40px;border-radius:6px" title="orange-100"></div>
+</div>
+
+### Dark theme
+
+The dark theme is applied with `data-mode="dark"`. In dark mode the semantic color families
+**shift their base hue** so it reads against a dark surface: step **10** becomes
+the most saturated value and higher steps fade toward the background. Neutral colors
+invert so that neutral-60 through neutral-100 all resolve to an off-white value,
+keeping text legible on dark surfaces.
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem;padding:12px;background:#121212;border-radius:8px">
+  <div style="background:#2737C9;width:40px;height:40px;border-radius:6px" title="primary-10 (dark)"></div>
+  <div style="background:#00BBE4;width:40px;height:40px;border-radius:6px" title="secondary-10 (dark)"></div>
+  <div style="background:#FFA800;width:40px;height:40px;border-radius:6px" title="warning-10 (dark)"></div>
+  <div style="background:#00AD6F;width:40px;height:40px;border-radius:6px" title="success-10 (dark)"></div>
+  <div style="background:#C30000;width:40px;height:40px;border-radius:6px" title="danger-10 (dark)"></div>
+  <div style="background:#FAFAFA;width:40px;height:40px;border-radius:6px" title="neutral-60+ (dark)"></div>
+  <div style="background:#F85C0E;width:40px;height:40px;border-radius:6px" title="orange-10 (dark)"></div>
+</div>
+
+---
+
+## Color tokens
+
+The tables below list every token in each color family along with its light-mode value.
+Each token name maps directly to a Tailwind class suffix — e.g. `primary-100` → `bg-primary-100`.
+
+### Primary
+
+<table>
+  <thead>
+    <tr><th>Token</th><th>Swatch</th><th>Hex</th><th>CSS Variable</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>primary-10</td><td><div style="background:#F1F3FF;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#F1F3FF</code></td><td><code>--color-primary-10</code></td></tr>
+    <tr><td>primary-20</td><td><div style="background:#D4D7F4;width:32px;height:32px;border-radius:4px"></div></td><td><code>#D4D7F4</code></td><td><code>--color-primary-20</code></td></tr>
+    <tr><td>primary-30</td><td><div style="background:#BEC3EF;width:32px;height:32px;border-radius:4px"></div></td><td><code>#BEC3EF</code></td><td><code>--color-primary-30</code></td></tr>
+    <tr><td>primary-40</td><td><div style="background:#A9AFE9;width:32px;height:32px;border-radius:4px"></div></td><td><code>#A9AFE9</code></td><td><code>--color-primary-40</code></td></tr>
+    <tr><td>primary-50</td><td><div style="background:#939BE4;width:32px;height:32px;border-radius:4px"></div></td><td><code>#939BE4</code></td><td><code>--color-primary-50</code></td></tr>
+    <tr><td>primary-60</td><td><div style="background:#7D87DF;width:32px;height:32px;border-radius:4px"></div></td><td><code>#7D87DF</code></td><td><code>--color-primary-60</code></td></tr>
+    <tr><td>primary-70</td><td><div style="background:#6873D9;width:32px;height:32px;border-radius:4px"></div></td><td><code>#6873D9</code></td><td><code>--color-primary-70</code></td></tr>
+    <tr><td>primary-80</td><td><div style="background:#525FD4;width:32px;height:32px;border-radius:4px"></div></td><td><code>#525FD4</code></td><td><code>--color-primary-80</code></td></tr>
+    <tr><td>primary-90</td><td><div style="background:#3D4BCE;width:32px;height:32px;border-radius:4px"></div></td><td><code>#3D4BCE</code></td><td><code>--color-primary-90</code></td></tr>
+    <tr><td>primary-100</td><td><div style="background:#2737C9;width:32px;height:32px;border-radius:4px"></div></td><td><code>#2737C9</code></td><td><code>--color-primary-100</code></td></tr>
+  </tbody>
+</table>
+
+### Secondary
+
+<table>
+  <thead>
+    <tr><th>Token</th><th>Swatch</th><th>Hex</th><th>CSS Variable</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>secondary-10</td><td><div style="background:#E6F8FC;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#E6F8FC</code></td><td><code>--color-secondary-10</code></td></tr>
+    <tr><td>secondary-20</td><td><div style="background:#CCF1FA;width:32px;height:32px;border-radius:4px"></div></td><td><code>#CCF1FA</code></td><td><code>--color-secondary-20</code></td></tr>
+    <tr><td>secondary-30</td><td><div style="background:#B3EBF7;width:32px;height:32px;border-radius:4px"></div></td><td><code>#B3EBF7</code></td><td><code>--color-secondary-30</code></td></tr>
+    <tr><td>secondary-40</td><td><div style="background:#99E4F4;width:32px;height:32px;border-radius:4px"></div></td><td><code>#99E4F4</code></td><td><code>--color-secondary-40</code></td></tr>
+    <tr><td>secondary-50</td><td><div style="background:#80DDF2;width:32px;height:32px;border-radius:4px"></div></td><td><code>#80DDF2</code></td><td><code>--color-secondary-50</code></td></tr>
+    <tr><td>secondary-60</td><td><div style="background:#66D6EF;width:32px;height:32px;border-radius:4px"></div></td><td><code>#66D6EF</code></td><td><code>--color-secondary-60</code></td></tr>
+    <tr><td>secondary-70</td><td><div style="background:#4DCFEC;width:32px;height:32px;border-radius:4px"></div></td><td><code>#4DCFEC</code></td><td><code>--color-secondary-70</code></td></tr>
+    <tr><td>secondary-80</td><td><div style="background:#33C9E9;width:32px;height:32px;border-radius:4px"></div></td><td><code>#33C9E9</code></td><td><code>--color-secondary-80</code></td></tr>
+    <tr><td>secondary-90</td><td><div style="background:#1AC2E7;width:32px;height:32px;border-radius:4px"></div></td><td><code>#1AC2E7</code></td><td><code>--color-secondary-90</code></td></tr>
+    <tr><td>secondary-100</td><td><div style="background:#00BBE4;width:32px;height:32px;border-radius:4px"></div></td><td><code>#00BBE4</code></td><td><code>--color-secondary-100</code></td></tr>
+  </tbody>
+</table>
+
+### Neutral
+
+<table>
+  <thead>
+    <tr><th>Token</th><th>Swatch</th><th>Hex</th><th>CSS Variable</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>neutral-10</td><td><div style="background:#EFF0F3;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#EFF0F3</code></td><td><code>--color-neutral-10</code></td></tr>
+    <tr><td>neutral-20</td><td><div style="background:#E5E6EB;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#E5E6EB</code></td><td><code>--color-neutral-20</code></td></tr>
+    <tr><td>neutral-30</td><td><div style="background:#D7D9DF;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#D7D9DF</code></td><td><code>--color-neutral-30</code></td></tr>
+    <tr><td>neutral-40</td><td><div style="background:#BBBDC5;width:32px;height:32px;border-radius:4px"></div></td><td><code>#BBBDC5</code></td><td><code>--color-neutral-40</code></td></tr>
+    <tr><td>neutral-50</td><td><div style="background:#A4A5AD;width:32px;height:32px;border-radius:4px"></div></td><td><code>#A4A5AD</code></td><td><code>--color-neutral-50</code></td></tr>
+    <tr><td>neutral-60</td><td><div style="background:#787A88;width:32px;height:32px;border-radius:4px"></div></td><td><code>#787A88</code></td><td><code>--color-neutral-60</code></td></tr>
+    <tr><td>neutral-70</td><td><div style="background:#626474;width:32px;height:32px;border-radius:4px"></div></td><td><code>#626474</code></td><td><code>--color-neutral-70</code></td></tr>
+    <tr><td>neutral-80</td><td><div style="background:#4B4E60;width:32px;height:32px;border-radius:4px"></div></td><td><code>#4B4E60</code></td><td><code>--color-neutral-80</code></td></tr>
+    <tr><td>neutral-90</td><td><div style="background:#35384C;width:32px;height:32px;border-radius:4px"></div></td><td><code>#35384C</code></td><td><code>--color-neutral-90</code></td></tr>
+    <tr><td>neutral-100</td><td><div style="background:#1E2238;width:32px;height:32px;border-radius:4px"></div></td><td><code>#1E2238</code></td><td><code>--color-neutral-100</code></td></tr>
+  </tbody>
+</table>
+
+### Semantic colors
+
+<table>
+  <thead>
+    <tr><th>Family</th><th>Token</th><th>Swatch</th><th>Hex</th></tr>
+  </thead>
+  <tbody>
+    <tr><td rowspan="3">Success</td><td>success-10</td><td><div style="background:#E6F7F1;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#E6F7F1</code></td></tr>
+    <tr><td>success-50</td><td><div style="background:#80D6B7;width:32px;height:32px;border-radius:4px"></div></td><td><code>#80D6B7</code></td></tr>
+    <tr><td>success-100</td><td><div style="background:#00AD6F;width:32px;height:32px;border-radius:4px"></div></td><td><code>#00AD6F</code></td></tr>
+    <tr><td rowspan="3">Warning</td><td>warning-10</td><td><div style="background:#FFF6E6;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#FFF6E6</code></td></tr>
+    <tr><td>warning-50</td><td><div style="background:#FFD480;width:32px;height:32px;border-radius:4px"></div></td><td><code>#FFD480</code></td></tr>
+    <tr><td>warning-100</td><td><div style="background:#FFA800;width:32px;height:32px;border-radius:4px"></div></td><td><code>#FFA800</code></td></tr>
+    <tr><td rowspan="3">Danger</td><td>danger-10</td><td><div style="background:#FFF0F0;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#FFF0F0</code></td></tr>
+    <tr><td>danger-50</td><td><div style="background:#EF8A8A;width:32px;height:32px;border-radius:4px"></div></td><td><code>#EF8A8A</code></td></tr>
+    <tr><td>danger-100</td><td><div style="background:#C30000;width:32px;height:32px;border-radius:4px"></div></td><td><code>#C30000</code></td></tr>
+    <tr><td rowspan="3">Info</td><td>info-10</td><td><div style="background:#F1F3FF;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#F1F3FF</code></td></tr>
+    <tr><td>info-50</td><td><div style="background:#939BE4;width:32px;height:32px;border-radius:4px"></div></td><td><code>#939BE4</code></td></tr>
+    <tr><td>info-100</td><td><div style="background:#2737C9;width:32px;height:32px;border-radius:4px"></div></td><td><code>#2737C9</code></td></tr>
+    <tr><td rowspan="3">Orange</td><td>orange-10</td><td><div style="background:#FFE9DE;width:32px;height:32px;border-radius:4px;border:1px solid #e0e0e0"></div></td><td><code>#FFE9DE</code></td></tr>
+    <tr><td>orange-50</td><td><div style="background:#FF9762;width:32px;height:32px;border-radius:4px"></div></td><td><code>#FF9762</code></td></tr>
+    <tr><td>orange-100</td><td><div style="background:#F85C0E;width:32px;height:32px;border-radius:4px"></div></td><td><code>#F85C0E</code></td></tr>
+  </tbody>
+</table>
+
+> **Note:** The `info` family intentionally shares the same palette values as `primary`.
+> Use `info-*` tokens for informational UI states (banners, inline hints) and `primary-*`
+> tokens for interactive or brand elements to keep intent clear in code.
+
+---
+
+## Interaction states
+
+Sicoco components handle interaction states through Tailwind's state variants.
+The following guidelines describe how each state should be expressed using
+the color scale.
+
+### Hover
+
+Hover states use a **one step darker** value from the element's base color.
+For most components this is handled internally, but when building custom elements
+apply `hover:` variants with the adjacent darker step:
+
+```html
+<!-- Button-like element: base primary-100, hover goes darker via opacity -->
+<button class="bg-primary-100 hover:bg-primary-100/80 text-white">
+  Click me
+</button>
+```
+
+For backgrounds sitting on light layers, a subtle neutral tint is appropriate:
+
+```html
+<li class="hover:bg-neutral-10 px-4 py-2 cursor-pointer">List item</li>
+```
+
+### Active / Pressed
+
+Active (mouse-down) states step **two levels darker** than the base color, or use an
+opacity reduction. Apply via Tailwind's `active:` variant:
+
+```html
+<button class="bg-primary-100 active:bg-primary-100/60 text-white">
+  Press me
+</button>
+```
+
+### Selected
+
+Selected states — used in navigation, tabs, and list selections — use a one step
+darker background with the matching text color:
+
+```html
+<li class="bg-primary-10 text-primary-100 font-semibold">Selected item</li>
+```
+
+### Focus
+
+Focus states use a **2px ring** in `primary-100` for light mode and an appropriate
+contrasting ring in dark mode. All interactive components in Sicoco include default
+focus ring handling. When building custom components, use:
+
+```html
+<button class="focus-visible:ring-2 focus-visible:ring-primary-100 focus-visible:outline-none">
+  Accessible button
+</button>
+```
+
+### Disabled
+
+Disabled elements are de-emphasized using neutral tones regardless of the component's
+base color. Disabled states do not need to meet WCAG contrast requirements — they
+are intentionally subdued to communicate non-interactivity:
+
+```html
+<button class="bg-neutral-30 text-neutral-50 cursor-not-allowed" disabled>
+  Disabled
+</button>
+```
+
+---
+
+## Accessibility
+
+Color contrast is the most critical accessibility consideration in the Sicoco palette.
+All text and interactive elements must meet [WCAG 2.1](https://www.w3.org/TR/WCAG21/) contrast requirements:
+
+| Text size | Minimum contrast ratio | Recommended Sicoco token pairs |
+|---|---|---|
+| Small (< 24px) | **4.5 : 1** | `neutral-100` on `white`, `primary-100` on `white` |
+| Large (≥ 24px or bold ≥ 18.67px) | **3 : 1** | `neutral-80` on `neutral-10`, `primary-90` on `white` |
+| Graphical / UI elements | **3 : 1** | `success-100` on `white`, `danger-100` on `white` |
+
+### Safe combinations (light theme)
+
+- `text-neutral-100` on white or `bg-neutral-10` — exceeds 4.5:1
+- `text-primary-100` on white — exceeds 4.5:1
+- `text-white` on `bg-primary-100` — exceeds 4.5:1
+- `text-white` on `bg-danger-100` — exceeds 4.5:1
+- `text-white` on `bg-success-100` — verify; success-100 is a mid-green, test with a contrast checker
+
+### Avoid
+
+- Do not place `warning-100` (#FFA800) text on white — fails 4.5:1 for normal text.
+  Use `warning-100` for decorative backgrounds or icons only, paired with dark text.
+- Do not use `neutral-40` or lighter for body text on white backgrounds.
+- Do not rely on color alone to convey state — always pair color with an icon, label, or pattern.
+
+---
+
+## Resources
+
+- [WCAG 2.1 — Understanding Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+- [Tailwind CSS — Customizing Colors](https://tailwindcss.com/docs/customizing-colors)
+- [Sicoco v3 package — configPreset.js](https://github.com/sutekitechid/sicoco-v3)
