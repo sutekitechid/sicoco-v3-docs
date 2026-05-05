@@ -5,7 +5,7 @@ interface Props {
 
 const { className } = Astro.props;
 
-const copyHandler = `const button=this;(async()=>{if(!navigator.clipboard?.writeText){return;}try{await navigator.clipboard.writeText(${JSON.stringify(className)});button.textContent='Copied';button.setAttribute('aria-label','Copied');button.setAttribute('title','Copied');setTimeout(()=>{button.textContent='Copy';button.setAttribute('aria-label',${JSON.stringify(`Copy ${className}`)});button.setAttribute('title','Copy')},1200);}catch(_error){}})();`;
+const copyHandler = `const button=this;if(button._copyTimer){clearTimeout(button._copyTimer);button._copyTimer=null;}(async()=>{if(!navigator.clipboard?.writeText){return;}try{await navigator.clipboard.writeText(${JSON.stringify(className)});button.textContent='Copied';button.setAttribute('aria-label','Copied');button.setAttribute('title','Copied');button._copyTimer=setTimeout(()=>{button.textContent='Copy';button.setAttribute('aria-label',${JSON.stringify(`Copy ${className}`)});button.setAttribute('title','Copy');button._copyTimer=null;},1200);}catch(_error){}})();`;
 ---
 
 <span style="display:inline-flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">

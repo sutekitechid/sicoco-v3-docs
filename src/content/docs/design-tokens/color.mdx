@@ -240,8 +240,8 @@ For most components this is handled internally, but when building custom element
 apply `hover:` variants with the adjacent darker step:
 
 ```html
-<!-- Button-like element: base primary-100, hover goes darker via opacity -->
-<button class="bg-primary-100 hover:bg-primary-100/80 text-white">
+<!-- Button-like element: base primary-100, hover steps one shade darker -->
+<button class="bg-primary-100 hover:bg-primary-90 text-white">
   Click me
 </button>
 ```
@@ -258,7 +258,7 @@ Active (mouse-down) states step **two levels darker** than the base color, or us
 opacity reduction. Apply via Tailwind's `active:` variant:
 
 ```html
-<button class="bg-primary-100 active:bg-primary-100/60 text-white">
+<button class="bg-primary-100 active:bg-primary-80 text-white">
   Press me
 </button>
 ```
