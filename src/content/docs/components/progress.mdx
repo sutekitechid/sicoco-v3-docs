@@ -1,0 +1,76 @@
+---
+title: Progress
+---
+
+The progress component is used to visually represent the completion status of an ongoing process. It helps users understand how much of a task has been completed and how much remains. The component is available in two variants: `Progress` (a linear progress bar) and `ProgressCircle` (a circular progress indicator).
+
+import { Code } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+import ProgressApiProperties from '@/components/Progress/apis/apiProperties.vue'
+import ProgressCircleApiProperties from '@/components/Progress/apis/apiCircleProperties.vue'
+
+import SProgress from '@/components/Progress/default.vue'
+import SProgressRaw from '@/components/Progress/default.vue?raw'
+
+import SProgressWithTooltip from '@/components/Progress/withTooltip.vue'
+import SProgressWithTooltipRaw from '@/components/Progress/withTooltip.vue?raw'
+
+import SProgressCircle from '@/components/Progress/circleVariant.vue'
+import SProgressCircleRaw from '@/components/Progress/circleVariant.vue?raw'
+
+import SProgressCircleWithText from '@/components/Progress/circleWithText.vue'
+import SProgressCircleWithTextRaw from '@/components/Progress/circleWithText.vue?raw'
+
+import SProgressCircleSize from '@/components/Progress/circleSize.vue'
+import SProgressCircleSizeRaw from '@/components/Progress/circleSize.vue?raw'
+
+import SProgressCircleSemi from '@/components/Progress/semiCircle.vue'
+import SProgressCircleSemiRaw from '@/components/Progress/semiCircle.vue?raw'
+
+## Component Usage
+
+### Progress Color
+
+<SProgress class="mb-4" />
+<Code code={SProgressRaw} lang="vue" title="progress.vue" />
+
+### Progress Tooltip
+
+<SProgressWithTooltip class="mb-4" />
+<Code code={SProgressWithTooltipRaw} lang="vue" title="withTooltip.vue" />
+
+### Progress Circle
+
+<SProgressCircle class="mb-4" />
+<Code code={SProgressCircleRaw} lang="vue" title="circleVariant.vue" />
+
+### Progress Circle Size
+
+<SProgressCircleSize class="mb-4" />
+<Code code={SProgressCircleSizeRaw} lang="vue" title="circleSize.vue" />
+
+### Progress Circle with Text
+
+<SProgressCircleWithText class="mb-4" />
+<Code code={SProgressCircleWithTextRaw} lang="vue" title="circleWithText.vue" />
+
+### Progress Semi Circle
+
+<SProgressCircleSemi class="mb-4" />
+<Code code={SProgressCircleSemiRaw} lang="vue" title="semiCircle.vue" />
+
+## Progress API
+
+<Tabs>
+	<TabItem label="Properties">
+		<ProgressApiProperties client:only="vue" />
+	</TabItem>
+</Tabs>
+
+## Progress Circle API
+
+<Tabs>
+	<TabItem label="Properties">
+		<ProgressCircleApiProperties client:only="vue" />
+	</TabItem>
+</Tabs>
