@@ -307,7 +307,7 @@ All text and interactive elements must meet [WCAG 2.1](https://www.w3.org/TR/WCA
 |---|---|---|
 | Small (< 24px) | **4.5 : 1** | `neutral-100` on `white`, `primary-100` on `white` |
 | Large (≥ 24px or bold ≥ 18.67px) | **3 : 1** | `neutral-80` on `neutral-10`, `primary-90` on `white` |
-| Graphical / UI elements | **3 : 1** | `success-100` on `white`, `danger-100` on `white` |
+| Graphical / UI elements | **3 : 1** | `danger-100` on `white`, `primary-80` on `white` |
 
 ### Safe combinations (light theme)
 
@@ -315,12 +315,13 @@ All text and interactive elements must meet [WCAG 2.1](https://www.w3.org/TR/WCA
 - `text-primary-100` on white — exceeds 4.5:1
 - `text-white` on `bg-primary-100` — exceeds 4.5:1
 - `text-white` on `bg-danger-100` — exceeds 4.5:1
-- `text-white` on `bg-success-100` — verify; success-100 is a mid-green, test with a contrast checker
+
 
 ### Avoid
 
 - Do not place `warning-100` (#FFA800) text on white — fails 4.5:1 for normal text.
   Use `warning-100` for decorative backgrounds or icons only, paired with dark text.
+- Do not use `success-100` as a text or icon color on white — it reaches only ~2.9:1 and fails the 3:1 minimum for graphical/UI elements. Use it for decorative fills or pair dark text on top of a `success-100` background instead.
 - Do not use `neutral-40` or lighter for body text on white backgrounds.
 - Do not rely on color alone to convey state — always pair color with an icon, label, or pattern.
 
